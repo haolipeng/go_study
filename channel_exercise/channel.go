@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"strconv"
+	"os"
 )
 
 type People struct {
@@ -15,7 +16,7 @@ type Addr struct {
 	city string
 }
 
-//验证将数值投递如通道是浅拷贝还是深拷贝
+/////////////////////////////////验证将数值投递如通道是浅拷贝还是深拷贝///////////////////////////////
 func channelCopyValue() {
 	p1 := People{"zhangsan", 26, Addr{"habin"}}
 	fmt.Printf("p1(1):%v\n", p1)
@@ -45,11 +46,11 @@ func sum(a []int, c chan int) {
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 var personTotal = 200 //人员总数
 var personList []Person = make([]Person, personTotal)
-var personCount int //人员数量
+var personCount int //全局的人员数量
 
 type Person struct {
 	name    string
-	age     uint8
+	age     int
 	Address Addr
 }
 type PersonHandler interface {
@@ -84,34 +85,87 @@ func (handler PersonHandlerImpl) Batch(origs <-chan Person) <-chan Person {
 
 //user-define handle to modify address
 func (handler PersonHandlerImpl) Handle(orig *Person) {
+	//add number 100 to address.city tail
 	orig.Address.city += strconv.Itoa(100)
 }
 
+//获取PersonHandler接口的实现类型
 func getPersonHandler() PersonHandler {
 	return PersonHandlerImpl{}
 }
 
-//TODO:函数参数origs表明函数内部只会对通道进行写入操作
+//函数参数origs表明函数内部只会对通道进行写入操作
 func fetchPerson(origs chan<- Person) {
 	origsCap := cap(origs)
 	buffered := origsCap > 0
 	goTicketTotal := origsCap / 2
+	goTicket := initGoTicket(goTicketTotal)
 
 	go func() {
-		p, ok := fetchPerson1()
-		if !ok {
-			for {
-				if !buffered || len(goTicketTotal) == goTicketTotal
+		for {
+			p, ok := fetchPerson1()
+			if !ok {
+				//close channel,notify the receiver of channel
+				fmt.Println("all the infomation has been fetched!")
+				close(origs)
+				break
+			}
+
+			if buffered {
+				<-goTicket
+				go func() {
+					origs <- p
+					goTicket <- 1
+				}()
+			} else {
+				origs <- p
 			}
 		}
 	}()
 }
 
-//TODO:将处理过的信息进行存储和落盘
+//将处理过的信息进行存储和落盘
 func savePerson(dstchan <-chan Person) <-chan byte {
+	sign := make(chan byte, 1)
 
+	//创建文件来保存信息
+	outputHandle, err := os.Create("output.txt")
+	if err != nil {
+		fmt.Println("create file output.txt failed")
+	}
+	go func() {
+		//可以用for range 遍历channel通道
+		/*
+		for p:=range dstchan{
+			//call internal saveperson function
+			savePersonInfoInternal(p,outputHandle)
+		}
+		fmt.Println("All the information has been saved.")
+		sign<-0
+		*/
+
+		for {
+			p, ok := <-dstchan
+			if !ok {
+				fmt.Println("All the information has been saved.")
+				sign <- 0
+				break
+			}
+
+			//call internal saveperson function
+			savePersonInfoInternal(p, outputHandle)
+		}
+	}()
+
+	return sign
 }
 
+func savePersonInfoInternal(p Person, hFile *os.File) {
+	strTotal := p.name + strconv.Itoa(p.age) + p.Address.city + "\r\n"
+	hFile.WriteString(strTotal)
+}
+
+//channal byte 作用是什么
 func initGoTicket(total int) chan byte {
 	var goTicket chan byte
 	if 0 == total {
@@ -128,10 +182,17 @@ func initGoTicket(total int) chan byte {
 }
 
 func fetchPerson1() (Person, bool) {
+	if personCount < personTotal {
+		p := personList[personCount]
+		personCount++
 
+		return p, true
+	}
+
+	return Person{}, false
 }
 
-//person数组初始化
+//main函数之前person数组初始化
 func init() {
 	for i := 0; i < personTotal; i++ {
 		name := fmt.Sprintf("%s%d", "P", i)
@@ -163,7 +224,7 @@ func test() {
 }
 
 func main() {
-	//简单测试用例
+	//简单测试
 	test()
 
 	//验证通道中数据的拷贝机制
