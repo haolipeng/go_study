@@ -31,6 +31,8 @@ func main() {
 				select {
 				case <-stopCh:
 					return
+					//这里必须加上default语句，否则会流程会一直阻塞在上面的case <- stopCh这
+					//无法执行到下一个select语句
 				default: //comment this line may cause panic
 				}
 
