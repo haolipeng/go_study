@@ -223,13 +223,44 @@ func test() {
 	fmt.Printf("x(%d) + y(%d) = %d\n", x, y, x+y)
 }
 
+///////////////////////////////测试通道的阻塞条件///////////////////////////////////////////
+//1.对通道只有读操作，会阻塞
+//2.对通道只有写操作，会阻塞
+var chanElemCnt int = 10
+var globalChannel = make(chan int)
+
+//signChannel用于保证main函数等待go协程执行完毕
+var signChannel = make(chan int, 2)
+
+func onlyReadChannel() {
+	for v := range globalChannel {
+		fmt.Printf("value is %d\n", v)
+	}
+	fmt.Println("channel is closed,all data has been read")
+	signChannel <- 2
+}
+func onlyWriteChannel() {
+	for i := 0; i < chanElemCnt; i++ {
+		globalChannel <- i
+	}
+	close(globalChannel)
+	fmt.Println("start close channel")
+	signChannel <- 1
+}
+
 func main() {
+	go onlyReadChannel()
+
+	go onlyWriteChannel()
+
+	<-signChannel
+	<-signChannel
 	//简单测试
-	test()
+	//test()
 
 	//验证通道中数据的拷贝机制
-	channelCopyValue()
+	//channelCopyValue()
 
 	//使用通信方式来共享
-	goroutine_channel()
+	//goroutine_channel()
 }
