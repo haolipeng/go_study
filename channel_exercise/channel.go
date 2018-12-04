@@ -6,53 +6,17 @@ import (
 	"os"
 )
 
-type People struct {
-	name    string
-	age     uint8
-	Address Addr
-}
-
-type Addr struct {
-	city string
-}
-
-/////////////////////////////////验证将数值投递如通道是浅拷贝还是深拷贝///////////////////////////////
-func channelCopyValue() {
-	p1 := People{"zhangsan", 26, Addr{"habin"}}
-	fmt.Printf("p1(1):%v\n", p1)
-
-	var personChan = make(chan People, 1)
-
-	personChan <- p1
-
-	//外部修改p1的值
-	p1.Address.city = "chengdu"
-	fmt.Printf("p2(2):%v\n", p1)
-
-	p1_copy := <-personChan
-	fmt.Printf("p1_copy:%v\n", p1_copy)
-}
-
-func sum(a []int, c chan int) {
-	total := 0
-	for _, v := range a {
-		total += v
-	}
-
-	//将值写入channel管道中
-	c <- total
-}
-
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 var personTotal = 200 //人员总数
 var personList []Person = make([]Person, personTotal)
 var personCount int //全局的人员数量
 
 type Person struct {
-	name    string
-	age     int
-	Address Addr
+	name string
+	age  int
+	city string
 }
+
 type PersonHandler interface {
 	Batch(origs <-chan Person) <-chan Person
 	Handle(orig *Person)
@@ -61,6 +25,7 @@ type PersonHandler interface {
 type PersonHandlerImpl struct {
 }
 
+//PersonHandler接口的实现类型
 func (handler PersonHandlerImpl) Batch(origs <-chan Person) <-chan Person {
 	//0. create dst channel,default capacity is 100
 	var dstChan = make(chan Person, 100)
@@ -86,7 +51,7 @@ func (handler PersonHandlerImpl) Batch(origs <-chan Person) <-chan Person {
 //user-define handle to modify address
 func (handler PersonHandlerImpl) Handle(orig *Person) {
 	//add number 100 to address.city tail
-	orig.Address.city += strconv.Itoa(100)
+	orig.city += strconv.Itoa(100)
 }
 
 //获取PersonHandler接口的实现类型
@@ -161,11 +126,10 @@ func savePerson(dstchan <-chan Person) <-chan byte {
 }
 
 func savePersonInfoInternal(p Person, hFile *os.File) {
-	strTotal := p.name + strconv.Itoa(p.age) + p.Address.city + "\r\n"
+	strTotal := p.name + strconv.Itoa(p.age) + p.city + "\r\n"
 	hFile.WriteString(strTotal)
 }
 
-//channal byte 作用是什么
 func initGoTicket(total int) chan byte {
 	var goTicket chan byte
 	if 0 == total {
@@ -196,7 +160,7 @@ func fetchPerson1() (Person, bool) {
 func init() {
 	for i := 0; i < personTotal; i++ {
 		name := fmt.Sprintf("%s%d", "P", i)
-		p := Person{name, 32, Addr{"beijing"}}
+		p := Person{name, 32, "beijing"}
 		personList[i] = p
 	}
 }
@@ -211,56 +175,7 @@ func goroutine_channel() {
 	<-sign
 }
 
-func test() {
-	a := []int{7, 2, 8, -9, 4, 0}
-	c := make(chan int)
-
-	//将切片传递给协程函数
-	go sum(a[:len(a)/2], c)
-	go sum(a[len(a)/2:], c)
-
-	x, y := <-c, <-c //receive from c
-	fmt.Printf("x(%d) + y(%d) = %d\n", x, y, x+y)
-}
-
-///////////////////////////////测试通道的阻塞条件///////////////////////////////////////////
-//1.对通道只有读操作，会阻塞
-//2.对通道只有写操作，会阻塞
-var chanElemCnt int = 10
-var globalChannel = make(chan int)
-
-//signChannel用于保证main函数等待go协程执行完毕
-var signChannel = make(chan int, 2)
-
-func onlyReadChannel() {
-	for v := range globalChannel {
-		fmt.Printf("value is %d\n", v)
-	}
-	fmt.Println("channel is closed,all data has been read")
-	signChannel <- 2
-}
-func onlyWriteChannel() {
-	for i := 0; i < chanElemCnt; i++ {
-		globalChannel <- i
-	}
-	close(globalChannel)
-	fmt.Println("start close channel")
-	signChannel <- 1
-}
-
 func main() {
-	go onlyReadChannel()
-
-	go onlyWriteChannel()
-
-	<-signChannel
-	<-signChannel
-	//简单测试
-	//test()
-
-	//验证通道中数据的拷贝机制
-	//channelCopyValue()
-
 	//使用通信方式来共享
-	//goroutine_channel()
+	goroutine_channel()
 }
