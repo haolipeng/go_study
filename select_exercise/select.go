@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"time"
-	"sync"
 )
 
 //////////////////////select定时器////////////////////////////////
@@ -21,6 +20,26 @@ func select_timer() {
 		}
 	}
 }
+
+func BkdrHash(str string) uint32 {
+	var seed uint32 = 10
+	var hash uint32 = 0
+
+	for i := range str {
+		hash = hash*seed + uint32(i)
+	}
+
+	return hash
+}
+
+func main() {
+	var uHashValue uint32 = 0
+	uHashValue = BkdrHash("www.baidu.com")
+
+	fmt.Printf("hash value is %d", uHashValue)
+}
+
+/*
 func main() {
 	ch1 := make(chan int, 1)
 	ch2 := make(chan int, 1)
@@ -55,5 +74,7 @@ func main() {
 		}
 	}
 
+	//select和timer结合
 	//select_timer()
 }
+*/

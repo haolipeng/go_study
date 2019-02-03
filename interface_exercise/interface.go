@@ -5,12 +5,12 @@ import (
 	"strconv"
 )
 
-//人的接口
 type People interface {
 	SayHi()
 	Sing(lyric string)
 }
 
+////////////////////结构体定义////////////////////
 type Human struct {
 	name string
 	age  int
@@ -31,7 +31,7 @@ type Employee struct {
 	company string //公司名称
 }
 
-//Human实现接口
+//Human方法
 func (h Human) SayHi() {
 	fmt.Printf("I am a Human,name is %s,age is %d\n", h.name, h.age)
 }
@@ -44,7 +44,7 @@ func (h Human) String() string {
 	return h.name + " " + strconv.Itoa(h.age) + " " + h.home;
 }
 
-//Employee实现SayHi接口
+//Employee方法
 func (e Employee) SayHi() {
 	fmt.Printf("I am a Employee,name is %s,age is %d\n", e.name, e.age)
 }
@@ -55,6 +55,7 @@ func (e Employee) Sing(lyric string) {
 
 //interface{} 可以存储任意类型的数据，定义一个interface类型的变量，可以存实现这个interface的任意类型的变量
 func testInterfaceSave() {
+	//创建学生和雇员变量
 	mike := Student{Human{"mike", 29, "heilongjiang"}, "shengwu", "qinghua"}
 	limei := Employee{Human{"limeimei", 21, "haerbin"}, 10000, "360"}
 
@@ -72,13 +73,7 @@ func testInterfaceSave() {
 	i.Sing("wo shi li meimei")
 }
 
-//fmt输出Human变量
-func printHumanInfo() {
-	h := Human{"mike", 29, "heilongjiang"}
-	fmt.Println("human is ", h)
-}
-
-//interface{} use
+//interface{} + make 来创建内建容器
 type Element interface{}
 type List []Element
 
@@ -100,7 +95,6 @@ func interfaceUse() {
 	}
 }
 func main() {
-	testInterfaceSave()
-	printHumanInfo()
+	//testInterfaceSave()
 	interfaceUse()
 }
