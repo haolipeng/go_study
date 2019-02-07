@@ -1,21 +1,24 @@
 package engine
 
-import (
-	"fmt"
-)
-
 var itemCount int = 0
 
 type ConcurrentEngine struct {
 	Scheduler
 	WorkCount int
+	ItemChan  chan interface{}
 }
 
+//优化接口,每个worker有一个channel，和多个worker共用一个channel，
+// 就是simpleScheduler和concurrentScheduler的区别
 type Scheduler interface {
+	ReadyNotifier
 	Submit(Request)
-	ConfigureMasterWorkerChan(ch chan Request)
-	WorkerReady(chan Request)
+	GetWorkerChan() chan Request //我有一个worker，给我哪个channel
 	Run()
+}
+
+type ReadyNotifier interface {
+	WorkerReady(chan Request)
 }
 
 func (e *ConcurrentEngine) Run(seeds ...Request) {
@@ -29,7 +32,7 @@ func (e *ConcurrentEngine) Run(seeds ...Request) {
 
 	//创建工作者协程，每个工作者对应一个request队列
 	for i := 0; i < e.WorkCount; i++ {
-		e.createWorker(outCh, e.Scheduler)
+		e.createWorker(e.Scheduler.GetWorkerChan(), outCh, e.Scheduler)
 	}
 
 	//添加request任务对requests队列中
@@ -47,8 +50,14 @@ func (e *ConcurrentEngine) printParserResult(out chan ParseResult) {
 	result := <-out
 
 	for _, item := range result.Items {
-		fmt.Printf("Got Item %d: %v\n", itemCount, item)
-		itemCount++
+		//not print here,print in itemSaver module
+		//fmt.Printf("Got Item #%d: %v\n", itemCount, item)
+		//itemCount++
+
+		//保存item
+		go func() {
+			e.ItemChan <- item
+		}()
 	}
 
 	//将解析过的url重新投递到管道中
@@ -57,14 +66,14 @@ func (e *ConcurrentEngine) printParserResult(out chan ParseResult) {
 	}
 }
 
-func (e *ConcurrentEngine) createWorker(out chan ParseResult, s Scheduler) {
+func (e *ConcurrentEngine) createWorker(in chan Request, out chan ParseResult, notifier ReadyNotifier) {
 	//create a channel each worker
-	in := make(chan Request)
+	//in := make(chan Request)//这块不自己创建channel了
 
 	go func() {
 		for {
-			//tell scheduler I'm ready
-			e.Scheduler.WorkerReady(in)
+			//tell scheduler I'm ready,nofity 类比反注册函数
+			notifier.WorkerReady(in)
 
 			//输入->并发执行处理逻辑->输出解析结果
 			request := <-in

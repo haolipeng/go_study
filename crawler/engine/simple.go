@@ -26,16 +26,11 @@ func (e *SimpleEngine) Run(seeds ...Request) {
 		}
 
 		requests = append(requests, parserResult.Requests ...)
-
-		//打印items
-		for _, item := range parserResult.Items {
-			log.Printf("Get Item %s", item)
-		}
 	}
 }
 
 func worker(r Request) (ParseResult, error) {
-	log.Printf("Fetching %s\n", r.Url)
+	//log.Printf("Fetching %s\n", r.Url)
 	body, err := fetcher.FetchWithUserAgent(r.Url)
 
 	if err != nil {

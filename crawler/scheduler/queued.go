@@ -4,9 +4,12 @@ import "go_study/crawler/engine"
 
 //requestChan和workerChan是何时创建的
 type QueuedScheduler struct {
-	RequestChan chan engine.Request
-	//chan是一个worker类型，每个worker有自己的channel
-	WorkerChan chan chan engine.Request //存储worker队列的队列
+	RequestChan chan engine.Request      //chan是一个worker类型，每个worker有自己的channel
+	WorkerChan  chan chan engine.Request //存储worker队列的队列
+}
+
+func (s *QueuedScheduler) GetWorkerChan() chan engine.Request {
+	return make(chan engine.Request)
 }
 
 func (s *QueuedScheduler) Submit(r engine.Request) {
