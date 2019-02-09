@@ -7,33 +7,33 @@ import (
 	"go_study/crawler/persist"
 )
 
-const seed = "http://www.zhenai.com/zhenghun"
+//可选择不同的输出方式
+
+///////////////////////////////seed variable///////////////////////////////////////
+//const seed = "http://www.zhenai.com/zhenghun"
 const shanghai_seed = "http://www.zhenai.com/zhenghun/shanghai"
 
-func main() {
-	//simple engine version code
-	/*
-	e := engine.SimpleEngine{}
-	e.Run(engine.Request{
-		Url:seed,
-		ParserFunc:parser.ParseCityList,
-	})
-	*/
+/////////////////////////elastic variable/////////////////////////////////
+var (
+	elastic_database = "dating_profile"
+	elastic_url      = "http://192.168.227.134:9200"
+)
 
-	//concurrent engine version code
-	/*e := engine.ConcurrentEngine{&scheduler.QueuedScheduler{}, 10}
-	e.Run(engine.Request{
-		Url:        seed,
-		ParserFunc: parser.ParseCityList,
-	})
-	*/
+func main() {
+
+	//TODO:Item server要有不同的输出方式，如数据库，表格，网络传输
+	itemChan, err := persist.ItemSaver(elastic_database, elastic_url)
+	if err != nil {
+		panic(err)
+	}
 
 	//parser target city
 	e := engine.ConcurrentEngine{
 		&scheduler.QueuedScheduler{},
 		10,
-		persist.ItemSaver(),
+		itemChan,
 	}
+
 	e.Run(engine.Request{
 		Url:        shanghai_seed,
 		ParserFunc: parser.ParserCity,

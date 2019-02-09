@@ -40,7 +40,11 @@ var marriageInfo = []string{
 	"离异",
 }
 
-func ParserProfile(contents []byte, name string) engine.ParseResult {
+//用户信息解析器
+//id:用户的唯一标识
+//url：用户的url
+//name:用户昵称
+func ParserProfile(contents []byte, id string, url string, name string) engine.ParseResult {
 	profile := model.Profile{}
 	profile.Name = name
 
@@ -94,8 +98,16 @@ func ParserProfile(contents []byte, name string) engine.ParseResult {
 	//7.收入
 	profile.Income = extractString(contents, incomeRe)
 
+	//8.解析结果
 	result := engine.ParseResult{
-		Items: []interface{}{profile},
+		Items: []engine.Item{
+			{
+				Url:     url,
+				Type:    "zhenai",
+				ID:      id,
+				Payload: profile,
+			},
+		},
 	}
 
 	return result

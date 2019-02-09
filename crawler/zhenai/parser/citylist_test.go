@@ -3,6 +3,8 @@ package parser
 import (
 	"testing"
 	"io/ioutil"
+	_ "fmt"
+	_ "go_study/crawler/model"
 	"fmt"
 )
 
@@ -24,32 +26,15 @@ func TestParseCityList(t *testing.T) {
 		"http://www.zhenai.com/zhenghun/alashanmeng",
 	}
 
-	expectedCitys := []string{
-		"City 阿坝",
-		"City 阿克苏",
-		"City 阿拉善盟",
-	}
-
 	for i, url := range expectedUrls {
 		if result.Requests[i].Url != url {
 			t.Errorf("expected url #%d: %s;but was %s\n", i, url, result.Requests[i].Url)
 		}
 	}
 
-	for i, city := range expectedCitys {
-		if result.Items[i].(string) != city {
-			t.Errorf("expected city #%d: %s;but was %s\n", i, city, result.Items[i].(string))
-		}
-	}
-
 	if len(result.Requests) != resultSize {
 		t.Errorf("result should have %d "+
 			"requests;but have %d", resultSize, len(result.Requests))
-	}
-
-	if len(result.Items) != resultSize {
-		t.Errorf("result should have %d "+
-			"requests;but have %d", resultSize, len(result.Items))
 	}
 
 	fmt.Println("test successed")

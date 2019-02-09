@@ -1,11 +1,14 @@
 package engine
 
-var itemCount int = 0
+import (
+	"go_study/crawler/fetcher"
+	"log"
+)
 
 type ConcurrentEngine struct {
 	Scheduler
 	WorkCount int
-	ItemChan  chan interface{}
+	ItemChan  chan Item
 }
 
 //优化接口,每个worker有一个channel，和多个worker共用一个channel，
@@ -78,7 +81,7 @@ func (e *ConcurrentEngine) createWorker(in chan Request, out chan ParseResult, n
 			//输入->并发执行处理逻辑->输出解析结果
 			request := <-in
 
-			result, err := worker(request)
+			result, err := Worker(request)
 			if err != nil {
 				continue
 			}
@@ -87,4 +90,19 @@ func (e *ConcurrentEngine) createWorker(in chan Request, out chan ParseResult, n
 			out <- result
 		}
 	}()
+}
+
+func Worker(r Request) (ParseResult, error) {
+	//log.Printf("Fetching %s\n", r.Url)
+	body, err := fetcher.FetchWithUserAgent(r.Url)
+
+	if err != nil {
+		log.Printf("Fetcher:error "+
+			"fetching url:%s %v", r.Url, err)
+		return ParseResult{}, err
+	}
+
+	parserResult := r.ParserFunc(body)
+
+	return parserResult, nil
 }

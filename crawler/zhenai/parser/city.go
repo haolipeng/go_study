@@ -6,30 +6,32 @@ import (
 )
 
 const cityNextPage = `href="(http://www.zhenai.com/zhenghun/shanghai/[^"]+)"`
-//过滤城市列表的正则表达式
-const cityRe = `<a href="(http://album.zhenai.com/u/[0-9]+)"[^>]*>([^<]+)</a>`
+const city = `<a href="(http://album.zhenai.com/u/([0-9]+))"[^>]*>([^<]+)</a>`
+
+var cityRe = regexp.MustCompile(city)
+var cityNextPageRe = regexp.MustCompile(cityNextPage)
 
 func ParserCity(contents []byte) engine.ParseResult {
-	re := regexp.MustCompile(cityRe)
-	matches := re.FindAllSubmatch(contents, -1)
+	//获取城市的名称和对应的url
+	matches := cityRe.FindAllSubmatch(contents, -1)
 
 	result := engine.ParseResult{}
 	for _, m := range matches {
-		name := string(m[2])
-		//result.Items = append(result.Items, name)
+		url := string(m[1])
+		id := string(m[2])
+		name := string(m[3])
 
 		result.Requests = append(result.Requests, engine.Request{
 			Url: string(m[1]),
 			ParserFunc: func(c []byte) engine.ParseResult {
-				return ParserProfile(c, name)
+				return ParserProfile(c, id, url, name)
 			},
 		})
 
 	}
 
 	//获取下一页内容
-	re = regexp.MustCompile(cityNextPage)
-	matches = re.FindAllSubmatch(contents, -1)
+	matches = cityNextPageRe.FindAllSubmatch(contents, -1)
 	for _, m := range matches {
 		result.Requests = append(result.Requests, engine.Request{
 			Url:        string(m[1]),
