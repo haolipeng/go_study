@@ -14,7 +14,13 @@ type Addr struct {
 
 /////////////////////////////////验证将数值投递如通道是浅拷贝还是深拷贝///////////////////////////////
 func channelCopyValue() {
-	p1 := People{"zhangsan", 26, Addr{"habin"}}
+	p1 := People{
+		"zhangsan",
+		26,
+		Addr{
+			"habin",
+		}}
+
 	var personChan = make(chan People, 1)
 	fmt.Printf("p1(1):%v\n", p1)
 
@@ -33,6 +39,6 @@ func channelCopyValue() {
 }
 
 func main() {
+	fmt.Println("将结构体投递到channel通道中，是值拷贝吗？")
 	channelCopyValue()
-	fmt.Println("channel copy value lab")
 }

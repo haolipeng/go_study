@@ -28,7 +28,7 @@ func main() {
 	inspect(r)
 
 	//type assertion
-	//convert interface type to real type
+	//将接口类型转换为具体类型
 	if mockR, ok := r.(mockretriever.Retriever); ok {
 		fmt.Println("mock Retriever:", mockR.Contents)
 	} else {
