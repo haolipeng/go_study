@@ -1,9 +1,9 @@
 package realRetriever
 
 import (
-	"time"
 	"net/http"
 	"net/http/httputil"
+	"time"
 )
 
 type Retriever struct {
@@ -13,6 +13,7 @@ type Retriever struct {
 
 func (r *Retriever) Get(url string) string {
 	resp, err := http.Get(url)
+	defer resp.Body.Close()
 	if err != nil {
 		panic(err)
 	}
@@ -21,8 +22,6 @@ func (r *Retriever) Get(url string) string {
 	if err != nil {
 		panic(err)
 	}
-
-	resp.Body.Close()
 
 	return string(result)
 }

@@ -1,11 +1,11 @@
 package main
 
 import (
-	"math/rand"
-	"time"
 	"log"
-	"sync"
+	"math/rand"
 	"strconv"
+	"sync"
+	"time"
 )
 
 func main() {

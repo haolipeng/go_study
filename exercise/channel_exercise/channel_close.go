@@ -1,8 +1,8 @@
 package main
 
 import (
-	"time"
 	"fmt"
+	"time"
 )
 
 //close一个通道会唤醒所有等待在通道上的goroutine协程
@@ -16,9 +16,9 @@ func closeChannel() {
 	time.Sleep(time.Second)
 
 	/*
-	go func() {
-		close(ch)
-	}()
+		go func() {
+			close(ch)
+		}()
 	*/
 
 	time.Sleep(2 * time.Second)
@@ -39,5 +39,5 @@ func main() {
 	closeChannel()
 
 	//panic: close of nil channel
-	///closeNilChannel()
+	closeNilChannel()
 }

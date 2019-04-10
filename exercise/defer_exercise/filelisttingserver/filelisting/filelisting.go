@@ -2,11 +2,11 @@ package filelisting
 
 //显示文件列表
 import (
+	"fmt"
+	"io/ioutil"
 	"net/http"
 	"os"
-	"io/ioutil"
 	"strings"
-	"fmt"
 )
 
 const prefix = "/list/"

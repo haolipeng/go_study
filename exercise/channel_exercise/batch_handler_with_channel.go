@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"strconv"
 	"os"
+	"strconv"
 )
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -101,12 +101,12 @@ func savePerson(dstchan <-chan Person) <-chan byte {
 	go func() {
 		//可以用for range 遍历channel通道
 		/*
-		for p:=range dstchan{
-			//call internal saveperson function
-			savePersonInfoInternal(p,outputHandle)
-		}
-		fmt.Println("All the information has been saved.")
-		sign<-0
+			for p:=range dstchan{
+				//call internal saveperson function
+				savePersonInfoInternal(p,outputHandle)
+			}
+			fmt.Println("All the information has been saved.")
+			sign<-0
 		*/
 
 		for {
@@ -127,7 +127,10 @@ func savePerson(dstchan <-chan Person) <-chan byte {
 
 func savePersonInfoInternal(p Person, hFile *os.File) {
 	strTotal := p.name + strconv.Itoa(p.age) + p.city + "\r\n"
-	hFile.WriteString(strTotal)
+	_, err := hFile.WriteString(strTotal)
+	if err != nil {
+		fmt.Println("savePersonInfoInternal Failed")
+	}
 }
 
 func initGoTicket(total int) chan byte {

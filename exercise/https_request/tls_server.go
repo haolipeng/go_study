@@ -3,9 +3,9 @@ package main
 import (
 	"crypto/rand"
 	"crypto/tls"
+	"crypto/x509"
 	"log"
 	"net"
-	"crypto/x509"
 )
 
 func main() {

@@ -1,14 +1,17 @@
 package main
 
 import (
-	"net/rpc"
-	"go_study/rpc_exercise"
+	"go_study/exercise/rpc_exercise"
 	"net"
+	"net/rpc"
 	"net/rpc/jsonrpc"
 )
 
 func main() {
-	rpc.Register(rpcdemo.DemoService{})
+	err := rpc.Register(rpcdemo.DemoService{})
+	if err != nil {
+		panic(err)
+	}
 
 	listener, err := net.Listen("tcp", ":1234")
 	if err != nil {

@@ -1,8 +1,8 @@
 package main
 
 import (
-	"runtime"
 	"fmt"
+	"runtime"
 )
 
 //轻量级的线程
@@ -23,9 +23,9 @@ func channelPractise() {
 	ci <- 20
 	close(ci)
 	/*
-	first := <-ci
-	second := <-ci
-	fmt.Printf("first is %d,second is %d\r\n",first,second)
+		first := <-ci
+		second := <-ci
+		fmt.Printf("first is %d,second is %d\r\n",first,second)
 	*/
 
 	//使用for range来遍历channel中元素

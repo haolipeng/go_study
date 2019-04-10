@@ -1,10 +1,10 @@
 package main
 
 import (
-	"math/rand"
-	"time"
 	"log"
+	"math/rand"
 	"sync"
+	"time"
 )
 
 //the receiver says "please stop sending more" by closing an additional signal channel

@@ -1,10 +1,10 @@
 package main
 
 import (
-	"fmt"
-	"os"
 	"bufio"
 	"errors"
+	"fmt"
+	"os"
 )
 
 //defer确保调用在函数结束时发生
@@ -81,7 +81,7 @@ func writeFile(filename string) {
 }
 
 func main() {
-	//tryDefer()
-	//writeFile("test.txt")
+	tryDefer()
+	writeFile("test.txt")
 	writeFileError("test.txt")
 }

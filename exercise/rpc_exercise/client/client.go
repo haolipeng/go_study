@@ -1,9 +1,9 @@
 package main
 
 import (
-	"net"
-	"go_study/rpc_exercise"
 	"fmt"
+	"go_study/exercise/rpc_exercise"
+	"net"
 	"net/rpc/jsonrpc"
 )
 

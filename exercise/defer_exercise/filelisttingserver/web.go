@@ -1,9 +1,9 @@
 package main
 
 import (
-	"net/http"
-	"go_study/defer_exercise/filelisttingserver/filelisting"
+	"go_study/exercise/defer_exercise/filelisttingserver/filelisting"
 	"log"
+	"net/http"
 	"os"
 )
 

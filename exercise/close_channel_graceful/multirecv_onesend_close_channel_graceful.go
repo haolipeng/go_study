@@ -1,10 +1,10 @@
 package main
 
 import (
-	"math/rand"
-	"time"
 	"log"
+	"math/rand"
 	"sync"
+	"time"
 )
 
 func main() {
