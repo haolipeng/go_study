@@ -29,7 +29,6 @@ func worker(id int, c chan int) {
 	}
 }
 
-//func createWorker(id int) chan< a- int {
 func createWorker(id int) chan int {
 	c := make(chan int)
 	go worker(id, c)
