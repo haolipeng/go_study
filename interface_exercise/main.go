@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"go_study/interface_exercise/realRetriever"
 	"go_study/interface_exercise/mockretriever"
+	"go_study/interface_exercise/realRetriever"
 	"time"
 )
 
@@ -16,29 +16,7 @@ type Retriever interface {
 	Get(url string) string
 }
 
-func main() {
-	var r Retriever
-
-	//1.在r的内部，是有它的类型和内容的
-	r = &realRetriever.Retriever{UserAgent: "Mozilla/5.0",
-		TimeOut: time.Minute}
-	inspect(r)
-
-	r = mockretriever.Retriever{"baidu"}
-	inspect(r)
-
-	//type assertion
-	//将接口类型转换为具体类型
-	if mockR, ok := r.(mockretriever.Retriever); ok {
-		fmt.Println("mock Retriever:", mockR.Contents)
-	} else {
-		fmt.Println("not a mock Retriever")
-	}
-
-}
-
 func inspect(r Retriever) {
-	fmt.Printf("%T %v\n", r, r)
 	//获取接口的类型
 	switch v := r.(type) {
 	case *realRetriever.Retriever: //r此时保存的是指针
@@ -46,4 +24,26 @@ func inspect(r Retriever) {
 	case mockretriever.Retriever:
 		fmt.Println("contents:", v.Contents)
 	}
+}
+
+func main() {
+	var r Retriever
+
+	//1.init realRetriever object
+	r = &realRetriever.Retriever{UserAgent: "Mozilla/5.0",
+		TimeOut: time.Minute}
+
+	inspect(r)
+
+	//2.init mockretriever object
+	r = mockretriever.Retriever{"www.baidu.com"}
+	inspect(r)
+
+	//3.将接口类型转换为具体实现类型，并判断是否转换成功
+	if mockR, ok := r.(mockretriever.Retriever); ok {
+		fmt.Println("mock Retriever:", mockR.Contents)
+	} else {
+		fmt.Println("not a mock Retriever")
+	}
+
 }

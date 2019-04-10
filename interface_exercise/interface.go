@@ -10,7 +10,7 @@ type People interface {
 	Sing(lyric string)
 }
 
-////////////////////结构体定义////////////////////
+//人类
 type Human struct {
 	name string
 	age  int
@@ -41,7 +41,7 @@ func (h Human) Sing(lyric string) {
 }
 
 func (h Human) String() string {
-	return h.name + " " + strconv.Itoa(h.age) + " " + h.home;
+	return h.name + " " + strconv.Itoa(h.age) + " " + h.home
 }
 
 //Employee方法
@@ -53,13 +53,13 @@ func (e Employee) Sing(lyric string) {
 	fmt.Printf("Employee %s Sing Song,Lyric is %s,company is %s\n", e.name, lyric, e.company)
 }
 
-//interface{} 可以存储任意类型的数据，定义一个interface类型的变量，可以存实现这个interface的任意类型的变量
+//interface{} 可以存储任意类型的数据，
 func testInterfaceSave() {
 	//创建学生和雇员变量
 	mike := Student{Human{"mike", 29, "heilongjiang"}, "shengwu", "qinghua"}
 	limei := Employee{Human{"limeimei", 21, "haerbin"}, 10000, "360"}
 
-	//定义People类型的变量
+	//定义interface类型变量（即People类型）
 	var i People
 	i = mike
 	fmt.Println("This is a Student,mike")
@@ -77,6 +77,8 @@ func testInterfaceSave() {
 type Element interface{}
 type List []Element
 
+//List是切片类型，切片中的元素类型是interface{}
+
 func interfaceUse() {
 	elemList := make(List, 3)
 	elemList[0] = 1
@@ -84,6 +86,7 @@ func interfaceUse() {
 	elemList[2] = Human{"haolipeng", 25, "jiang_su"}
 
 	for index, element := range elemList {
+		//obtain interface type
 		switch value := element.(type) {
 		case int:
 			fmt.Printf("list[%d] is an int and its value is %d\n", index, value)
@@ -95,6 +98,9 @@ func interfaceUse() {
 	}
 }
 func main() {
-	//testInterfaceSave()
+	fmt.Println("------------------testInterfaceSave---------------------------")
+	testInterfaceSave()
+
+	fmt.Println("------------------interfaceUse---------------------------")
 	interfaceUse()
 }
