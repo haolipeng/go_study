@@ -2,10 +2,13 @@ package handler
 
 import (
 	"fmt"
+	"go_study/filestore_server/meta"
+	"go_study/filestore_server/util"
 	"io"
 	"io/ioutil"
 	"net/http"
 	"os"
+	"time"
 )
 
 const FILE_PATH = "/tmp"
@@ -30,7 +33,15 @@ func UploadFile(w http.ResponseWriter, r *http.Request) {
 		}
 		defer file.Close()
 
-		//创建缓存我额济纳
+		//创建文件元结构
+		//fix me,Location
+		fMeta := meta.FileMeta{
+			FileName: fileHeader.Filename,
+			Location: fileHeader.Filename,
+			UploadAt: time.Now().Format("2006-01-02 15:04:05"),
+		}
+
+		//创建缓存文件
 		newFile, err := os.Create(fileHeader.Filename)
 		if err != nil {
 			fmt.Printf("Failed to create file %s\n", err.Error())
@@ -40,11 +51,15 @@ func UploadFile(w http.ResponseWriter, r *http.Request) {
 		defer newFile.Close()
 
 		//拷贝数据
-		writtenSize, err := io.Copy(newFile, file)
+		fMeta.FileSize, err = io.Copy(newFile, file)
 		if err != nil {
 			fmt.Printf("written size %d is not equal to file size %d", writtenSize, fileHeader.Size)
 
 		}
+
+		//计算sha1值
+		newFile.Seek(0, 0)
+		fMeta.FileSha1 = util.FileSha1(newFile)
 
 		//重定向
 		http.Redirect(w, r, "/file/upload/suc", http.StatusFound)
