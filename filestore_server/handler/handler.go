@@ -88,7 +88,13 @@ func QueryFile(w http.ResponseWriter, r *http.Request) {
 
 	fileSha1 := r.Form["filehash"][0]
 
-	fMeta := meta.GetFileMeta(fileSha1)
+	fMeta, bExist := meta.GetFileMeta(fileSha1)
+	if !bExist {
+		//向http头部写入状态码
+		w.WriteHeader(http.StatusNotFound)
+		w.Write([]byte("query file not exist!"))
+		return
+	}
 
 	//fix me GetFileMeta may return nil
 	data, err := json.Marshal(fMeta)
@@ -106,7 +112,12 @@ func QueryFile(w http.ResponseWriter, r *http.Request) {
 func DownloadFile(w http.ResponseWriter, r *http.Request) {
 	r.ParseForm()
 	fileSha1 := r.Form.Get("filehash")
-	fMeta := meta.GetFileMeta(fileSha1)
+	fMeta, bExist := meta.GetFileMeta(fileSha1)
+	if !bExist {
+		w.WriteHeader(http.StatusNotFound)
+		w.Write([]byte("file is not exist in fileMeta map"))
+		return
+	}
 
 	//通过元文件地址来打开文件
 	f, err := os.Open(fMeta.Location)
@@ -138,15 +149,31 @@ func DeleteFile(w http.ResponseWriter, r *http.Request) {
 
 	//fix me 判断文件是否存在
 	//获取文件元信息
-	fMeta := meta.GetFileMeta(fileSha1)
+	fMeta, bExist := meta.GetFileMeta(fileSha1)
+	if !bExist {
+		w.WriteHeader(http.StatusNotFound)
+		w.Write([]byte("The File to be deleted is not found in fileMap"))
+		return
+	}
+
+	localFileExist, _ := util.PathExists(fMeta.Location)
+	if false == localFileExist {
+		w.WriteHeader(http.StatusNotFound)
+		w.Write([]byte("The File to be deleted is not found in local disk"))
+		return
+	}
 
 	//删除磁盘中文件
-	os.Remove(fMeta.Location)
+	err := os.Remove(fMeta.Location)
+	if err != nil {
+		w.WriteHeader(http.StatusInternalServerError)
+		w.Write([]byte("Delete file failed, in os.Remove function"))
+	}
 
 	meta.RemoveFileMeta(fileSha1)
 
 	w.WriteHeader(http.StatusOK)
-	w.Write("file have removed!")
+	w.Write([]byte("file have removed!"))
 }
 
 func UpdateFileMeta(w http.ResponseWriter, r *http.Request) {
@@ -166,8 +193,15 @@ func UpdateFileMeta(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	fMeta := meta.GetFileMeta(fileSha1)
+	fMeta, bExist := meta.GetFileMeta(fileSha1)
+	if false == bExist {
+		w.WriteHeader(http.StatusNotFound)
+		return
+	}
+
 	fMeta.FileName = newFileName
+	//fix me,location is not change
+
 	meta.UpdateFileMeta(fMeta)
 
 	//return json data to client

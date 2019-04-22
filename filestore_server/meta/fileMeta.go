@@ -21,8 +21,9 @@ func UpdateFileMeta(fmeta FileMeta) {
 }
 
 //获取文件元信息
-func GetFileMeta(fileSha1 string) FileMeta {
-	return fileMetaMap[fileSha1]
+func GetFileMeta(fileSha1 string) (FileMeta, bool) {
+	fMeta, ok := fileMetaMap[fileSha1]
+	return fMeta, ok
 }
 
 //根据sha1删除文件元信息

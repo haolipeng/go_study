@@ -13,5 +13,7 @@ func main() {
 	http.HandleFunc("/file/download", handler.DownloadFile)
 	http.HandleFunc("/file/delete", handler.DeleteFile)
 	http.HandleFunc("/file/update", handler.UpdateFileMeta)
+
+	//侦听端口并运行服务器
 	http.ListenAndServe(":9000", nil)
 }
