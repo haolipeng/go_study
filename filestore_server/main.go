@@ -11,5 +11,7 @@ func main() {
 	http.HandleFunc("/file/upload", handler.UploadFile)
 	http.HandleFunc("/file/meta", handler.QueryFile)
 	http.HandleFunc("/file/download", handler.DownloadFile)
+	http.HandleFunc("/file/delete", handler.DeleteFile)
+	http.HandleFunc("/file/update", handler.UpdateFileMeta)
 	http.ListenAndServe(":9000", nil)
 }

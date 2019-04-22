@@ -102,12 +102,13 @@ func QueryFile(w http.ResponseWriter, r *http.Request) {
 	w.Write(data)
 }
 
+//DownloadFile 下载文件
 func DownloadFile(w http.ResponseWriter, r *http.Request) {
 	r.ParseForm()
 	fileSha1 := r.Form.Get("filehash")
 	fMeta := meta.GetFileMeta(fileSha1)
 
-	//打开文件
+	//通过元文件地址来打开文件
 	f, err := os.Open(fMeta.Location)
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
@@ -127,4 +128,55 @@ func DownloadFile(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("content-disposition", "attachment;filename=\""+fMeta.FileName+"\"")
 
 	w.Write(data)
+}
+
+//DeleteFile:删除文件
+func DeleteFile(w http.ResponseWriter, r *http.Request) {
+	//获取要删除的元素
+	r.ParseForm()
+	fileSha1 := r.Form.Get("filehash")
+
+	//fix me 判断文件是否存在
+	//获取文件元信息
+	fMeta := meta.GetFileMeta(fileSha1)
+
+	//删除磁盘中文件
+	os.Remove(fMeta.Location)
+
+	meta.RemoveFileMeta(fileSha1)
+
+	w.WriteHeader(http.StatusOK)
+	w.Write("file have removed!")
+}
+
+func UpdateFileMeta(w http.ResponseWriter, r *http.Request) {
+	r.ParseForm()
+
+	opType := r.Form.Get("op")
+	fileSha1 := r.Form.Get("filehash")
+	newFileName := r.Form.Get("filename")
+
+	if opType != "update" {
+		w.WriteHeader(http.StatusMethodNotAllowed)
+		return
+	}
+
+	if r.Method != http.MethodPost {
+		w.WriteHeader(http.StatusMethodNotAllowed)
+		return
+	}
+
+	fMeta := meta.GetFileMeta(fileSha1)
+	fMeta.FileName = newFileName
+	meta.UpdateFileMeta(fMeta)
+
+	//return json data to client
+	data, err := json.Marshal(fMeta)
+	if err != nil {
+		w.WriteHeader(http.StatusInternalServerError)
+		return
+	}
+
+	w.Write(data)
+	w.WriteHeader(http.StatusOK)
 }
