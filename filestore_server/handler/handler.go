@@ -82,8 +82,8 @@ func UploadFileSuccess(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-//FileQuery:文件元信息查询
-func FileQuery(w http.ResponseWriter, r *http.Request) {
+//QueryFile:文件元信息查询
+func QueryFile(w http.ResponseWriter, r *http.Request) {
 	r.ParseForm()
 
 	fileSha1 := r.Form["filehash"][0]
