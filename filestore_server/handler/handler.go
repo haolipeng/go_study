@@ -63,7 +63,8 @@ func UploadFile(w http.ResponseWriter, r *http.Request) {
 		fmt.Printf("file sha1 is %s\n", fMeta.FileSha1)
 
 		//添加到文件元集合中
-		meta.UpdateFileMeta(fMeta)
+		//meta.UpdateFileMeta(fMeta)
+		meta.UpdateFileMeta2DB(fMeta)
 
 		//重定向
 		http.Redirect(w, r, "/file/upload/suc", http.StatusFound)
@@ -88,7 +89,7 @@ func QueryFile(w http.ResponseWriter, r *http.Request) {
 
 	fileSha1 := r.Form["filehash"][0]
 
-	fMeta, bExist := meta.GetFileMeta(fileSha1)
+	fMeta, bExist := meta.GetFileMetaFromDb(fileSha1)
 	if !bExist {
 		//向http头部写入状态码
 		w.WriteHeader(http.StatusNotFound)
@@ -96,7 +97,7 @@ func QueryFile(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	//fix me GetFileMeta may return nil
+	//fix me GetFileMetaFromDb may return nil
 	data, err := json.Marshal(fMeta)
 	if err != nil {
 		//向http头部写入状态码
@@ -112,7 +113,7 @@ func QueryFile(w http.ResponseWriter, r *http.Request) {
 func DownloadFile(w http.ResponseWriter, r *http.Request) {
 	r.ParseForm()
 	fileSha1 := r.Form.Get("filehash")
-	fMeta, bExist := meta.GetFileMeta(fileSha1)
+	fMeta, bExist := meta.GetFileMetaFromDb(fileSha1)
 	if !bExist {
 		w.WriteHeader(http.StatusNotFound)
 		w.Write([]byte("file is not exist in fileMeta map"))
@@ -149,7 +150,7 @@ func DeleteFile(w http.ResponseWriter, r *http.Request) {
 
 	//fix me 判断文件是否存在
 	//获取文件元信息
-	fMeta, bExist := meta.GetFileMeta(fileSha1)
+	fMeta, bExist := meta.GetFileMetaFromDb(fileSha1)
 	if !bExist {
 		w.WriteHeader(http.StatusNotFound)
 		w.Write([]byte("The File to be deleted is not found in fileMap"))
@@ -193,7 +194,7 @@ func UpdateFileMeta(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	fMeta, bExist := meta.GetFileMeta(fileSha1)
+	fMeta, bExist := meta.GetFileMetaFromDb(fileSha1)
 	if false == bExist {
 		w.WriteHeader(http.StatusNotFound)
 		return
@@ -202,7 +203,8 @@ func UpdateFileMeta(w http.ResponseWriter, r *http.Request) {
 	fMeta.FileName = newFileName
 	//fix me,location is not change
 
-	meta.UpdateFileMeta(fMeta)
+	//meta.UpdateFileMeta(fMeta)
+	_ = meta.UpdateFileMeta2DB(fMeta)
 
 	//return json data to client
 	data, err := json.Marshal(fMeta)
