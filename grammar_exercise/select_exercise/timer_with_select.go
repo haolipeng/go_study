@@ -7,8 +7,9 @@ import (
 
 //Ticker和Timer的区别是什么?
 //Ticker是永久定时器，如过不调用Stop函数就会一直触发
-//Timer是单次定时器
+//Timer是单次定时器，如果想定时器再次触发，则需调用Reset函数
 
+//数据生产者 从channel通道中读取数据20次
 func dataProducer(ch chan int) {
 	for i := 0; i < 20; i++ {
 		ch <- i
@@ -16,6 +17,7 @@ func dataProducer(ch chan int) {
 	}
 }
 
+//数据消费者,使用多路选择器从channel通道中读取数据，和定时器一起使用
 func dataConsumer(ch chan int) {
 	tm := time.NewTimer(time.Second)
 	for {
@@ -26,23 +28,22 @@ func dataConsumer(ch chan int) {
 			fmt.Println("call new timer!")
 			tm.Reset(time.Second)
 		//如果ch通道中持续有数据，则不会触发此case语句
-		//每进行一次select选择时，time.After会重新创建一个定时器，而以前的定时器还遗留在时间堆中
+		//每进行一次select选择时，time.After会重新创建一个定时器，而以前的定时器还遗留在时间堆中等待gc释放
 		case <-time.After(time.Second):
 			fmt.Println("timeout")
 		}
 	}
 }
 
-/*在select多路选择器中使用time.After是错误的
- */
-func testTimerInSelect() {
+//在select多路选择器中使用time.After是错误的，After可能不触发
+func timeAfterInSelect() {
 	ch := make(chan int, 1)
 	go dataProducer(ch)
 	go dataConsumer(ch)
 }
 
 /*Tick是对NewTicker的封装*/
-func TickUse() {
+func useTick() {
 	c := time.Tick(time.Second)
 	for now := range c {
 		fmt.Println("time at ", now)
@@ -50,7 +51,7 @@ func TickUse() {
 }
 
 /*NewTimer 例子*/
-func UseNewTimer() {
+func useNewTimer() {
 	onceTimer := time.NewTimer(time.Second)
 	everyTimer := time.NewTimer(time.Second * 2)
 
@@ -66,7 +67,7 @@ func UseNewTimer() {
 }
 
 /*NewTicker 例子*/
-func UseNewTicker() {
+func useNewTicker() {
 	ticker := time.NewTicker(time.Second)
 	defer ticker.Stop()
 
@@ -89,8 +90,8 @@ func UseNewTicker() {
 }
 
 func main() {
-
-	//TickUse()
-	//UseNewTicker()
-	UseNewTimer()
+	useTick()
+	useNewTimer()
+	useNewTicker()
+	timeAfterInSelect()
 }

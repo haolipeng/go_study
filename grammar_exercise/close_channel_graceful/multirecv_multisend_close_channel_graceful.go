@@ -20,21 +20,21 @@ func main() {
 	wgReceivers := sync.WaitGroup{}
 	wgReceivers.Add(NumReceivers)
 
-	// ...
-	dataCh := make(chan int, 100)
-	stopCh := make(chan struct{})
 	// stopCh is an additional signal channel.
 	// Its sender is the moderator goroutine shown below.
 	// Its reveivers are all senders and receivers of dataCh.
-	toStop := make(chan string, 1)
+	dataCh := make(chan int, 100)
+	stopCh := make(chan struct{})
+
 	// The channel toStop is used to notify the moderator
 	// to close the additional signal channel (stopCh).
 	// Its senders are any senders and receivers of dataCh.
 	// Its reveiver is the moderator goroutine shown below.
+	toStop := make(chan string, 1)
 
 	var stoppedBy string
 
-	// moderator
+	// moderator 调解人
 	go func() {
 		stoppedBy = <-toStop
 		close(stopCh)

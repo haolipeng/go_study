@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"go_study/exercise/rpc_exercise"
+	"go_study/grammar_exercise/rpc_exercise"
 	"net"
 	"net/rpc/jsonrpc"
 )
