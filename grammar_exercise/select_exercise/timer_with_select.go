@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"fmt"
 	"time"
 )
@@ -89,9 +90,59 @@ func useNewTicker() {
 	}
 }
 
+func useNewTimerWithContext(ctx context.Context) {
+	onceTimer := time.NewTimer(time.Second)
+	everyTimer := time.NewTimer(time.Second * 2)
+
+	for {
+		select {
+		case <-ctx.Done():
+			fmt.Println("useNewTimerWithContext function return!")
+			return
+		case <-onceTimer.C:
+			fmt.Println("call 1s once timer!")
+		case <-everyTimer.C:
+			fmt.Println("call 2s every timer")
+			everyTimer.Reset(time.Second * 2)
+		}
+	}
+}
+
+/*func main() {
+	//useTick()
+	//useNewTimer()
+	//useNewTicker()
+	//timeAfterInSelect()
+	ctx, _ := context.WithTimeout(context.Background(), time.Duration(8 * time.Second))
+	go useNewTimerWithContext(ctx)
+
+	time.Sleep(30 * time.Second)
+}
+*/
+
 func main() {
-	useTick()
-	useNewTimer()
-	useNewTicker()
-	timeAfterInSelect()
+	//ctx, cancel := context.WithCancel(context.Background())
+	context.WithDeadline(context.Background())
+	go watch(ctx, "【监控1】")
+	go watch(ctx, "【监控2】")
+	go watch(ctx, "【监控3】")
+
+	time.Sleep(10 * time.Second)
+	fmt.Println("可以了，通知监控停止")
+	cancel()
+	//为了检测监控过是否停止，如果没有监控输出，就表示停止了
+	time.Sleep(5 * time.Second)
+}
+
+func watch(ctx context.Context, name string) {
+	for {
+		select {
+		case <-ctx.Done():
+			fmt.Println(name, "监控退出，停止了...")
+			return
+		default:
+			fmt.Println(name, "goroutine监控中...")
+			time.Sleep(2 * time.Second)
+		}
+	}
 }
