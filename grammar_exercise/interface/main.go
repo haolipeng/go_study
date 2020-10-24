@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"go_study/grammar_exercise/interface_exercise/mockretriever"
-	"go_study/grammar_exercise/interface_exercise/realRetriever"
+	"go_study/grammar_exercise/interface/mockretriever"
+	"go_study/grammar_exercise/interface/realRetriever"
 	"time"
 )
 

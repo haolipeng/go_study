@@ -26,7 +26,12 @@ func main() {
 	app := newApp()
 	userList = []string{}
 
-	app.Run(iris.Addr(":8080"))
+	err := app.Run(iris.Addr(":8080"))
+	if err != nil {
+		fmt.Println("程序启动失败")
+		return
+	}
+	fmt.Println("程序启动成功")
 }
 
 func (c *lotteryController) Get() string {

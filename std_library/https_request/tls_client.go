@@ -20,7 +20,7 @@ func main() {
 	if err != nil {
 		log.Fatalf("client: dial: %s", err)
 	}
-	defer conn.Close()
+
 	log.Println("client: connected to: ", conn.RemoteAddr())
 
 	state := conn.ConnectionState()
@@ -42,4 +42,9 @@ func main() {
 	n, err = conn.Read(reply)
 	log.Printf("client: read %q (%d bytes)", string(reply[:n]), n)
 	log.Print("client: exiting")
+
+	err = conn.Close()
+	if err != nil {
+		log.Fatalf("conn close failed: %s", err)
+	}
 }

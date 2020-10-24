@@ -1,7 +1,7 @@
 package main
 
 import (
-	"go_study/grammar_exercise/defer_exercise/filelisttingserver/filelisting"
+	"go_study/grammar_exercise/defer/filelisttingserver/filelisting"
 	"log"
 	"net/http"
 	"os"

@@ -1,6 +1,7 @@
 package realRetriever
 
 import (
+	"fmt"
 	"net/http"
 	"net/http/httputil"
 	"time"
@@ -13,7 +14,14 @@ type Retriever struct {
 
 func (r *Retriever) Get(url string) string {
 	resp, err := http.Get(url)
-	defer resp.Body.Close()
+	//defer resp.Body.Close() //Unhandled error
+	defer func() {
+		err = resp.Body.Close()
+		if err != nil {
+			fmt.Println("response close failed")
+		}
+	}()
+
 	if err != nil {
 		panic(err)
 	}

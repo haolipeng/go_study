@@ -121,8 +121,7 @@ func useNewTimerWithContext(ctx context.Context) {
 */
 
 func main() {
-	//ctx, cancel := context.WithCancel(context.Background())
-	context.WithDeadline(context.Background())
+	ctx, cancel := context.WithCancel(context.Background())
 	go watch(ctx, "【监控1】")
 	go watch(ctx, "【监控2】")
 	go watch(ctx, "【监控3】")
