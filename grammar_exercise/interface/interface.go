@@ -17,6 +17,19 @@ type Human struct {
 	home string
 }
 
+//Human方法
+func (h Human) SayHi() {
+	fmt.Printf("I am a Human,name is %s,age is %d\n", h.name, h.age)
+}
+
+func (h Human) Sing(lyric string) {
+	fmt.Printf("Human %s Sing Song,Lyric is %s\n", h.name, lyric)
+}
+
+func (h Human) String() string {
+	return h.name + " " + strconv.Itoa(h.age) + " " + h.home
+}
+
 //学生
 type Student struct {
 	Human
@@ -31,19 +44,6 @@ type Employee struct {
 	company string //公司名称
 }
 
-//Human方法
-func (h Human) SayHi() {
-	fmt.Printf("I am a Human,name is %s,age is %d\n", h.name, h.age)
-}
-
-func (h Human) Sing(lyric string) {
-	fmt.Printf("Human %s Sing Song,Lyric is %s\n", h.name, lyric)
-}
-
-func (h Human) String() string {
-	return h.name + " " + strconv.Itoa(h.age) + " " + h.home
-}
-
 //Employee方法
 func (e Employee) SayHi() {
 	fmt.Printf("I am a Employee,name is %s,age is %d\n", e.name, e.age)
@@ -53,11 +53,13 @@ func (e Employee) Sing(lyric string) {
 	fmt.Printf("Employee %s Sing Song,Lyric is %s,company is %s\n", e.name, lyric, e.company)
 }
 
+//外部struct会覆盖内部struct的同名字段、同名方法,这条规则使得go Struct能够实现面向对象中的重写
+//而且可以重写字段，重写方法
+
 //interface{} 可以存储任意类型的数据，
 func testInterfaceSave() {
-	//创建学生和雇员变量
+	//创建学生
 	mike := Student{Human{"mike", 29, "heilongjiang"}, "shengwu", "qinghua"}
-	limei := Employee{Human{"limeimei", 21, "haerbin"}, 10000, "360"}
 
 	//定义interface类型变量（即People类型）
 	var i People
@@ -66,7 +68,9 @@ func testInterfaceSave() {
 	i.SayHi()
 	i.Sing("wo shi mike")
 
+	//创建雇员
 	//i也能存储Employee类型变量
+	limei := Employee{Human{"limeimei", 21, "haerbin"}, 10000, "360"}
 	i = limei
 	fmt.Println("This is a Employee,limeimei")
 	i.SayHi()
