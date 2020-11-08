@@ -5,6 +5,11 @@ import (
 	"strconv"
 )
 
+/*
+外部struct会覆盖内部struct的同名字段、同名方法,这条规则使得go Struct能够实现面向对象中的重写
+而且可以重写字段，重写方法
+*/
+
 type People interface {
 	SayHi()
 	Sing(lyric string)
@@ -53,9 +58,6 @@ func (e Employee) Sing(lyric string) {
 	fmt.Printf("Employee %s Sing Song,Lyric is %s,company is %s\n", e.name, lyric, e.company)
 }
 
-//外部struct会覆盖内部struct的同名字段、同名方法,这条规则使得go Struct能够实现面向对象中的重写
-//而且可以重写字段，重写方法
-
 //interface{} 可以存储任意类型的数据，
 func testInterfaceSave() {
 	//创建学生
@@ -69,7 +71,6 @@ func testInterfaceSave() {
 	i.Sing("wo shi mike")
 
 	//创建雇员
-	//i也能存储Employee类型变量
 	limei := Employee{Human{"limeimei", 21, "haerbin"}, 10000, "360"}
 	i = limei
 	fmt.Println("This is a Employee,limeimei")
@@ -77,14 +78,9 @@ func testInterfaceSave() {
 	i.Sing("wo shi li meimei")
 }
 
-//interface{} + make 来创建内建容器
-type Element interface{}
-type List []Element
-
-//List是切片类型，切片中的元素类型是interface{}
-
-func interfaceUse() {
-	elemList := make(List, 3)
+//演示元素类型是interface{}的切片
+func interfaceElemSlice() {
+	elemList := make([]interface{}, 3)
 	elemList[0] = 1
 	elemList[1] = "hello world"
 	elemList[2] = Human{"haolipeng", 25, "jiang_su"}
@@ -106,5 +102,5 @@ func main() {
 	testInterfaceSave()
 
 	fmt.Println("------------------interfaceUse---------------------------")
-	interfaceUse()
+	interfaceElemSlice()
 }
