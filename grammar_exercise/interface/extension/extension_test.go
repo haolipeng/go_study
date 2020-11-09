@@ -23,9 +23,10 @@ type Dog struct {
 	Pet
 }
 
-/*func (d *Dog) Speak() {
+//for test,注释掉Dog的Speak()函数
+func (d *Dog) Speak() {
 	fmt.Println("dog Speak() called")
-}*/
+}
 
 func (d *Dog) SpeakTo(name string) {
 	d.Speak()
