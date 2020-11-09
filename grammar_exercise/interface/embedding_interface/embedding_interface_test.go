@@ -5,69 +5,61 @@ import (
 	"testing"
 )
 
-// 接口1
-type AuthorDetails interface {
-	details()
+type purchase interface {
+	sell()
 }
 
-// 接口2
-type AuthorArticles interface {
-	articles()
+type display interface {
+	show()
 }
 
-// 接口3嵌入了接口1和接口2
-type FinalDetails interface {
-	AuthorDetails
-	AuthorArticles
+// We use the two previous
+// interfaces to form
+// The following composite
+// interface through embedding
+type salesman interface {
+	purchase
+	display
 }
 
-// Structure
-type author struct {
-	a_name    string
-	branch    string
-	college   string
-	year      int
-	salary    int
-	particles int
-	tarticles int
+type game struct {
+	name, price    string
+	gameCollection []string
 }
 
-// Implementing method of
-// the interface 1
-func (a author) details() {
-
-	fmt.Printf("Author Name: %s", a.a_name)
-	fmt.Printf("\nBranch: %s and passing year: %d",
-		a.branch, a.year)
-	fmt.Printf("\nCollege Name: %s", a.college)
-	fmt.Printf("\nSalary: %d", a.salary)
-	fmt.Printf("\nPublished articles: %d", a.particles)
+// We use the game struct to
+// implement the interfaces
+func (t game) sell() {
+	fmt.Println("--------------------------------------")
+	fmt.Println("Name:", t.name)
+	fmt.Println("Price:", t.price)
+	fmt.Println("--------------------------------------")
+}
+func (t game) show() {
+	fmt.Println("The Games available are: ")
+	for _, name := range t.gameCollection {
+		fmt.Println(name)
+	}
+	fmt.Println("--------------------------------------")
 }
 
-// Implementing method
-// of the interface 2
-func (a author) articles() {
-	pendingarticles := a.tarticles - a.particles
-	fmt.Printf("\nPending articles: %d", pendingarticles)
+// This method takes the composite
+// interface as a parameter
+// Since the interface is composed
+// of purchase and display
+// Hence the child methods of those
+// interfaces can be accessed here
+func shop(s salesman) {
+	fmt.Println(s)
+	s.sell()
+	s.show()
 }
 
 func TestEmbeddingInterface(t *testing.T) {
-	// Assigning values
-	// to the structure
-	values := author{
-		a_name:    "Mickey",
-		branch:    "Computer science",
-		college:   "XYZ",
-		year:      2012,
-		salary:    50000,
-		particles: 209,
-		tarticles: 309,
-	}
 
-	// Accessing the methods of
-	// the interface 1 and 2
-	// Using FinalDetails interface
-	var f FinalDetails = values
-	f.details()
-	f.articles()
+	collection := []string{"XYZ",
+		"Trial by Code", "Sea of Rubies"}
+	game1 := game{"ABC", "$125", collection}
+	shop(game1)
+
 }
