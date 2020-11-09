@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"strconv"
+	"testing"
 )
 
 /*
@@ -79,7 +80,7 @@ func testInterfaceSave() {
 }
 
 //演示元素类型是interface{}的切片
-func interfaceElemSlice() {
+func interfaceElemSlice(t testing.T) {
 	elemList := make([]interface{}, 3)
 	elemList[0] = 1
 	elemList[1] = "hello world"
@@ -97,10 +98,11 @@ func interfaceElemSlice() {
 		}
 	}
 }
+
 func main() {
 	fmt.Println("------------------testInterfaceSave---------------------------")
 	testInterfaceSave()
 
-	fmt.Println("------------------interfaceUse---------------------------")
+	//fmt.Println("------------------interfaceUse---------------------------")
 	interfaceElemSlice()
 }
