@@ -19,13 +19,26 @@ func Mutiply(a, b int, reply *int) {
 	*reply = a * b
 }
 
+//函数类型作为函数参数
+func add(a, b int) int {
+	fmt.Println("call add function!")
+	return a + b
+}
+
+func callback(x, y int, f func(int, int) int) int {
+	return f(x, y)
+}
+
 func main() {
 	res := min(1, 2)
 	fmt.Printf("result:%d\n", res)
 
-	//test mutiply
 	n := 0
 	reply := &n
 	Mutiply(10, 5, reply)
 	fmt.Println("Multiply:", *reply)
+
+	//测试函数类型作为函数参数
+	res = callback(10, 5, add)
+	fmt.Println("result:", res)
 }
