@@ -44,19 +44,6 @@ type Employee struct {
 	company string //公司名称
 }
 
-//Human方法
-func (h Human) SayHi() {
-	fmt.Printf("I am a Human,name is %s,age is %d\n", h.name, h.age)
-}
-
-func (h Human) Sing(lyric string) {
-	fmt.Printf("Human %s Sing Song,Lyric is %s\n", h.name, lyric)
-}
-
-func (h Human) String() string {
-	return h.name + " " + strconv.Itoa(h.age) + " " + h.home
-}
-
 //Employee方法
 func (e Employee) SayHi() {
 	fmt.Printf("I am a Employee,name is %s,age is %d\n", e.name, e.age)
