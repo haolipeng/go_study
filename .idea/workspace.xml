@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a11b864b-5158-4507-bc40-0e2f0185bc36" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/third_party/multimap/multimap.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grammar_exercise/interface/interface.go" beforeDir="false" afterPath="$PROJECT_DIR$/grammar_exercise/interface/interface.go" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go Application" />
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="C:\Go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="false" />
+  </component>
+  <component name="ProjectId" id="1jixKfpfjHMsDMZVwoFoSSHo8jO" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RunManager" selected="Go Build.go build multimap.go">
+    <configuration name="go build go_study/grammar_exercise/interface" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go_study" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/grammar_exercise/interface/interface.go" />
+      <package value="go_study/grammar_exercise/interface" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build multimap.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go_study" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/third_party/multimap/multimap.go" />
+      <package value="go_study" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestSomething in go_study/testing/goconvey" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="go_study" />
+      <working_directory value="$PROJECT_DIR$/testing/goconvey" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="go_study/testing/goconvey" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTestSomething\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestSomething in go_study/testing/testify" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="go_study" />
+      <working_directory value="$PROJECT_DIR$/testing/testify" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="go_study/testing/testify" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTestSomething\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="testify_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="go_study" />
+      <working_directory value="$PROJECT_DIR$/testing/testify" />
+      <framework value="gotest" />
+      <kind value="FILE" />
+      <package value="go_study" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/testing/testify/testify_test.go" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build multimap.go" />
+        <item itemvalue="Go Build.go build go_study/grammar_exercise/interface" />
+        <item itemvalue="Go Test.testify_test.go" />
+        <item itemvalue="Go Test.TestSomething in go_study/testing/testify" />
+        <item itemvalue="Go Test.TestSomething in go_study/testing/goconvey" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="golang单元测试" />
+    <option name="LAST_COMMIT_MESSAGE" value="golang单元测试" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="324" y="27" key="CommitChangelistDialog2" timestamp="1604311329038">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="324" y="27" key="CommitChangelistDialog2/0.0.1440.920@0.0.1440.920" timestamp="1604311329038" />
+    <state x="138" y="74" key="DiffContextDialog" timestamp="1604301053557">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="138" y="74" key="DiffContextDialog/0.0.1440.920@0.0.1440.920" timestamp="1604301053557" />
+    <state x="501" y="215" key="FileChooserDialogImpl" timestamp="1605000604112">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="501" y="215" key="FileChooserDialogImpl/0.0.1440.920@0.0.1440.920" timestamp="1605000604112" />
+    <state x="535" y="379" key="Github.CreateGistDialog" timestamp="1604311422356">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="535" y="379" key="Github.CreateGistDialog/0.0.1440.920@0.0.1440.920" timestamp="1604311422356" />
+    <state width="1397" height="242" key="GridCell.Tab.0.bottom" timestamp="1605087696474">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="1397" height="242" key="GridCell.Tab.0.bottom/0.0.1440.920@0.0.1440.920" timestamp="1605087696474" />
+    <state width="1397" height="242" key="GridCell.Tab.0.center" timestamp="1605087696473">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="1397" height="242" key="GridCell.Tab.0.center/0.0.1440.920@0.0.1440.920" timestamp="1605087696473" />
+    <state width="1397" height="242" key="GridCell.Tab.0.left" timestamp="1605087696473">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="1397" height="242" key="GridCell.Tab.0.left/0.0.1440.920@0.0.1440.920" timestamp="1605087696473" />
+    <state width="1397" height="242" key="GridCell.Tab.0.right" timestamp="1605087696474">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="1397" height="242" key="GridCell.Tab.0.right/0.0.1440.920@0.0.1440.920" timestamp="1605087696474" />
+    <state x="313" y="193" key="Vcs.Push.Dialog.v2" timestamp="1604311441971">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="313" y="193" key="Vcs.Push.Dialog.v2/0.0.1440.920@0.0.1440.920" timestamp="1604311441971" />
+  </component>
+</project>
