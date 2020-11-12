@@ -9,8 +9,13 @@ import (
 
 var once sync.Once
 var Instance *Singleton
+var duckObj *Duck
 
 type Singleton struct {
+	name string
+}
+
+type Duck struct {
 	name string
 }
 
@@ -21,4 +26,13 @@ func GetSingletonObj() *Singleton {
 	})
 
 	return Instance
+}
+
+func GetDuck() *Duck {
+	once.Do(func() {
+		fmt.Println("Create Singleton obj.")
+		duckObj = new(Duck)
+	})
+
+	return duckObj
 }

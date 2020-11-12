@@ -19,4 +19,6 @@ func TestGetSingletonObj(t *testing.T) {
 	}
 
 	wg.Wait()
+	duck := GetDuck()
+	fmt.Printf("duck pionter:%x\n", unsafe.Pointer(duck))
 }
