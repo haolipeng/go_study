@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a11b864b-5158-4507-bc40-0e2f0185bc36" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/multimap/multimap.go" afterDir="false" />
+    <list default="true" id="a11b864b-5158-4507-bc40-0e2f0185bc36" name="Default Changelist" comment="测试单例模式">
+      <change afterPath="$PROJECT_DIR$/common_mistake/func_args/func_args.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common_mistake/func_ret_interface/return_interface.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common_mistake/nil_string.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common_mistake/read.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/go_reading/data_race/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rcpexample/streaming/client/client.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rcpexample/streaming/pb/helloworld.pb.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rcpexample/streaming/pb/helloworld.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rcpexample/streaming/server/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grammar_exercise/interface/interface.go" beforeDir="false" afterPath="$PROJECT_DIR$/grammar_exercise/interface/interface.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Go Application" />
         <option value="Go File" />
+        <option value="Go Application" />
       </list>
     </option>
   </component>
@@ -29,18 +36,22 @@
     <option name="indexEntireGoPath" value="false" />
   </component>
   <component name="ProjectId" id="1jixKfpfjHMsDMZVwoFoSSHo8jO" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultGoTemplateProperty" value="Go Application" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/common_mistake/func_args.go" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -48,64 +59,68 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
-  <component name="RunManager" selected="Go Build.go build multimap.go">
-    <configuration name="go build go_study/grammar_exercise/interface" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\goProject\src\go_study\rcpexample\streaming\pb" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\goProject\src\go_study\common_mistake\func_args" />
+      <recent name="D:\goProject\src\go_study\rcpexample\streaming\pb" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Go Build.go build go_study/common_mistake/func_ret_interface">
+    <configuration name="go build go_study/common_mistake (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go_study" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/common_mistake/func_args.go" />
+      <package value="go_study/common_mistake" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build go_study/common_mistake" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_study" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/grammar_exercise/interface/interface.go" />
-      <package value="go_study/grammar_exercise/interface" />
+      <filePath value="$PROJECT_DIR$/common_mistake/range_slice_array.go|$PROJECT_DIR$/common_mistake/func_args.go" />
+      <package value="go_study/common_mistake" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build multimap.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build go_study/common_mistake/func_args" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go_study" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/common_mistake/func_args/func_args.go" />
+      <package value="go_study/common_mistake/func_args" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build go_study/common_mistake/func_ret_interface" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go_study" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/common_mistake/func_ret_interface/return_interface.go" />
+      <package value="go_study/common_mistake/func_ret_interface" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build return_interface.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_study" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/third_party/multimap/multimap.go" />
+      <filePath value="$PROJECT_DIR$/common_mistake/func_ret_interface/return_interface.go" />
       <package value="go_study" />
       <directory value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestSomething in go_study/testing/goconvey" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="go_study" />
-      <working_directory value="$PROJECT_DIR$/testing/goconvey" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="go_study/testing/goconvey" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <pattern value="^\QTestSomething\E$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestSomething in go_study/testing/testify" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="go_study" />
-      <working_directory value="$PROJECT_DIR$/testing/testify" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="go_study/testing/testify" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <pattern value="^\QTestSomething\E$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="testify_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="go_study" />
-      <working_directory value="$PROJECT_DIR$/testing/testify" />
-      <framework value="gotest" />
-      <kind value="FILE" />
-      <package value="go_study" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/testing/testify/testify_test.go" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build multimap.go" />
-        <item itemvalue="Go Build.go build go_study/grammar_exercise/interface" />
-        <item itemvalue="Go Test.testify_test.go" />
-        <item itemvalue="Go Test.TestSomething in go_study/testing/testify" />
-        <item itemvalue="Go Test.TestSomething in go_study/testing/goconvey" />
+        <item itemvalue="Go Build.go build go_study/common_mistake/func_ret_interface" />
+        <item itemvalue="Go Build.go build return_interface.go" />
+        <item itemvalue="Go Build.go build go_study/common_mistake/func_args" />
+        <item itemvalue="Go Build.go build go_study/common_mistake (1)" />
+        <item itemvalue="Go Build.go build go_study/common_mistake" />
       </list>
     </recent_temporary>
   </component>
@@ -114,48 +129,83 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="golang单元测试" />
-    <option name="LAST_COMMIT_MESSAGE" value="golang单元测试" />
+    <MESSAGE value="解决冲突" />
+    <MESSAGE value="测试单例模式" />
+    <option name="LAST_COMMIT_MESSAGE" value="测试单例模式" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
   </component>
   <component name="WindowStateProjectService">
-    <state x="324" y="27" key="CommitChangelistDialog2" timestamp="1604311329038">
+    <state x="324" y="27" key="CommitChangelistDialog2" timestamp="1605535669854">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="324" y="27" key="CommitChangelistDialog2/0.0.1440.920@0.0.1440.920" timestamp="1604311329038" />
-    <state x="138" y="74" key="DiffContextDialog" timestamp="1604301053557">
+    <state x="324" y="27" key="CommitChangelistDialog2/0.0.1440.920@0.0.1440.920" timestamp="1605535669854" />
+    <state x="138" y="74" key="DiffContextDialog" timestamp="1605535589705">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="138" y="74" key="DiffContextDialog/0.0.1440.920@0.0.1440.920" timestamp="1604301053557" />
-    <state x="501" y="215" key="FileChooserDialogImpl" timestamp="1605000604112">
+    <state x="138" y="74" key="DiffContextDialog/0.0.1440.920@0.0.1440.920" timestamp="1605535589705" />
+    <state x="501" y="215" key="FileChooserDialogImpl" timestamp="1605681677007">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="501" y="215" key="FileChooserDialogImpl/0.0.1440.920@0.0.1440.920" timestamp="1605000604112" />
+    <state x="501" y="215" key="FileChooserDialogImpl/0.0.1440.920@0.0.1440.920" timestamp="1605681677007" />
     <state x="535" y="379" key="Github.CreateGistDialog" timestamp="1604311422356">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state x="535" y="379" key="Github.CreateGistDialog/0.0.1440.920@0.0.1440.920" timestamp="1604311422356" />
-    <state width="1397" height="242" key="GridCell.Tab.0.bottom" timestamp="1605087696474">
+    <state width="1397" height="242" key="GridCell.Tab.0.bottom" timestamp="1605689296411">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="242" key="GridCell.Tab.0.bottom/0.0.1440.920@0.0.1440.920" timestamp="1605087696474" />
-    <state width="1397" height="242" key="GridCell.Tab.0.center" timestamp="1605087696473">
+    <state width="1397" height="242" key="GridCell.Tab.0.bottom/0.0.1440.920@0.0.1440.920" timestamp="1605689296411" />
+    <state width="1397" height="242" key="GridCell.Tab.0.center" timestamp="1605689296410">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="242" key="GridCell.Tab.0.center/0.0.1440.920@0.0.1440.920" timestamp="1605087696473" />
-    <state width="1397" height="242" key="GridCell.Tab.0.left" timestamp="1605087696473">
+    <state width="1397" height="242" key="GridCell.Tab.0.center/0.0.1440.920@0.0.1440.920" timestamp="1605689296410" />
+    <state width="1397" height="242" key="GridCell.Tab.0.left" timestamp="1605689296410">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="242" key="GridCell.Tab.0.left/0.0.1440.920@0.0.1440.920" timestamp="1605087696473" />
-    <state width="1397" height="242" key="GridCell.Tab.0.right" timestamp="1605087696474">
+    <state width="1397" height="242" key="GridCell.Tab.0.left/0.0.1440.920@0.0.1440.920" timestamp="1605689296410" />
+    <state width="1397" height="242" key="GridCell.Tab.0.right" timestamp="1605689296411">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="242" key="GridCell.Tab.0.right/0.0.1440.920@0.0.1440.920" timestamp="1605087696474" />
-    <state x="313" y="193" key="Vcs.Push.Dialog.v2" timestamp="1604311441971">
+    <state width="1397" height="242" key="GridCell.Tab.0.right/0.0.1440.920@0.0.1440.920" timestamp="1605689296411" />
+    <state width="1397" height="300" key="GridCell.Tab.1.bottom" timestamp="1605655008238">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="313" y="193" key="Vcs.Push.Dialog.v2/0.0.1440.920@0.0.1440.920" timestamp="1604311441971" />
+    <state width="1397" height="300" key="GridCell.Tab.1.bottom/0.0.1440.920@0.0.1440.920" timestamp="1605655008238" />
+    <state width="1397" height="300" key="GridCell.Tab.1.center" timestamp="1605655008238">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="1397" height="300" key="GridCell.Tab.1.center/0.0.1440.920@0.0.1440.920" timestamp="1605655008238" />
+    <state width="1397" height="300" key="GridCell.Tab.1.left" timestamp="1605655008238">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="1397" height="300" key="GridCell.Tab.1.left/0.0.1440.920@0.0.1440.920" timestamp="1605655008238" />
+    <state width="1397" height="300" key="GridCell.Tab.1.right" timestamp="1605655008238">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="1397" height="300" key="GridCell.Tab.1.right/0.0.1440.920@0.0.1440.920" timestamp="1605655008238" />
+    <state x="122" y="63" key="MergeDialog" timestamp="1605151137300">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="122" y="63" key="MergeDialog/0.0.1440.920@0.0.1440.920" timestamp="1605151137300" />
+    <state x="357" y="221" key="MultipleFileMergeDialog" timestamp="1605151137310">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="357" y="221" key="MultipleFileMergeDialog/0.0.1440.920@0.0.1440.920" timestamp="1605151137310" />
+    <state x="556" y="161" key="RollbackChangesDialog" timestamp="1605535629369">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="556" y="161" key="RollbackChangesDialog/0.0.1440.920@0.0.1440.920" timestamp="1605535629369" />
+    <state x="313" y="193" key="Vcs.Push.Dialog.v2" timestamp="1605171623795">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="313" y="193" key="Vcs.Push.Dialog.v2/0.0.1440.920@0.0.1440.920" timestamp="1605171623795" />
+    <state x="418" y="192" width="605" height="536" key="find.popup" timestamp="1605258407080">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="418" y="192" width="605" height="536" key="find.popup/0.0.1440.920@0.0.1440.920" timestamp="1605258407080" />
   </component>
 </project>
