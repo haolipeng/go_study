@@ -14,7 +14,7 @@ import (
 var (
 	address = flag.String("addr", "localhost:8973", "address")
 	name    = flag.String("n", "world", "name")
-	example = flag.Int("e", 1, "0 for replay streaming, 1 for request streaming, 2 for bi-streaming")
+	example = flag.Int("e", 2, "0 for replay streaming, 1 for request streaming, 2 for bi-streaming")
 )
 
 func main() {

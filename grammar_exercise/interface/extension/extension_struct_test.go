@@ -8,10 +8,11 @@ import (
 )
 
 type Pet struct {
+	name string
 }
 
 func (p *Pet) Speak() {
-	fmt.Print("Pet Speak() called")
+	fmt.Print("Pet Speak() called\n")
 }
 
 func (p *Pet) SpeakTo(name string) {
@@ -21,12 +22,13 @@ func (p *Pet) SpeakTo(name string) {
 
 type Dog struct {
 	Pet
+	age int
 }
 
 //for test,注释掉Dog的Speak()函数
-func (d *Dog) Speak() {
+/*func (d *Dog) Speak() {
 	fmt.Println("dog Speak() called")
-}
+}*/
 
 func (d *Dog) SpeakTo(name string) {
 	d.Speak()
