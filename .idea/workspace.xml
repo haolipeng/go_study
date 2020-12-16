@@ -5,15 +5,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a11b864b-5158-4507-bc40-0e2f0185bc36" name="Default Changelist" comment="测试单例模式">
-      <change afterPath="$PROJECT_DIR$/geektime-go-trainning/filePath/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grammar_exercise/rateLimit/限速.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/std_library/cmd/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/std_library/strings/main.go" afterDir="false" />
+    <list default="true" id="a11b864b-5158-4507-bc40-0e2f0185bc36" name="Default Changelist" comment="代码验证error group和http库">
+      <change afterPath="$PROJECT_DIR$/common_mistake/for-range/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/std_library/error_group/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/std_library/http/http_exercise.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grammar_exercise/map/map.go" beforeDir="false" afterPath="$PROJECT_DIR$/grammar_exercise/map/map.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rcpexample/streaming/client/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/rcpexample/streaming/client/client.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/third_party/kubernetes_client/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/third_party/kubernetes_client/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common_mistake/nil_string.go" beforeDir="false" afterPath="$PROJECT_DIR$/common_mistake/string/nil_string.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common_mistake/range_slice_array.go" beforeDir="false" afterPath="$PROJECT_DIR$/common_mistake/range_slice_array.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,69 +63,70 @@
     <property name="settings.editor.selected.configurable" value="com.goide.configuration.GoLibrariesConfigurableProvider" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\goProject\src\go_study\third_party\k8s_client" />
-      <recent name="D:\goProject\src\go_study\rcpexample\streaming\pb" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\goProject\src\go_study\common_mistake\string" />
       <recent name="D:\goProject\src\go_study\geektime-go-trainning\filePath" />
       <recent name="D:\goProject\src\go_study\common_mistake\func_args" />
       <recent name="D:\goProject\src\go_study\rcpexample\streaming\pb" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\goProject\src\go_study\third_party\k8s_client" />
+      <recent name="D:\goProject\src\go_study\rcpexample\streaming\pb" />
+    </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build go_study/third_party/kubernetes_client">
-    <configuration name="go build go_study/common_mistake/func_ret_interface" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Build.go build go_study/std_library/http">
+    <configuration name="go build go_study/common_mistake" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_study" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/common_mistake/func_ret_interface/return_interface.go" />
-      <package value="go_study/common_mistake/func_ret_interface" />
+      <filePath value="$PROJECT_DIR$/common_mistake/range_slice_array.go" />
+      <package value="go_study/common_mistake" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build go_study/std_library/strings" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build go_study/common_mistake/for-range" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_study" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/std_library/strings/main.go" />
-      <package value="go_study/std_library/strings" />
+      <filePath value="$PROJECT_DIR$/common_mistake/for-range/main.go" />
+      <package value="go_study/common_mistake/for-range" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build go_study/third_party/kubernetes_client" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build go_study/std_library/error_group" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_study" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/third_party/kubernetes_client/main.go" />
-      <package value="go_study/third_party/kubernetes_client" />
+      <filePath value="$PROJECT_DIR$/std_library/error_group/main.go" />
+      <package value="go_study/std_library/error_group" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build go_study/std_library/http" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go_study" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/std_library/http/http_exercise.go" />
+      <package value="go_study/std_library/http" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build logFatal.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_study" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/third_party/k8s_client/main.go" />
-      <package value="go_study" />
-      <directory value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build return_interface.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="go_study" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/common_mistake/func_ret_interface/return_interface.go" />
+      <filePath value="$PROJECT_DIR$/common_mistake/logFatal/logFatal.go" />
       <package value="go_study" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build go_study/third_party/kubernetes_client" />
-        <item itemvalue="Go Build.go build go_study/std_library/strings" />
-        <item itemvalue="Go Build.go build main.go" />
-        <item itemvalue="Go Build.go build go_study/common_mistake/func_ret_interface" />
-        <item itemvalue="Go Build.go build return_interface.go" />
+        <item itemvalue="Go Build.go build go_study/std_library/http" />
+        <item itemvalue="Go Build.go build go_study/common_mistake/for-range" />
+        <item itemvalue="Go Build.go build go_study/common_mistake" />
+        <item itemvalue="Go Build.go build logFatal.go" />
+        <item itemvalue="Go Build.go build go_study/std_library/error_group" />
       </list>
     </recent_temporary>
   </component>
@@ -175,9 +175,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="golang单元测试" />
     <MESSAGE value="解决冲突" />
-    <MESSAGE value="测试单例模式" />
     <MESSAGE value="提交k8s客户端代码" />
-    <option name="LAST_COMMIT_MESSAGE" value="提交k8s客户端代码" />
+    <MESSAGE value="测试单例模式" />
+    <MESSAGE value="代码验证error group和http库" />
+    <option name="LAST_COMMIT_MESSAGE" value="代码验证error group和http库" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -192,10 +193,10 @@
       <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state x="176" y="115" width="1089" height="742" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.920@0.0.1440.920" timestamp="1608024533142" />
-    <state x="324" y="27" key="CommitChangelistDialog2" timestamp="1606987558824">
+    <state x="324" y="27" key="CommitChangelistDialog2" timestamp="1608113763995">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="324" y="27" key="CommitChangelistDialog2/0.0.1440.920@0.0.1440.920" timestamp="1606987558824" />
+    <state x="324" y="27" key="CommitChangelistDialog2/0.0.1440.920@0.0.1440.920" timestamp="1608113763995" />
     <state width="639" height="466" key="DebuggerActiveHint" timestamp="1607059487659">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
@@ -216,38 +217,38 @@
       <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state x="535" y="379" key="Github.CreateGistDialog/0.0.1440.920@0.0.1440.920" timestamp="1604311422356" />
-    <state width="1397" height="188" key="GridCell.Tab.0.bottom" timestamp="1608087642747">
+    <state width="1397" height="371" key="GridCell.Tab.0.bottom" timestamp="1608113809230">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="188" key="GridCell.Tab.0.bottom/0.0.1440.920@0.0.1440.920" timestamp="1608087642747" />
-    <state width="1397" height="188" key="GridCell.Tab.0.center" timestamp="1608087642747">
+    <state width="1397" height="371" key="GridCell.Tab.0.bottom/0.0.1440.920@0.0.1440.920" timestamp="1608113809230" />
+    <state width="1397" height="371" key="GridCell.Tab.0.center" timestamp="1608113809229">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="188" key="GridCell.Tab.0.center/0.0.1440.920@0.0.1440.920" timestamp="1608087642747" />
-    <state width="1397" height="188" key="GridCell.Tab.0.left" timestamp="1608087642747">
+    <state width="1397" height="371" key="GridCell.Tab.0.center/0.0.1440.920@0.0.1440.920" timestamp="1608113809229" />
+    <state width="1397" height="371" key="GridCell.Tab.0.left" timestamp="1608113809229">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="188" key="GridCell.Tab.0.left/0.0.1440.920@0.0.1440.920" timestamp="1608087642747" />
-    <state width="1397" height="188" key="GridCell.Tab.0.right" timestamp="1608087642747">
+    <state width="1397" height="371" key="GridCell.Tab.0.left/0.0.1440.920@0.0.1440.920" timestamp="1608113809229" />
+    <state width="1397" height="371" key="GridCell.Tab.0.right" timestamp="1608113809230">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="188" key="GridCell.Tab.0.right/0.0.1440.920@0.0.1440.920" timestamp="1608087642747" />
-    <state width="1397" height="385" key="GridCell.Tab.1.bottom" timestamp="1607477575173">
+    <state width="1397" height="371" key="GridCell.Tab.0.right/0.0.1440.920@0.0.1440.920" timestamp="1608113809230" />
+    <state width="1397" height="385" key="GridCell.Tab.1.bottom" timestamp="1608112240387">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="385" key="GridCell.Tab.1.bottom/0.0.1440.920@0.0.1440.920" timestamp="1607477575173" />
-    <state width="1397" height="385" key="GridCell.Tab.1.center" timestamp="1607477575173">
+    <state width="1397" height="385" key="GridCell.Tab.1.bottom/0.0.1440.920@0.0.1440.920" timestamp="1608112240387" />
+    <state width="1397" height="385" key="GridCell.Tab.1.center" timestamp="1608112240386">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="385" key="GridCell.Tab.1.center/0.0.1440.920@0.0.1440.920" timestamp="1607477575173" />
-    <state width="1397" height="385" key="GridCell.Tab.1.left" timestamp="1607477575173">
+    <state width="1397" height="385" key="GridCell.Tab.1.center/0.0.1440.920@0.0.1440.920" timestamp="1608112240386" />
+    <state width="1397" height="385" key="GridCell.Tab.1.left" timestamp="1608112240386">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="385" key="GridCell.Tab.1.left/0.0.1440.920@0.0.1440.920" timestamp="1607477575173" />
-    <state width="1397" height="385" key="GridCell.Tab.1.right" timestamp="1607477575173">
+    <state width="1397" height="385" key="GridCell.Tab.1.left/0.0.1440.920@0.0.1440.920" timestamp="1608112240386" />
+    <state width="1397" height="385" key="GridCell.Tab.1.right" timestamp="1608112240387">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="385" key="GridCell.Tab.1.right/0.0.1440.920@0.0.1440.920" timestamp="1607477575173" />
+    <state width="1397" height="385" key="GridCell.Tab.1.right/0.0.1440.920@0.0.1440.920" timestamp="1608112240387" />
     <state x="122" y="63" key="MergeDialog" timestamp="1605151137300">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
@@ -264,14 +265,14 @@
       <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state x="201" y="167" key="SettingsEditor/0.0.1440.920@0.0.1440.920" timestamp="1606982044076" />
-    <state x="313" y="193" key="Vcs.Push.Dialog.v2" timestamp="1606987563210">
+    <state x="313" y="193" key="Vcs.Push.Dialog.v2" timestamp="1608112563094">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="313" y="193" key="Vcs.Push.Dialog.v2/0.0.1440.920@0.0.1440.920" timestamp="1606987563210" />
-    <state width="727" height="467" key="XDebugger.FullValuePopup" timestamp="1607059149662">
+    <state x="313" y="193" key="Vcs.Push.Dialog.v2/0.0.1440.920@0.0.1440.920" timestamp="1608112563094" />
+    <state width="727" height="467" key="XDebugger.FullValuePopup" timestamp="1608105771492">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="727" height="467" key="XDebugger.FullValuePopup/0.0.1440.920@0.0.1440.920" timestamp="1607059149662" />
+    <state width="727" height="467" key="XDebugger.FullValuePopup/0.0.1440.920@0.0.1440.920" timestamp="1608105771492" />
     <state x="419" y="190" width="605" height="536" key="find.popup" timestamp="1607909281150">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
@@ -282,6 +283,15 @@
     <state x="443" y="293" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.0.1440.920@0.0.1440.920" timestamp="1606899042614" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/std_library/error_group/main.go</url>
+          <line>26</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="GoApplicationRunConfiguration">
         <watch expression="*(*&quot;string&quot;)(824636984960)" />
