@@ -7,8 +7,13 @@ import (
 )
 
 func main() {
+	//test 1
+	rangeSlice()
+
+	//test 2
 	x := []string{"a", "b", "c"}
 
+	//遍历slice时，返回的第一个值是index索引
 	for _, v := range x {
 		fmt.Printf("out of goroutine -> value:%v pointer:%v\n", v, &v)
 	}
