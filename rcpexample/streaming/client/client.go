@@ -39,7 +39,6 @@ func main() {
 		log.Println("\n\n\nTest Bidirectional streaming")
 		sayHello3(c)
 	}
-
 }
 
 func sayHello1(c pb.GreeterClient) {
