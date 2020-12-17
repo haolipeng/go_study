@@ -5,14 +5,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a11b864b-5158-4507-bc40-0e2f0185bc36" name="Default Changelist" comment="代码验证error group和http库">
-      <change afterPath="$PROJECT_DIR$/common_mistake/for-range/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/std_library/error_group/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/std_library/http/http_exercise.go" afterDir="false" />
+    <list default="true" id="a11b864b-5158-4507-bc40-0e2f0185bc36" name="Default Changelist" comment="string 和 []byte 字节切片之间的转换">
+      <change afterPath="$PROJECT_DIR$/common_mistake/go易犯的错误.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/go_reading/技术博客练习.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grammar_exercise/init/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grammar_exercise/init/pack/pack.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grammar_exercise/init/util/util.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common_mistake/nil_string.go" beforeDir="false" afterPath="$PROJECT_DIR$/common_mistake/string/nil_string.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common_mistake/range_slice_array.go" beforeDir="false" afterPath="$PROJECT_DIR$/common_mistake/range_slice_array.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common_mistake/slice_stale/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/common_mistake/slice_stale/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,13 +22,18 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Go File" />
         <option value="Go Application" />
+        <option value="Go File" />
       </list>
     </option>
   </component>
   <component name="GOROOT" path="C:\Go" />
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="haolipeng &lt;1078285863@qq.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GoLibraries">
@@ -44,7 +49,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="DefaultGoTemplateProperty" value="Go Application" />
+    <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="configurable.Global.GOPATH.is.expanded" value="true" />
@@ -53,7 +58,7 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../go-ethereum" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -64,6 +69,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\goProject\src\go_study\common_mistake\for-range" />
       <recent name="D:\goProject\src\go_study\common_mistake\string" />
       <recent name="D:\goProject\src\go_study\geektime-go-trainning\filePath" />
       <recent name="D:\goProject\src\go_study\common_mistake\func_args" />
@@ -74,59 +80,59 @@
       <recent name="D:\goProject\src\go_study\rcpexample\streaming\pb" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build go_study/std_library/http">
-    <configuration name="go build go_study/common_mistake" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="go_study" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/common_mistake/range_slice_array.go" />
-      <package value="go_study/common_mistake" />
-      <directory value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build go_study/common_mistake/for-range" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="go_study" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/common_mistake/for-range/main.go" />
-      <package value="go_study/common_mistake/for-range" />
-      <directory value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build go_study/std_library/error_group" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="go_study" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/std_library/error_group/main.go" />
-      <package value="go_study/std_library/error_group" />
-      <directory value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build go_study/std_library/http" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="go_study" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/std_library/http/http_exercise.go" />
-      <package value="go_study/std_library/http" />
-      <directory value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build logFatal.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Build.go build main.go (1)">
+    <configuration name="go build channel_behavir.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_study" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/common_mistake/logFatal/logFatal.go" />
+      <filePath value="$PROJECT_DIR$/grammar_exercise/channel_behavior/channel_behavir.go" />
+      <package value="go_study" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build go_study/grammar_exercise/init" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go_study" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/grammar_exercise/init/main.go" />
+      <package value="go_study/grammar_exercise/init" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build main.go (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go_study" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/grammar_exercise/init/main.go" />
+      <package value="go_study" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build main.go (2)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go_study" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/common_mistake/slice_stale/main.go" />
+      <package value="go_study" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go_study" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/common_mistake/nil_interface/main.go" />
       <package value="go_study" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build go_study/std_library/http" />
-        <item itemvalue="Go Build.go build go_study/common_mistake/for-range" />
-        <item itemvalue="Go Build.go build go_study/common_mistake" />
-        <item itemvalue="Go Build.go build logFatal.go" />
-        <item itemvalue="Go Build.go build go_study/std_library/error_group" />
+        <item itemvalue="Go Build.go build main.go (1)" />
+        <item itemvalue="Go Build.go build go_study/grammar_exercise/init" />
+        <item itemvalue="Go Build.go build main.go (2)" />
+        <item itemvalue="Go Build.go build channel_behavir.go" />
+        <item itemvalue="Go Build.go build main.go" />
       </list>
     </recent_temporary>
   </component>
@@ -173,12 +179,26 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <option name="SHOW_UNVERSIONED_FILES_WHILE_COMMIT" value="false" />
     <MESSAGE value="golang单元测试" />
     <MESSAGE value="解决冲突" />
     <MESSAGE value="提交k8s客户端代码" />
     <MESSAGE value="测试单例模式" />
     <MESSAGE value="代码验证error group和http库" />
-    <option name="LAST_COMMIT_MESSAGE" value="代码验证error group和http库" />
+    <MESSAGE value="nil slice and nil map usage" />
+    <MESSAGE value="nil string is a empty string" />
+    <MESSAGE value="slice or array as function arguments" />
+    <MESSAGE value="string 和 []byte 字节切片之间的转换" />
+    <MESSAGE value="invalid switch case and fallthrough" />
+    <MESSAGE value="以小写字母开头的结构体将不会被（json、xml、gob等）编码，因此当你编码这些未导出的结构体时，你将会得到零值。" />
+    <MESSAGE value="panic and recover 使用方法" />
+    <MESSAGE value="slice中有隐藏数据" />
+    <MESSAGE value="slice broken data" />
+    <MESSAGE value="stale slice" />
+    <MESSAGE value="提供高级版的for-range技巧demo" />
+    <MESSAGE value="空 interface接口" />
+    <MESSAGE value="modify bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="modify bug" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -193,14 +213,14 @@
       <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state x="176" y="115" width="1089" height="742" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.920@0.0.1440.920" timestamp="1608024533142" />
-    <state x="324" y="27" key="CommitChangelistDialog2" timestamp="1608113763995">
+    <state x="246" y="54" key="CommitChangelistDialog2" timestamp="1608164935743">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="324" y="27" key="CommitChangelistDialog2/0.0.1440.920@0.0.1440.920" timestamp="1608113763995" />
-    <state width="639" height="466" key="DebuggerActiveHint" timestamp="1607059487659">
+    <state x="246" y="54" key="CommitChangelistDialog2/0.0.1440.920@0.0.1440.920" timestamp="1608164935743" />
+    <state width="639" height="466" key="DebuggerActiveHint" timestamp="1608126601739">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="639" height="466" key="DebuggerActiveHint/0.0.1440.920@0.0.1440.920" timestamp="1607059487659" />
+    <state width="639" height="466" key="DebuggerActiveHint/0.0.1440.920@0.0.1440.920" timestamp="1608126601739" />
     <state x="138" y="74" key="DiffContextDialog" timestamp="1605535589705">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
@@ -209,46 +229,46 @@
       <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state x="587" y="382" key="EnvironmentVariablesDialog/0.0.1440.920@0.0.1440.920" timestamp="1606982022878" />
-    <state x="501" y="215" key="FileChooserDialogImpl" timestamp="1607679619736">
+    <state x="501" y="215" key="FileChooserDialogImpl" timestamp="1608170188438">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="501" y="215" key="FileChooserDialogImpl/0.0.1440.920@0.0.1440.920" timestamp="1607679619736" />
+    <state x="501" y="215" key="FileChooserDialogImpl/0.0.1440.920@0.0.1440.920" timestamp="1608170188438" />
     <state x="535" y="379" key="Github.CreateGistDialog" timestamp="1604311422356">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state x="535" y="379" key="Github.CreateGistDialog/0.0.1440.920@0.0.1440.920" timestamp="1604311422356" />
-    <state width="1397" height="371" key="GridCell.Tab.0.bottom" timestamp="1608113809230">
+    <state width="1397" height="222" key="GridCell.Tab.0.bottom" timestamp="1608174430178">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="371" key="GridCell.Tab.0.bottom/0.0.1440.920@0.0.1440.920" timestamp="1608113809230" />
-    <state width="1397" height="371" key="GridCell.Tab.0.center" timestamp="1608113809229">
+    <state width="1397" height="222" key="GridCell.Tab.0.bottom/0.0.1440.920@0.0.1440.920" timestamp="1608174430178" />
+    <state width="1397" height="222" key="GridCell.Tab.0.center" timestamp="1608174430178">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="371" key="GridCell.Tab.0.center/0.0.1440.920@0.0.1440.920" timestamp="1608113809229" />
-    <state width="1397" height="371" key="GridCell.Tab.0.left" timestamp="1608113809229">
+    <state width="1397" height="222" key="GridCell.Tab.0.center/0.0.1440.920@0.0.1440.920" timestamp="1608174430178" />
+    <state width="1397" height="222" key="GridCell.Tab.0.left" timestamp="1608174430178">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="371" key="GridCell.Tab.0.left/0.0.1440.920@0.0.1440.920" timestamp="1608113809229" />
-    <state width="1397" height="371" key="GridCell.Tab.0.right" timestamp="1608113809230">
+    <state width="1397" height="222" key="GridCell.Tab.0.left/0.0.1440.920@0.0.1440.920" timestamp="1608174430178" />
+    <state width="1397" height="222" key="GridCell.Tab.0.right" timestamp="1608174430178">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="371" key="GridCell.Tab.0.right/0.0.1440.920@0.0.1440.920" timestamp="1608113809230" />
-    <state width="1397" height="385" key="GridCell.Tab.1.bottom" timestamp="1608112240387">
+    <state width="1397" height="222" key="GridCell.Tab.0.right/0.0.1440.920@0.0.1440.920" timestamp="1608174430178" />
+    <state width="1234" height="422" key="GridCell.Tab.1.bottom" timestamp="1608173060864">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="385" key="GridCell.Tab.1.bottom/0.0.1440.920@0.0.1440.920" timestamp="1608112240387" />
-    <state width="1397" height="385" key="GridCell.Tab.1.center" timestamp="1608112240386">
+    <state width="1234" height="422" key="GridCell.Tab.1.bottom/0.0.1440.920@0.0.1440.920" timestamp="1608173060864" />
+    <state width="1234" height="422" key="GridCell.Tab.1.center" timestamp="1608173060864">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="385" key="GridCell.Tab.1.center/0.0.1440.920@0.0.1440.920" timestamp="1608112240386" />
-    <state width="1397" height="385" key="GridCell.Tab.1.left" timestamp="1608112240386">
+    <state width="1234" height="422" key="GridCell.Tab.1.center/0.0.1440.920@0.0.1440.920" timestamp="1608173060864" />
+    <state width="1234" height="422" key="GridCell.Tab.1.left" timestamp="1608173060864">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="385" key="GridCell.Tab.1.left/0.0.1440.920@0.0.1440.920" timestamp="1608112240386" />
-    <state width="1397" height="385" key="GridCell.Tab.1.right" timestamp="1608112240387">
+    <state width="1234" height="422" key="GridCell.Tab.1.left/0.0.1440.920@0.0.1440.920" timestamp="1608173060864" />
+    <state width="1234" height="422" key="GridCell.Tab.1.right" timestamp="1608173060864">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="385" key="GridCell.Tab.1.right/0.0.1440.920@0.0.1440.920" timestamp="1608112240387" />
+    <state width="1234" height="422" key="GridCell.Tab.1.right/0.0.1440.920@0.0.1440.920" timestamp="1608173060864" />
     <state x="122" y="63" key="MergeDialog" timestamp="1605151137300">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
@@ -265,18 +285,18 @@
       <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state x="201" y="167" key="SettingsEditor/0.0.1440.920@0.0.1440.920" timestamp="1606982044076" />
-    <state x="313" y="193" key="Vcs.Push.Dialog.v2" timestamp="1608112563094">
+    <state x="313" y="193" key="Vcs.Push.Dialog.v2" timestamp="1608134370451">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="313" y="193" key="Vcs.Push.Dialog.v2/0.0.1440.920@0.0.1440.920" timestamp="1608112563094" />
+    <state x="313" y="193" key="Vcs.Push.Dialog.v2/0.0.1440.920@0.0.1440.920" timestamp="1608134370451" />
     <state width="727" height="467" key="XDebugger.FullValuePopup" timestamp="1608105771492">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state width="727" height="467" key="XDebugger.FullValuePopup/0.0.1440.920@0.0.1440.920" timestamp="1608105771492" />
-    <state x="419" y="190" width="605" height="536" key="find.popup" timestamp="1607909281150">
+    <state x="419" y="190" width="605" height="536" key="find.popup" timestamp="1608173389742">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="419" y="190" width="605" height="536" key="find.popup/0.0.1440.920@0.0.1440.920" timestamp="1607909281150" />
+    <state x="419" y="190" width="605" height="536" key="find.popup/0.0.1440.920@0.0.1440.920" timestamp="1608173389742" />
     <state x="443" y="293" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1606899042614">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
@@ -289,6 +309,16 @@
           <url>file://$PROJECT_DIR$/std_library/error_group/main.go</url>
           <line>26</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/common_mistake/func_args/func_args.go</url>
+          <line>6</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/common_mistake/slice_stale/main.go</url>
+          <line>10</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
