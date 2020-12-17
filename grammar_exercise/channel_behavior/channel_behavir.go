@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+//生产者消费者模型
 func waitForTask() {
 	ch := make(chan string, 1)
 
@@ -18,7 +19,7 @@ func waitForTask() {
 
 	const work = 10
 	for w := 0; w < work; w++ {
-		ch <- "paper"
+		ch <- fmt.Sprintf("paper %d", w)
 	}
 
 	//close channel
@@ -38,6 +39,7 @@ func withTimeout() {
 		ch <- "paper"
 	}()
 
+	//或者取到任务，或者是context超时控制
 	select {
 	case p := <-ch:
 		fmt.Println("work complete", p)
