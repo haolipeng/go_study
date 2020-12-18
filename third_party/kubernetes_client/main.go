@@ -42,17 +42,21 @@ func main() {
 	if err != nil {
 		panic(err.Error())
 	}
+
 	//service -> lables
-	clientset.CoreV1().Pods("").Watch(context.TODO(), metav1.ListOptions{})
-	pods, err := clientset.CoreV1().Pods("default").List(context.TODO(), metav1.ListOptions{})
+	labels := "system=centos"
+	result, err := clientset.CoreV1().Pods("default").Watch(context.TODO(), metav1.ListOptions{LabelSelector: labels})
 	if err != nil {
 		panic(err.Error())
 	}
-
-	/*nodeList, err := clientset.CoreV1().Nodes().List(context.TODO(), metav1.ListOptions{})
-	for _, node := range nodeList.Items {
-		fmt.Printf("name:%s\n", node.Name)
-	}*/
+	resultCh := result.ResultChan()
+	for ch := range resultCh {
+		fmt.Printf("type:%s\n", string(ch.Type))
+	}
+	/*pods, err := clientset.CoreV1().Pods("default").List(context.TOD	O(), metav1.ListOptions{})
+	if err != nil {
+		panic(err.Error())
+	}
 
 	fmt.Printf("There are %d pods in the cluster\n", len(pods.Items))
 	for _, pod := range pods.Items {
@@ -66,23 +70,6 @@ func main() {
 			fmt.Printf("Name:%s", c.Name)
 		}
 		//}
-	}
-
-	// Examples for error handling:
-	// - Use helper functions like e.g. errors.IsNotFound()
-	// - And/or cast to StatusError and use its properties like e.g. ErrStatus.Message
-	/*namespace := "default"
-	pod := "example-xxxxx"
-	_, err = clientset.CoreV1().Pods(namespace).Get(context.TODO(), pod, metav1.GetOptions{})
-	if errors.IsNotFound(err) {
-		fmt.Printf("Pod %s in namespace %s not found\n", pod, namespace)
-	} else if statusError, isStatus := err.(*errors.StatusError); isStatus {
-		fmt.Printf("Error getting pod %s in namespace %s: %v\n",
-			pod, namespace, statusError.ErrStatus.Message)
-	} else if err != nil {
-		panic(err.Error())
-	} else {
-		fmt.Printf("Found pod %s in namespace %s\n", pod, namespace)
 	}*/
 }
 
