@@ -4,11 +4,16 @@ import (
 	"fmt"
 )
 
+var tempRecordMap map[string]map[string]string = make(map[string]map[string]string)
+
 func main() {
 	//空map无法使用，需要显式初始化或make
 	//panic: assignment to entry in nil map
 	//var nilMap  map[string] string
 	//nilMap["name"] = "haolipeng"
+	n := make(map[string]string)
+	n["1"] = "1"
+	tempRecordMap["haolipeng"] = n
 
 	// 1.map 创建及初始化
 	m := map[string]string{
