@@ -5,6 +5,16 @@ import (
 	"io"
 )
 
+func CountLinesGood(r io.Reader) (int, error) {
+	sc := bufio.NewScanner(r)
+	lines := 0
+	for sc.Scan() {
+		lines++
+	}
+
+	return lines, sc.Err()
+}
+
 func CountLines(r io.Reader) (int, error) {
 	var (
 		br    = bufio.NewReader(r)
