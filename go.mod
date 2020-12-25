@@ -16,6 +16,7 @@ require (
 	github.com/nats-io/nats-server/v2 v2.1.8 // indirect
 	github.com/onsi/ginkgo v1.14.2 // indirect
 	github.com/onsi/gomega v1.10.3 // indirect
+	github.com/pkg/errors v0.9.1
 	github.com/smartystreets/goconvey v1.6.4
 	github.com/stretchr/testify v1.6.1
 	github.com/valyala/fasthttp v1.16.0 // indirect

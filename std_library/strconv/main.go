@@ -1,4 +1,4 @@
-package strconv_exercise
+package strconv
 
 import (
 	"fmt"

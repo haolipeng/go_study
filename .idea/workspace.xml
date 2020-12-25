@@ -5,14 +5,18 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a11b864b-5158-4507-bc40-0e2f0185bc36" name="Default Changelist" comment="string 和 []byte 字节切片之间的转换">
-      <change afterPath="$PROJECT_DIR$/common_mistake/go易犯的错误.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go_reading/技术博客练习.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grammar_exercise/init/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grammar_exercise/init/pack/pack.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grammar_exercise/init/util/util.go" afterDir="false" />
+    <list default="true" id="a11b864b-5158-4507-bc40-0e2f0185bc36" name="Default Changelist" comment="mutex实验代码以及原理剖析">
+      <change afterPath="$PROJECT_DIR$/geektime-go-trainning/error_handle/errorType/error_type.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/geektime-go-trainning/error_handle/errorType/error_type_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/geektime-go-trainning/go进阶训练营.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/third_party/kubernetes_workqueue/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common_mistake/slice_stale/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/common_mistake/slice_stale/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/geektime-go-trainning/filePath/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/std_library/filePath/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go_reading_article/技术博客练习.md" beforeDir="false" afterPath="$PROJECT_DIR$/go_reading_article/技术博客练习.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/std_library/strconv_exercise/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/std_library/strconv/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/third_party/kubernetes_client/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/third_party/kubernetes_client/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +62,7 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../go-ethereum" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/std_library" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -69,69 +73,77 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\goProject\src\go_study\geektime-go-trainning\error_handle\countLines" />
+      <recent name="D:\goProject\src\go_study\" />
+      <recent name="D:\goProject\src\go_study\std_library" />
       <recent name="D:\goProject\src\go_study\common_mistake\for-range" />
       <recent name="D:\goProject\src\go_study\common_mistake\string" />
-      <recent name="D:\goProject\src\go_study\geektime-go-trainning\filePath" />
-      <recent name="D:\goProject\src\go_study\common_mistake\func_args" />
-      <recent name="D:\goProject\src\go_study\rcpexample\streaming\pb" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\goProject\src\go_study" />
       <recent name="D:\goProject\src\go_study\third_party\k8s_client" />
       <recent name="D:\goProject\src\go_study\rcpexample\streaming\pb" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build main.go (1)">
-    <configuration name="go build channel_behavir.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="go_study" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/grammar_exercise/channel_behavior/channel_behavir.go" />
-      <package value="go_study" />
-      <directory value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build go_study/grammar_exercise/init" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="go_study" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/grammar_exercise/init/main.go" />
-      <package value="go_study/grammar_exercise/init" />
-      <directory value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build main.go (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="go_study" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/grammar_exercise/init/main.go" />
-      <package value="go_study" />
-      <directory value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build main.go (2)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="go_study" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/common_mistake/slice_stale/main.go" />
-      <package value="go_study" />
-      <directory value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Go Test.Test_test in go_study/geektime-go-trainning/error_handle/errorType">
     <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_study" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/common_mistake/nil_interface/main.go" />
+      <filePath value="$PROJECT_DIR$/geektime-go-trainning/error_handle/main.go" />
       <package value="go_study" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
+    <configuration name="TestCountLines in go_study/geektime-go-trainning/error_handle/countLines" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="go_study" />
+      <working_directory value="$PROJECT_DIR$/geektime-go-trainning/error_handle/countLines" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="go_study/geektime-go-trainning/error_handle/countLines" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTestCountLines\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestCountLines in go_study/geektime-go-trainning/error_handle/sentinelError" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="go_study" />
+      <working_directory value="$PROJECT_DIR$/geektime-go-trainning/error_handle/sentinelError" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="go_study/geektime-go-trainning/error_handle/sentinelError" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTestCountLines\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test_test in go_study/geektime-go-trainning/error_handle/errorType" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="go_study" />
+      <working_directory value="$PROJECT_DIR$/geektime-go-trainning/error_handle/errorType" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="go_study/geektime-go-trainning/error_handle/errorType" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTest_test\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="count_lines_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="go_study" />
+      <working_directory value="$PROJECT_DIR$/geektime-go-trainning/error_handle/countLines" />
+      <framework value="gotest" />
+      <kind value="FILE" />
+      <package value="go_study" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/geektime-go-trainning/error_handle/countLines/count_lines_test.go" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build main.go (1)" />
-        <item itemvalue="Go Build.go build go_study/grammar_exercise/init" />
-        <item itemvalue="Go Build.go build main.go (2)" />
-        <item itemvalue="Go Build.go build channel_behavir.go" />
+        <item itemvalue="Go Test.Test_test in go_study/geektime-go-trainning/error_handle/errorType" />
+        <item itemvalue="Go Test.TestCountLines in go_study/geektime-go-trainning/error_handle/sentinelError" />
+        <item itemvalue="Go Test.TestCountLines in go_study/geektime-go-trainning/error_handle/countLines" />
+        <item itemvalue="Go Test.count_lines_test.go" />
         <item itemvalue="Go Build.go build main.go" />
       </list>
     </recent_temporary>
@@ -180,15 +192,10 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="SHOW_UNVERSIONED_FILES_WHILE_COMMIT" value="false" />
-    <MESSAGE value="golang单元测试" />
-    <MESSAGE value="解决冲突" />
-    <MESSAGE value="提交k8s客户端代码" />
-    <MESSAGE value="测试单例模式" />
     <MESSAGE value="代码验证error group和http库" />
     <MESSAGE value="nil slice and nil map usage" />
     <MESSAGE value="nil string is a empty string" />
     <MESSAGE value="slice or array as function arguments" />
-    <MESSAGE value="string 和 []byte 字节切片之间的转换" />
     <MESSAGE value="invalid switch case and fallthrough" />
     <MESSAGE value="以小写字母开头的结构体将不会被（json、xml、gob等）编码，因此当你编码这些未导出的结构体时，你将会得到零值。" />
     <MESSAGE value="panic and recover 使用方法" />
@@ -198,7 +205,19 @@
     <MESSAGE value="提供高级版的for-range技巧demo" />
     <MESSAGE value="空 interface接口" />
     <MESSAGE value="modify bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="modify bug" />
+    <MESSAGE value="init函数的使用姿势" />
+    <MESSAGE value="总结go编程中容易犯的错误" />
+    <MESSAGE value="技术博客练习" />
+    <MESSAGE value="string 和 []byte 字节切片之间的转换" />
+    <MESSAGE value="client-go调用watch函数" />
+    <MESSAGE value="mutex实验代码以及原理剖析" />
+    <MESSAGE value="在k8s的pod中执行shell命令" />
+    <MESSAGE value="k8s DaemonSet 添加、删除、更新、获取操作" />
+    <MESSAGE value="bufio reader and writer" />
+    <MESSAGE value="scanner 读取文件的每一行的练习代码" />
+    <MESSAGE value="临时文件和临时文件夹的创建和销毁" />
+    <MESSAGE value="error处理代码提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="error处理代码提交" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -213,62 +232,62 @@
       <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state x="176" y="115" width="1089" height="742" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.920@0.0.1440.920" timestamp="1608024533142" />
-    <state x="246" y="54" key="CommitChangelistDialog2" timestamp="1608164935743">
+    <state x="246" y="54" key="CommitChangelistDialog2" timestamp="1608885019359">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="246" y="54" key="CommitChangelistDialog2/0.0.1440.920@0.0.1440.920" timestamp="1608164935743" />
-    <state width="639" height="466" key="DebuggerActiveHint" timestamp="1608126601739">
+    <state x="246" y="54" key="CommitChangelistDialog2/0.0.1440.920@0.0.1440.920" timestamp="1608885019359" />
+    <state width="639" height="466" key="DebuggerActiveHint" timestamp="1608787117898">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="639" height="466" key="DebuggerActiveHint/0.0.1440.920@0.0.1440.920" timestamp="1608126601739" />
-    <state x="138" y="74" key="DiffContextDialog" timestamp="1605535589705">
+    <state width="639" height="466" key="DebuggerActiveHint/0.0.1440.920@0.0.1440.920" timestamp="1608787117898" />
+    <state x="138" y="74" key="DiffContextDialog" timestamp="1608795043273">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="138" y="74" key="DiffContextDialog/0.0.1440.920@0.0.1440.920" timestamp="1605535589705" />
+    <state x="138" y="74" key="DiffContextDialog/0.0.1440.920@0.0.1440.920" timestamp="1608795043273" />
     <state x="587" y="382" key="EnvironmentVariablesDialog" timestamp="1606982022878">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state x="587" y="382" key="EnvironmentVariablesDialog/0.0.1440.920@0.0.1440.920" timestamp="1606982022878" />
-    <state x="501" y="215" key="FileChooserDialogImpl" timestamp="1608170188438">
+    <state x="501" y="215" key="FileChooserDialogImpl" timestamp="1608860291432">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="501" y="215" key="FileChooserDialogImpl/0.0.1440.920@0.0.1440.920" timestamp="1608170188438" />
+    <state x="501" y="215" key="FileChooserDialogImpl/0.0.1440.920@0.0.1440.920" timestamp="1608860291432" />
     <state x="535" y="379" key="Github.CreateGistDialog" timestamp="1604311422356">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state x="535" y="379" key="Github.CreateGistDialog/0.0.1440.920@0.0.1440.920" timestamp="1604311422356" />
-    <state width="1397" height="222" key="GridCell.Tab.0.bottom" timestamp="1608174430178">
+    <state width="1397" height="200" key="GridCell.Tab.0.bottom" timestamp="1608884953228">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="222" key="GridCell.Tab.0.bottom/0.0.1440.920@0.0.1440.920" timestamp="1608174430178" />
-    <state width="1397" height="222" key="GridCell.Tab.0.center" timestamp="1608174430178">
+    <state width="1397" height="200" key="GridCell.Tab.0.bottom/0.0.1440.920@0.0.1440.920" timestamp="1608884953228" />
+    <state width="1397" height="200" key="GridCell.Tab.0.center" timestamp="1608884953227">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="222" key="GridCell.Tab.0.center/0.0.1440.920@0.0.1440.920" timestamp="1608174430178" />
-    <state width="1397" height="222" key="GridCell.Tab.0.left" timestamp="1608174430178">
+    <state width="1397" height="200" key="GridCell.Tab.0.center/0.0.1440.920@0.0.1440.920" timestamp="1608884953227" />
+    <state width="1397" height="200" key="GridCell.Tab.0.left" timestamp="1608884953226">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="222" key="GridCell.Tab.0.left/0.0.1440.920@0.0.1440.920" timestamp="1608174430178" />
-    <state width="1397" height="222" key="GridCell.Tab.0.right" timestamp="1608174430178">
+    <state width="1397" height="200" key="GridCell.Tab.0.left/0.0.1440.920@0.0.1440.920" timestamp="1608884953226" />
+    <state width="1397" height="200" key="GridCell.Tab.0.right" timestamp="1608884953227">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="222" key="GridCell.Tab.0.right/0.0.1440.920@0.0.1440.920" timestamp="1608174430178" />
-    <state width="1234" height="422" key="GridCell.Tab.1.bottom" timestamp="1608173060864">
+    <state width="1397" height="200" key="GridCell.Tab.0.right/0.0.1440.920@0.0.1440.920" timestamp="1608884953227" />
+    <state width="1397" height="150" key="GridCell.Tab.1.bottom" timestamp="1608883824541">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1234" height="422" key="GridCell.Tab.1.bottom/0.0.1440.920@0.0.1440.920" timestamp="1608173060864" />
-    <state width="1234" height="422" key="GridCell.Tab.1.center" timestamp="1608173060864">
+    <state width="1397" height="150" key="GridCell.Tab.1.bottom/0.0.1440.920@0.0.1440.920" timestamp="1608883824541" />
+    <state width="1397" height="150" key="GridCell.Tab.1.center" timestamp="1608883824541">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1234" height="422" key="GridCell.Tab.1.center/0.0.1440.920@0.0.1440.920" timestamp="1608173060864" />
-    <state width="1234" height="422" key="GridCell.Tab.1.left" timestamp="1608173060864">
+    <state width="1397" height="150" key="GridCell.Tab.1.center/0.0.1440.920@0.0.1440.920" timestamp="1608883824541" />
+    <state width="1397" height="150" key="GridCell.Tab.1.left" timestamp="1608883824541">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1234" height="422" key="GridCell.Tab.1.left/0.0.1440.920@0.0.1440.920" timestamp="1608173060864" />
-    <state width="1234" height="422" key="GridCell.Tab.1.right" timestamp="1608173060864">
+    <state width="1397" height="150" key="GridCell.Tab.1.left/0.0.1440.920@0.0.1440.920" timestamp="1608883824541" />
+    <state width="1397" height="150" key="GridCell.Tab.1.right" timestamp="1608883824541">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1234" height="422" key="GridCell.Tab.1.right/0.0.1440.920@0.0.1440.920" timestamp="1608173060864" />
+    <state width="1397" height="150" key="GridCell.Tab.1.right/0.0.1440.920@0.0.1440.920" timestamp="1608883824541" />
     <state x="122" y="63" key="MergeDialog" timestamp="1605151137300">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
@@ -285,18 +304,18 @@
       <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state x="201" y="167" key="SettingsEditor/0.0.1440.920@0.0.1440.920" timestamp="1606982044076" />
-    <state x="313" y="193" key="Vcs.Push.Dialog.v2" timestamp="1608134370451">
+    <state x="313" y="193" key="Vcs.Push.Dialog.v2" timestamp="1608885024243">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="313" y="193" key="Vcs.Push.Dialog.v2/0.0.1440.920@0.0.1440.920" timestamp="1608134370451" />
-    <state width="727" height="467" key="XDebugger.FullValuePopup" timestamp="1608105771492">
+    <state x="313" y="193" key="Vcs.Push.Dialog.v2/0.0.1440.920@0.0.1440.920" timestamp="1608885024243" />
+    <state width="727" height="467" key="XDebugger.FullValuePopup" timestamp="1608778409318">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="727" height="467" key="XDebugger.FullValuePopup/0.0.1440.920@0.0.1440.920" timestamp="1608105771492" />
-    <state x="419" y="190" width="605" height="536" key="find.popup" timestamp="1608173389742">
+    <state width="727" height="467" key="XDebugger.FullValuePopup/0.0.1440.920@0.0.1440.920" timestamp="1608778409318" />
+    <state x="533" y="191" width="715" height="536" key="find.popup" timestamp="1608775173214">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="419" y="190" width="605" height="536" key="find.popup/0.0.1440.920@0.0.1440.920" timestamp="1608173389742" />
+    <state x="533" y="191" width="715" height="536" key="find.popup/0.0.1440.920@0.0.1440.920" timestamp="1608775173214" />
     <state x="443" y="293" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1606899042614">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
@@ -319,6 +338,16 @@
           <url>file://$PROJECT_DIR$/common_mistake/slice_stale/main.go</url>
           <line>10</line>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/third_party/kubernetes_exec_pod/main.go</url>
+          <line>168</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/third_party/kubernetes_exec_pod/main.go</url>
+          <line>133</line>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

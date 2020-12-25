@@ -47,6 +47,7 @@ func main() {
 	//枚举集群中pod信息
 	ListPods(clientset)
 
+	//使用ds.yaml文件来部署DaemonSet pod
 	DaemonSetWithYaml(clientset, "add", "kube-system")
 	DaemonSetWithYaml(clientset, "get", "kube-system")
 	DaemonSetWithYaml(clientset, "delete", "kube-system")
