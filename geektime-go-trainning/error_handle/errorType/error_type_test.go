@@ -11,7 +11,9 @@ func Test_test(t *testing.T) {
 	case nil:
 		fmt.Println("successed")
 	case *MyError:
-		fmt.Printf("error happened:%v\n", err)
+		fmt.Printf("*MyError error happened:%v\n", err)
+	case MyError:
+		fmt.Printf("MyError error happened:%v\n", err)
 	default:
 		fmt.Println("unsupported type")
 	}
