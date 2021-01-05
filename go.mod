@@ -6,6 +6,7 @@ require (
 	github.com/PuerkitoBio/goquery v1.6.0
 	github.com/fasthttp-contrib/websocket v0.0.0-20160511215533-1f3b11f56072 // indirect
 	github.com/gogo/protobuf v1.3.1
+	github.com/huaweicloud/golangsdk v0.0.0-20201228013212-d10065a3dc7f // indirect
 	github.com/imdario/mergo v0.3.11 // indirect
 	github.com/jwangsadinata/go-multimap v0.0.0-20190620162914-c29f3d7f33b6
 	github.com/k0kubun/colorstring v0.0.0-20150214042306-9440f1994b88 // indirect
