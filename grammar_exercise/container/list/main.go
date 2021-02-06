@@ -46,4 +46,9 @@ func main() {
 	fmt.Println("==================after call MoveToFront==================")
 	l.MoveToFront(e1)
 	ShowList(l)
+
+	fmt.Println("==================after call Remove==================")
+	l.Remove(e1)
+	l.Remove(e4)
+	ShowList(l) //2,3
 }
