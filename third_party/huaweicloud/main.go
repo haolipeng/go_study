@@ -124,6 +124,7 @@ func getSecurityGroup(client *golangsdk.ServiceClient) bool {
 	if len(info) > 0 {
 		fmt.Printf("SecurityGroup:%v\n", info)
 		return true
+
 	}
 
 	return false
@@ -349,11 +350,14 @@ func identifyApiV3(client *golangsdk.ServiceClient) bool {
 
 //补充
 func main() {
+	//登录IAM服务器
+
 	//用户名、密码、节点url是必填项
 	opts := golangsdk.AuthOptions{
 		IdentityEndpoint: "https://openstack.example.com:5000/v2.0", //TODO:
 		Username:         "{username}",                              //TODO:
 		Password:         "{password}",                              //TODO:
+		TenantName:       "admin",
 	}
 
 	//另一种方式是读取环境变量，暂时没采用
