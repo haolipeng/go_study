@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strings"
 	"time"
 )
 
@@ -22,4 +23,11 @@ func main() {
 
 	diff := now.Sub(then)
 	fmt.Println("diff from now is ", diff)
+
+	url := "https://172.16.100.135:5000"
+	lists := strings.Split(url, "//")
+	for _, s := range lists {
+		fmt.Println(s)
+	}
+
 }

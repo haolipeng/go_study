@@ -14,6 +14,7 @@ func main() {
 	//用":"来分割字符串
 	var ifIndex string
 	strArray := strings.Split(ifStr, ":")
+
 	for _, v := range strArray {
 		//fmt.Println(v)
 		//是否包含子串
