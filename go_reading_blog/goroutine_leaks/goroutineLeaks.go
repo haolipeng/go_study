@@ -7,6 +7,9 @@ import (
 	"time"
 )
 
+// 链接文章
+//https://www.ardanlabs.com/blog/2018/12/goroutine-leaks-the-abandoned-receivers.html
+
 //abandoned receivers
 //processRecords is given a slice of values such as lines from a file.The order of these values is not important
 //so the function can start multiple workers to perform some processing on each record then feed the results back.
