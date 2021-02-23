@@ -6,7 +6,7 @@ import (
 
 var tempRecordMap map[string]map[string]string = make(map[string]map[string]string)
 
-func main() {
+func mapCurd() {
 	//空map无法使用，需要显式初始化或make
 	//panic: assignment to entry in nil map
 	//var nilMap  map[string] string
@@ -50,7 +50,6 @@ func main() {
 	fmt.Println("Deleting Values")
 	name, ok := m["name"]
 	fmt.Println(name, ok)
-
 	delete(m, "name")
 
 	name, ok = m["name"]
@@ -60,7 +59,7 @@ func main() {
 
 	//map作为函数参数
 	modifyMap(m)
-	fmt.Println("-----------调用函数后遍历--------------")
+	fmt.Println("-----------调用函数modifyMap后遍历--------------")
 	for k, v := range m {
 		fmt.Println(k, v)
 	}
@@ -69,4 +68,40 @@ func main() {
 //map是引用类型,以函数参数形式存在，函数内部修改会影响指向的同一个map
 func modifyMap(m map[string]string) {
 	m["course"] = "C++"
+}
+
+type Record struct {
+	male bool
+	name string
+	age  uint32
+	desc string
+}
+
+type InnerMap map[string]*Record
+
+func main() {
+	name := "haolipeng"
+	Relations := make(map[string]InnerMap)
+
+	tmpInnerMap := make(InnerMap)
+	Relations[name] = tmpInnerMap
+
+	r := Record{
+		male: false,
+		name: name,
+		age:  uint32(100),
+	}
+
+	tmpInnerMap[name] = &r
+
+	fmt.Println("origin Relations", Relations)
+	for _, v := range Relations[name] {
+		fmt.Printf("name:%s,age:%d,desc:%s\n", v.name, v.age, v.desc)
+	}
+
+	r.desc = "my name is haolipeng"
+	fmt.Println("modify Relations:", Relations[name])
+	for _, v := range Relations[name] {
+		fmt.Printf("name:%s,age:%d,desc:%s\n", v.name, v.age, v.desc)
+	}
 }
