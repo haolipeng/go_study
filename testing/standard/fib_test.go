@@ -28,6 +28,7 @@ func TestFib(t *testing.T) {
 	}
 }
 
+//table-driven tests
 func TestCaseTable(t *testing.T) {
 	var fibTests = []struct {
 		in       int //输出参数
