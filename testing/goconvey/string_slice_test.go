@@ -16,6 +16,7 @@ func TestStringSliceEqual(t *testing.T) {
 }
 
 //双层嵌套
+//内层的 Convey 不需要再传入 t *testing.T参数
 func TestStringSliceEqualWithNested(t *testing.T) {
 	Convey("TestStringSliceEqual", t, func() {
 		Convey("should return true when a != nil  && b != nil", func() {
