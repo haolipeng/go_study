@@ -6,9 +6,11 @@ require (
 	github.com/PuerkitoBio/goquery v1.6.0
 	github.com/capotej/groupcache-db-experiment v0.0.0-20130907171434-b890cd507cbb // indirect
 	github.com/fasthttp-contrib/websocket v0.0.0-20160511215533-1f3b11f56072 // indirect
+	github.com/fatih/set v0.2.1
 	github.com/gogo/protobuf v1.3.1
 	github.com/golang/groupcache v0.0.0-20200121045136-8c9f03a8e57e
 	github.com/golang/protobuf v1.4.3 // indirect
+	github.com/google/gopacket v1.1.19 // indirect
 	github.com/gophercloud/gophercloud v0.15.0 // indirect
 	github.com/huaweicloud/golangsdk v0.0.0-20201228013212-d10065a3dc7f
 	github.com/imdario/mergo v0.3.11 // indirect
