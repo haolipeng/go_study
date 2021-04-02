@@ -41,5 +41,4 @@ require (
 	k8s.io/apimachinery v0.19.0
 	k8s.io/client-go v0.19.0
 	k8s.io/klog/v2 v2.2.0
-	rsc.io/quote/v3 v3.1.0 // indirect
 )
