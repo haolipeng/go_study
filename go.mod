@@ -11,6 +11,7 @@ require (
 	github.com/golang/mock v1.5.0
 	github.com/golang/protobuf v1.4.3 // indirect
 	github.com/google/gopacket v1.1.19
+	github.com/hashicorp/go-plugin v1.4.1
 	github.com/huaweicloud/golangsdk v0.0.0-20201228013212-d10065a3dc7f
 	github.com/imdario/mergo v0.3.11 // indirect
 	github.com/jwangsadinata/go-multimap v0.0.0-20190620162914-c29f3d7f33b6
