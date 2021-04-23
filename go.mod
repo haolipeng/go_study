@@ -4,6 +4,7 @@ go 1.15
 
 require (
 	github.com/PuerkitoBio/goquery v1.6.0
+	github.com/dkiser/go-plugin-example v0.0.0-20170205011010-bead7e2bd676
 	github.com/fasthttp-contrib/websocket v0.0.0-20160511215533-1f3b11f56072 // indirect
 	github.com/fatih/set v0.2.1
 	github.com/gogo/protobuf v1.3.1
@@ -11,6 +12,7 @@ require (
 	github.com/golang/mock v1.5.0
 	github.com/golang/protobuf v1.4.3 // indirect
 	github.com/google/gopacket v1.1.19
+	github.com/hashicorp/go-hclog v0.14.1
 	github.com/hashicorp/go-plugin v1.4.1
 	github.com/huaweicloud/golangsdk v0.0.0-20201228013212-d10065a3dc7f
 	github.com/imdario/mergo v0.3.11 // indirect
