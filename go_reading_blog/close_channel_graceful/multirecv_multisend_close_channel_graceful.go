@@ -9,6 +9,10 @@ import (
 	"time"
 )
 
+//在多个senders，多个receivers的情况下，就需要引入一个中间人，确保只有中间人自己去关闭信号channel stopChan
+// 从senders或receivers处发送的关闭dataCh通道的N个请求，中间人只处理一个请求，然后去关闭信号通道 stopCh
+//多个receivers监听stopCh上信号，方便退出go协程
+//多个senders监听stopCh上信号，方便退出go协程
 func main() {
 	rand.Seed(time.Now().UnixNano())
 	//log.SetFlags(0)
