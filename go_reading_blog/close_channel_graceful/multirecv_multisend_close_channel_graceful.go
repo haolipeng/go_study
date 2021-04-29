@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"math/rand"
 	"strconv"
@@ -10,26 +11,26 @@ import (
 
 func main() {
 	rand.Seed(time.Now().UnixNano())
-	log.SetFlags(0)
+	//log.SetFlags(0)
 
 	// ...
 	const MaxRandomNumber = 100000
-	const NumReceivers = 10
-	const NumSenders = 1000
+	const NumReceivers = 5
+	const NumSenders = 8
 
 	wgReceivers := sync.WaitGroup{}
 	wgReceivers.Add(NumReceivers)
 
 	// stopCh is an additional signal channel.
-	// Its sender is the moderator goroutine shown below.
-	// Its reveivers are all senders and receivers of dataCh.
+	// Its sender is the moderator goroutine shown below. 它的发送者是调解协程
+	// Its reveivers are all senders and receivers of dataCh. 它的接收者是dataCh通道的发送者和接收者
 	dataCh := make(chan int, 100)
 	stopCh := make(chan struct{})
 
-	// The channel toStop is used to notify the moderator
-	// to close the additional signal channel (stopCh).
-	// Its senders are any senders and receivers of dataCh.
-	// Its reveiver is the moderator goroutine shown below.
+	// 通道用于通知调解者来关闭stopCh通道
+	// 通道的发送者是dataCh的发送者和接收者
+	// 通道的接收者是调解者协程
+	// 通道的容量只有1
 	toStop := make(chan string, 1)
 
 	var stoppedBy string
@@ -40,9 +41,12 @@ func main() {
 		close(stopCh)
 	}()
 
-	// senders
+	// 发送者
 	for i := 0; i < NumSenders; i++ {
 		go func(id string) {
+			defer func() {
+				//fmt.Printf("sender(%s) has stopped!\n", id)
+			}()
 			for {
 				value := rand.Intn(MaxRandomNumber)
 				if value == 0 {
@@ -55,24 +59,21 @@ func main() {
 					return
 				}
 
-				// The first select here is to try to exit the goroutine
-				// as early as possible. This select blocks with one
-				// receive operation case and one default branches will
-				// be specially optimized as a try-receive operation by
-				// the standard Go compiler.
+				// 第一个select语句是尽可能早的退出go协程. select语句阻塞在接收操作分支和default分支
+				// 将会被特别优化为一个尝试接收数据的操作
 				select {
 				case <-stopCh:
+					fmt.Println("触发发送协程1的的stop")
 					return
 				default:
 				}
 
-				// Even if stopCh is closed, the first branch in the
-				// second select may be still not selected for some
-				// loops (and for ever in theory) if the send to
-				// dataCh is also non-blocking.
-				// This is why the first select block above is needed.
+				// 即使stopCh关闭了, case <-stopCh分支可能仍不会被选中
+				// 发送数据到dataCh可能是非阻塞的(比如dataCh为buffered channel)
+				// 所以前面的select分支是有必要的
 				select {
 				case <-stopCh:
+					fmt.Println("触发发送协程2的的stop")
 					return
 				case dataCh <- value:
 				}
@@ -80,32 +81,28 @@ func main() {
 		}(strconv.Itoa(i))
 	}
 
-	// receivers
+	// 接收者
 	for i := 0; i < NumReceivers; i++ {
 		go func(id string) {
-			defer wgReceivers.Done()
+			defer func() {
+				wgReceivers.Done()
+				fmt.Printf("receiver(%s) has stopped!\n", id)
+			}()
 
 			for {
-				// Same as the sender goroutine, the first select here
-				// is to try to exit the goroutine as early as possible.
-				// This select blocks with one send operation case and
-				// one default branches will be specially optimized as
-				// a try-send operation by the standard Go compiler.
 				select {
 				case <-stopCh:
+					fmt.Println("触发接收协程1的的stop")
 					return
 				default:
 				}
 
-				// Even if stopCh is closed, the first branch in the
-				// second select may be still not selected for some
-				// loops (and for ever in theory) if the receive from
-				// dataCh is also non-blocking.
-				// This is why the first select block is needed.
 				select {
 				case <-stopCh:
+					fmt.Println("触发接收协程2的的stop")
 					return
 				case value := <-dataCh:
+					//当获取的值是其最大值-1时，尝试关闭接收协程
 					if value == MaxRandomNumber-1 {
 						// The same trick is used to notify
 						// the moderator to close the
@@ -117,7 +114,7 @@ func main() {
 						return
 					}
 
-					log.Println(value)
+					//log.Println(value)
 				}
 			}
 		}(strconv.Itoa(i))

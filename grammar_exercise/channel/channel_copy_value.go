@@ -39,6 +39,6 @@ func channelCopyValue() {
 }
 
 func main() {
-	fmt.Println("将结构体投递到channel通道中，是值拷贝吗？")
+	fmt.Println("将结构体投递到channel通道中，是值拷贝吗？是值拷贝")
 	channelCopyValue()
 }

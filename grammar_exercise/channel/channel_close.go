@@ -28,16 +28,44 @@ func closeChannel() {
 	fmt.Println(x, ok)
 }
 
-//测试1：关闭空channel会触发panic
+//测试1：关闭nil channel会触发panic
 func closeNilChannel() {
 	var a chan int
 	close(a)
 }
 
+func closeChannelTwice() {
+	dataCh := make(chan string, 10)
+	dataCh <- "hello world"
+	close(dataCh)
+	close(dataCh)
+}
+
+func readFromChannel() {
+	ch := make(chan int, 1)
+	ch <- 18
+	close(ch)
+
+	for {
+		select {
+		case data := <-ch:
+			fmt.Println("获取数据", data)
+		default:
+		}
+		time.Sleep(time.Second)
+	}
+}
+
 func main() {
+	//发送数据到channel，关闭channel，从channel读取两次数据
+	//readFromChannel()
+
+	//针对同一个channel，调用多次关闭，什么结果?
+	closeChannelTwice()
+
 	//panic: send on closed channel
-	closeChannel()
+	//closeChannel()
 
 	//panic: close of nil channel
-	closeNilChannel()
+	//closeNilChannel()
 }
