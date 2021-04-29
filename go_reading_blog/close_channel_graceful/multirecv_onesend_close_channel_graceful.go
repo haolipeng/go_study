@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+//多个消费者，单个生产者场景，直接让生产者关闭channel即可
 func main() {
 	rand.Seed(time.Now().UnixNano())
 	log.SetFlags(0)

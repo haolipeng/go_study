@@ -14,14 +14,14 @@ type Addr struct {
 
 /////////////////////////////////验证将数值投递如通道是浅拷贝还是深拷贝///////////////////////////////
 func channelCopyValue() {
-	p1 := People{
+	p1 := &People{
 		"zhangsan",
 		26,
 		Addr{
 			"habin",
 		}}
 
-	var personChan = make(chan People, 1)
+	var personChan = make(chan *People, 1)
 	fmt.Printf("p1(1):%v\n", p1)
 
 	//将值压入channel
