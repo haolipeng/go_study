@@ -10,14 +10,13 @@ type People interface {
 	Sing(lyric string)
 }
 
-//人类
+//Human 人类
 type Human struct {
 	name string
 	age  int
 	home string
 }
 
-//Human方法
 func (h Human) SayHi() {
 	fmt.Printf("I am a Human,name is %s,age is %d\n", h.name, h.age)
 }
@@ -30,14 +29,14 @@ func (h Human) String() string {
 	return h.name + " " + strconv.Itoa(h.age) + " " + h.home
 }
 
-//学生
+//Student 学生
 type Student struct {
 	Human
 	major  string //专业
 	school string //学校名称
 }
 
-//雇员
+//Employee 雇员
 type Employee struct {
 	Human
 	salary  float32

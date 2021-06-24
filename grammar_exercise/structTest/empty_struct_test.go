@@ -23,5 +23,5 @@ func TestEmptyStruct(t *testing.T) {
 	fmt.Printf("%p\n", &a)
 	fmt.Printf("%p\n", &b)
 	fmt.Printf("%p\n", &c)
-	fmt.Printf("empty structTest size is %d\n", unsafe.Sizeof(struct{}{}))
+	fmt.Printf("empty struct size is %d\n", unsafe.Sizeof(struct{}{}))
 }

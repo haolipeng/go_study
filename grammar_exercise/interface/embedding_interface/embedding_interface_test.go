@@ -27,7 +27,7 @@ type game struct {
 	gameCollection []string
 }
 
-// We use the game structTest to
+// We use the game struct to
 // implement the interfaces
 func (t game) sell() {
 	fmt.Println("--------------------------------------")

@@ -6,15 +6,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a11b864b-5158-4507-bc40-0e2f0185bc36" name="Default Changelist" comment="检测一个文件的user name和group name">
-      <change afterPath="$PROJECT_DIR$/grammar_exercise/mapTest/map_curd_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grammar_exercise/mapTest/map_multi_level_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common_mistake/slice_and_map/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/common_mistake/slice_and_map/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common_mistake/string/nil_string.go" beforeDir="false" afterPath="$PROJECT_DIR$/common_mistake/string/nil_string.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grammar_exercise/function/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/grammar_exercise/function/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grammar_exercise/map/map.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/third_party/go-plugin/basic/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/third_party/go-plugin/basic/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/third_party/go-plugin/basic/plugin/greeter_impl.go" beforeDir="false" afterPath="$PROJECT_DIR$/third_party/go-plugin/basic/plugin/greeter_impl.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go_reading_blog/goroutine_leaks/goroutinesLeaks2.go" beforeDir="false" afterPath="$PROJECT_DIR$/go_reading_blog/goroutine_leaks/goroutinesLeaks2.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grammar_exercise/interface/embedding_interface/embedding_interface_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/grammar_exercise/interface/embedding_interface/embedding_interface_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grammar_exercise/interface/interface.go" beforeDir="false" afterPath="$PROJECT_DIR$/grammar_exercise/interface/interface.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grammar_exercise/structTest/empty_struct_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/grammar_exercise/structTest/empty_struct_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/std_library/bufio/bufio.go" beforeDir="false" afterPath="$PROJECT_DIR$/std_library/bufio/bufio.go" afterDir="false" />
     </list>
     <list id="c2f8ca8b-8dd3-48cd-bda6-fb839780ac73" name="ignore Changelist" comment="ignore Changelist">
       <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
@@ -80,44 +77,11 @@
   <component name="LineStatusTrackerManager">
     <file path="$PROJECT_DIR$/.idea/workspace.xml">
       <ranges>
-        <range start1="8" end1="10" start2="8" end2="10" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="11" end1="14" start2="11" end2="13" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="15" end1="20" start2="14" end2="17" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="21" end1="22" start2="18" end2="19" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="27" end1="30" start2="24" end2="24" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="44" end1="45" start2="38" end2="39" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="60" end1="60" start2="54" end2="57" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="85" end1="120" start2="82" end2="120" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="124" end1="125" start2="124" end2="125" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="135" end1="135" start2="135" end2="138" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="141" end1="142" start2="144" end2="145" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="149" end1="150" start2="152" end2="153" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="153" end1="153" start2="156" end2="159" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="155" end1="157" start2="161" end2="161" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="159" end1="164" start2="163" end2="168" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="166" end1="168" start2="170" end2="172" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="169" end1="171" start2="173" end2="174" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="172" end1="173" start2="175" end2="176" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="174" end1="176" start2="177" end2="178" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="178" end1="179" start2="180" end2="181" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="180" end1="184" start2="182" end2="185" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="185" end1="187" start2="186" end2="187" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="189" end1="190" start2="189" end2="190" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="191" end1="195" start2="191" end2="194" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="196" end1="197" start2="195" end2="196" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="199" end1="200" start2="198" end2="199" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="201" end1="202" start2="200" end2="206" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="203" end1="207" start2="207" end2="208" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="209" end1="210" start2="210" end2="211" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="211" end1="212" start2="212" end2="218" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="213" end1="217" start2="219" end2="220" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="219" end1="219" start2="222" end2="230" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="221" end1="226" start2="232" end2="237" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="261" end1="261" start2="272" end2="277" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="273" end1="279" start2="289" end2="292" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="298" end1="299" start2="311" end2="318" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="376" end1="376" start2="395" end2="420" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="380" end1="384" start2="424" end2="425" changelist="c2f8ca8b-8dd3-48cd-bda6-fb839780ac73" />
+        <range start1="8" end1="10" start2="8" end2="8" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="11" end1="17" start2="9" end2="14" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="82" end1="120" start2="79" end2="84" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="414" end1="419" start2="378" end2="378" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="424" end1="428" start2="383" end2="384" changelist="c2f8ca8b-8dd3-48cd-bda6-fb839780ac73" />
       </ranges>
     </file>
   </component>
@@ -412,11 +376,6 @@
           <url>file://$PROJECT_DIR$/std_library/mutex/var_in_struct_test.go</url>
           <line>28</line>
           <option name="timeStamp" value="55" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/grammar_exercise/mapTest/map_multi_level_test.go</url>
-          <line>18</line>
-          <option name="timeStamp" value="59" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
