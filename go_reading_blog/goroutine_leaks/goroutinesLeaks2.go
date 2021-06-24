@@ -50,7 +50,7 @@ func process_one(term string) error {
 	return nil
 }
 
-//Think about what the goroutine is doing;it send result struct to channel
+//Think about what the goroutine is doing;it send result structTest to channel
 //Sending on this channel blocks execution until another goroutine is ready to receive the value.
 //In the timeout case,the receiver stops waiting to receive from the goroutine and moves on.
 //this will cause the goroutine to block forever waiting for a receiver to appear which can't happen

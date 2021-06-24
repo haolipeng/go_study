@@ -8,7 +8,7 @@ import (
 )
 
 /*
-type Reader struct {
+type Reader structTest {
     buf          []byte        // 缓存
     rd           io.Reader    // 底层的io.Reader
     // r:从buf中读走的字节（偏移）；w:buf中填充内容的偏移；

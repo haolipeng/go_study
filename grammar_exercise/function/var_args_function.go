@@ -2,24 +2,16 @@ package main
 
 import "fmt"
 
-//如果参数被存储在一个 slice 类型的变量 slice 中，则可以通过 slice... 的形式来传递参数，调用变参函数。
-func greet(prefix string, who ...string) {
-	fmt.Println(prefix, who)
-}
-
-//变长参数可以作为对应类型的slice进行二次传递
-func F1(s ...string) {
-	F2(s)
-}
-
-func F2(s []string) {
-	for _, v := range s {
-		fmt.Println(v)
+func sum(nums ...int) {
+	total := 0
+	for _, num := range nums {
+		total += num
 	}
+	fmt.Printf("total num:%d\n", total)
 }
 
 //使用空接口
-func typecheck(values ...interface{}) {
+func typeCheck(values ...interface{}) {
 	for _, value := range values {
 		switch v := value.(type) {
 		case int:
@@ -35,9 +27,13 @@ func typecheck(values ...interface{}) {
 }
 
 func main() {
-	greet("hello:", "Joe", "Anna", "Eileen")
-	F1("Joe", "Anna", "Eileen")
+	sum(1, 2)
+	sum(1, 2, 3)
+
+	//通过slice作为函数参数来传递
+	s := []int{1, 2, 3, 4}
+	sum(s...)
 
 	fmt.Println("type check variable type")
-	typecheck(true, "456", 10, 1.23)
+	typeCheck(true, "456", 10, 1.23)
 }

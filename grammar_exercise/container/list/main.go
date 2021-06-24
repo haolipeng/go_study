@@ -28,7 +28,7 @@ func main() {
 	ShowList(l)
 
 	//首尾元素
-	fmt.Printf("Len: %d Front Element:%d Front Element:%d\n", l.Len(), l.Front().Value, l.Back().Value)
+	fmt.Printf("Len: %d Front Element:%d Back Element:%d\n", l.Len(), l.Front().Value, l.Back().Value)
 
 	//演示MoveAfter,MoveBefore,MoveToBack,MoveToFront
 	fmt.Println("==================after call MoveAfter==================")
