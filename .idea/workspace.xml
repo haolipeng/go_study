@@ -5,13 +5,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a11b864b-5158-4507-bc40-0e2f0185bc36" name="Default Changelist" comment="检测一个文件的user name和group name">
+    <list default="true" id="a11b864b-5158-4507-bc40-0e2f0185bc36" name="Default Changelist" comment="fix bug">
+      <change afterPath="$PROJECT_DIR$/grammar_exercise/channelTest/channel_close_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grammar_exercise/channelTest/channel_feature_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grammar_exercise/channelTest/channel_read_closed_channel_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go_reading_blog/goroutine_leaks/goroutinesLeaks2.go" beforeDir="false" afterPath="$PROJECT_DIR$/go_reading_blog/goroutine_leaks/goroutinesLeaks2.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grammar_exercise/interface/embedding_interface/embedding_interface_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/grammar_exercise/interface/embedding_interface/embedding_interface_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grammar_exercise/interface/interface.go" beforeDir="false" afterPath="$PROJECT_DIR$/grammar_exercise/interface/interface.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grammar_exercise/structTest/empty_struct_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/grammar_exercise/structTest/empty_struct_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/std_library/bufio/bufio.go" beforeDir="false" afterPath="$PROJECT_DIR$/std_library/bufio/bufio.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grammar_exercise/channel/batch_handler_with_channel.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grammar_exercise/channel/channel_close.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grammar_exercise/channel/channel_copy_value.go" beforeDir="false" afterPath="$PROJECT_DIR$/grammar_exercise/channelTest/channel_copy_value_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grammar_exercise/语法练习.md" beforeDir="false" afterPath="$PROJECT_DIR$/grammar_exercise/语法练习.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/std_library/mutex/as_func_args_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/grammar_exercise/mutex/as_func_args_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/std_library/mutex/var_in_struct_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/grammar_exercise/mutex/var_in_struct_test.go" afterDir="false" />
     </list>
     <list id="c2f8ca8b-8dd3-48cd-bda6-fb839780ac73" name="ignore Changelist" comment="ignore Changelist">
       <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
@@ -77,11 +81,36 @@
   <component name="LineStatusTrackerManager">
     <file path="$PROJECT_DIR$/.idea/workspace.xml">
       <ranges>
-        <range start1="8" end1="10" start2="8" end2="8" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="11" end1="17" start2="9" end2="14" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="82" end1="120" start2="79" end2="84" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="414" end1="419" start2="378" end2="378" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="424" end1="428" start2="383" end2="384" changelist="c2f8ca8b-8dd3-48cd-bda6-fb839780ac73" />
+        <range start1="7" end1="8" start2="7" end2="11" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="9" end1="14" start2="12" end2="18" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="79" end1="84" start2="83" end2="113" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="134" end1="136" start2="163" end2="165" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="137" end1="138" start2="166" end2="168" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="139" end1="140" start2="169" end2="170" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="141" end1="142" start2="171" end2="174" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="144" end1="145" start2="176" end2="177" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="146" end1="149" start2="178" end2="182" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="150" end1="151" start2="183" end2="186" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="153" end1="154" start2="188" end2="189" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="155" end1="156" start2="190" end2="192" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="157" end1="158" start2="193" end2="194" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="159" end1="160" start2="195" end2="198" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="162" end1="163" start2="200" end2="201" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="164" end1="165" start2="202" end2="203" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="167" end1="168" start2="205" end2="206" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="171" end1="172" start2="209" end2="210" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="174" end1="175" start2="212" end2="213" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="176" end1="177" start2="214" end2="215" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="179" end1="180" start2="217" end2="218" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="183" end1="184" start2="221" end2="222" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="188" end1="192" start2="226" end2="226" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="193" end1="193" start2="227" end2="231" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="196" end1="196" start2="234" end2="238" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="197" end1="201" start2="239" end2="239" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="256" end1="257" start2="294" end2="294" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="281" end1="282" start2="318" end2="320" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="375" end1="376" start2="413" end2="414" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="383" end1="387" start2="421" end2="422" changelist="c2f8ca8b-8dd3-48cd-bda6-fb839780ac73" />
       </ranges>
     </file>
   </component>
@@ -132,44 +161,29 @@
       <recent name="C:\goProject\src\go_study\grammar_exercise\timer\timer_with_select" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.TestMultiLevelMap in go_study/grammar_exercise/mapTest">
-    <configuration name="go build go_study/grammar_exercise/errors" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Test.TestWriteClosedChannel in go_study/grammar_exercise/channelTest">
+    <configuration name="TestChannelCopyValue in go_study/grammar_exercise/channelTest" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="go_study" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="go_study/grammar_exercise/errors" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/grammar_exercise/errors/main.go" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build go_study/grammar_exercise/function" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="go_study" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <package value="go_study/grammar_exercise/function" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/grammar_exercise/function/var_args_function.go" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build go_study/grammar_exercise/map" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="go_study" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="go_study/grammar_exercise/map" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/grammar_exercise/map/map.go" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestMemoryAlign in go_study/grammar_exercise/structTest" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="go_study" />
-      <working_directory value="$PROJECT_DIR$/grammar_exercise/structTest" />
+      <working_directory value="$PROJECT_DIR$/grammar_exercise/channelTest" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="go_study/grammar_exercise/structTest" />
+      <package value="go_study/grammar_exercise/channelTest" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestMemoryAlign\E$" />
+      <pattern value="^\QTestChannelCopyValue\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestCloseChannel in go_study/grammar_exercise/channelTest" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="go_study" />
+      <working_directory value="$PROJECT_DIR$/grammar_exercise/channelTest" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="go_study/grammar_exercise/channelTest" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestCloseChannel\E$" />
       <method v="2" />
     </configuration>
     <configuration name="TestMultiLevelMap in go_study/grammar_exercise/mapTest" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -184,21 +198,45 @@
       <pattern value="^\QTestMultiLevelMap\E$" />
       <method v="2" />
     </configuration>
+    <configuration name="TestReadFromClosedChannel in go_study/grammar_exercise/channelTest" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="go_study" />
+      <working_directory value="$PROJECT_DIR$/grammar_exercise/channelTest" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="go_study/grammar_exercise/channelTest" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestReadFromClosedChannel\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestWriteClosedChannel in go_study/grammar_exercise/channelTest" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="go_study" />
+      <working_directory value="$PROJECT_DIR$/grammar_exercise/channelTest" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="go_study/grammar_exercise/channelTest" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestWriteClosedChannel\E$" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Go Remote.10.250.125.33" />
-      <item itemvalue="Go Test.TestMemoryAlign in go_study/grammar_exercise/structTest" />
-      <item itemvalue="Go Build.go build go_study/grammar_exercise/errors" />
-      <item itemvalue="Go Build.go build go_study/grammar_exercise/function" />
-      <item itemvalue="Go Build.go build go_study/grammar_exercise/map" />
       <item itemvalue="Go Test.TestMultiLevelMap in go_study/grammar_exercise/mapTest" />
+      <item itemvalue="Go Test.TestReadFromClosedChannel in go_study/grammar_exercise/channelTest" />
+      <item itemvalue="Go Test.TestChannelCopyValue in go_study/grammar_exercise/channelTest" />
+      <item itemvalue="Go Test.TestCloseChannel in go_study/grammar_exercise/channelTest" />
+      <item itemvalue="Go Test.TestWriteClosedChannel in go_study/grammar_exercise/channelTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.TestWriteClosedChannel in go_study/grammar_exercise/channelTest" />
+        <item itemvalue="Go Test.TestCloseChannel in go_study/grammar_exercise/channelTest" />
+        <item itemvalue="Go Test.TestChannelCopyValue in go_study/grammar_exercise/channelTest" />
+        <item itemvalue="Go Test.TestReadFromClosedChannel in go_study/grammar_exercise/channelTest" />
         <item itemvalue="Go Test.TestMultiLevelMap in go_study/grammar_exercise/mapTest" />
-        <item itemvalue="Go Build.go build go_study/grammar_exercise/map" />
-        <item itemvalue="Go Build.go build go_study/grammar_exercise/function" />
-        <item itemvalue="Go Build.go build go_study/grammar_exercise/errors" />
-        <item itemvalue="Go Test.TestMemoryAlign in go_study/grammar_exercise/structTest" />
       </list>
     </recent_temporary>
   </component>
@@ -254,7 +292,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/third_party/go-plugin-example" />
     </ignored-roots>
-    <MESSAGE value="string 和 []byte 字节切片之间的转换" />
     <MESSAGE value="client-go调用watch函数" />
     <MESSAGE value="mutex实验代码以及原理剖析" />
     <MESSAGE value="在k8s的pod中执行shell命令" />
@@ -279,7 +316,8 @@
     <MESSAGE value="整理阅读博客时的配套代码" />
     <MESSAGE value="go101配套代码阅读" />
     <MESSAGE value="检测一个文件的user name和group name" />
-    <option name="LAST_COMMIT_MESSAGE" value="检测一个文件的user name和group name" />
+    <MESSAGE value="fix bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix bug" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -373,7 +411,7 @@
           <option name="timeStamp" value="52" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/std_library/mutex/var_in_struct_test.go</url>
+          <url>file://$PROJECT_DIR$/grammar_exercise/mutex/var_in_struct_test.go</url>
           <line>28</line>
           <option name="timeStamp" value="55" />
         </line-breakpoint>

@@ -1,7 +1,11 @@
-package main
+package channelTest
 
-import "fmt"
+import (
+	"fmt"
+	"testing"
+)
 
+//验证将数值投递如通道是浅拷贝还是深拷贝
 type People struct {
 	name    string
 	age     uint8
@@ -12,8 +16,8 @@ type Addr struct {
 	city string
 }
 
-/////////////////////////////////验证将数值投递如通道是浅拷贝还是深拷贝///////////////////////////////
-func channelCopyValue() {
+func TestChannelCopyValue(t *testing.T) {
+	fmt.Println("将结构体投递到channel通道中，是值拷贝吗？是值拷贝")
 	p1 := &People{
 		"zhangsan",
 		26,
@@ -36,9 +40,4 @@ func channelCopyValue() {
 	fmt.Printf("p1_copy:%v\n", p1_copy)
 
 	//结论：数值投入到channel中时，做了copy操作
-}
-
-func main() {
-	fmt.Println("将结构体投递到channel通道中，是值拷贝吗？是值拷贝")
-	channelCopyValue()
 }
