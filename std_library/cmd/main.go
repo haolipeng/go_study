@@ -6,6 +6,7 @@ import (
 	"os/exec"
 )
 
+//TODO:需持续补充下
 func main() {
 	fmt.Println("use cmd example")
 	path, _ := os.Getwd()

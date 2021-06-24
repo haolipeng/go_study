@@ -5,9 +5,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a11b864b-5158-4507-bc40-0e2f0185bc36" name="Default Changelist" comment="优化channel的示例代码">
+    <list default="true" id="a11b864b-5158-4507-bc40-0e2f0185bc36" name="Default Changelist" comment="删除channel的生产者消费者代码">
+      <change afterPath="$PROJECT_DIR$/grammar_exercise/ticker/ticker_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grammar_exercise/channel_behavior/channel_behavir.go" beforeDir="false" afterPath="$PROJECT_DIR$/grammar_exercise/channel_behavior/channel_behavir.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/std_library/cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/std_library/cmd/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/std_library/singleflight/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/std_library/singleflight/main.go" afterDir="false" />
     </list>
     <list id="c2f8ca8b-8dd3-48cd-bda6-fb839780ac73" name="ignore Changelist" comment="ignore Changelist">
       <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
@@ -73,13 +75,26 @@
   <component name="LineStatusTrackerManager">
     <file path="$PROJECT_DIR$/.idea/workspace.xml">
       <ranges>
-        <range start1="7" end1="11" start2="7" end2="8" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="12" end1="18" start2="9" end2="10" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="79" end1="79" start2="71" end2="84" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="80" end1="116" start2="85" end2="85" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="294" end1="295" start2="263" end2="263" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="319" end1="320" start2="287" end2="289" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="421" end1="425" start2="390" end2="391" changelist="c2f8ca8b-8dd3-48cd-bda6-fb839780ac73" />
+        <range start1="7" end1="8" start2="7" end2="9" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="9" end1="10" start2="10" end2="12" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="71" end1="71" start2="73" end2="99" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="72" end1="85" start2="100" end2="100" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="132" end1="133" start2="147" end2="148" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="157" end1="158" start2="172" end2="173" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="159" end1="160" start2="174" end2="175" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="162" end1="163" start2="177" end2="178" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="166" end1="167" start2="181" end2="182" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="169" end1="170" start2="184" end2="185" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="171" end1="172" start2="186" end2="187" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="174" end1="175" start2="189" end2="190" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="178" end1="179" start2="193" end2="194" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="195" end1="196" start2="210" end2="210" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="200" end1="200" start2="214" end2="215" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="203" end1="203" start2="218" end2="219" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="207" end1="208" start2="223" end2="223" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="263" end1="264" start2="278" end2="278" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="288" end1="289" start2="302" end2="304" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
+        <range start1="390" end1="394" start2="405" end2="406" changelist="c2f8ca8b-8dd3-48cd-bda6-fb839780ac73" />
       </ranges>
     </file>
   </component>
@@ -130,7 +145,7 @@
       <recent name="C:\goProject\src\go_study\grammar_exercise\timer\timer_with_select" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.TestWriteClosedChannel in go_study/grammar_exercise/channelTest">
+  <component name="RunManager" selected="Go Test.TestTicker in go_study/grammar_exercise/ticker">
     <configuration name="TestChannelCopyValue in go_study/grammar_exercise/channelTest" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="go_study" />
       <working_directory value="$PROJECT_DIR$/grammar_exercise/channelTest" />
@@ -155,18 +170,6 @@
       <pattern value="^\QTestCloseChannel\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestMultiLevelMap in go_study/grammar_exercise/mapTest" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="go_study" />
-      <working_directory value="$PROJECT_DIR$/grammar_exercise/mapTest" />
-      <root_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="go_study/grammar_exercise/mapTest" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestMultiLevelMap\E$" />
-      <method v="2" />
-    </configuration>
     <configuration name="TestReadFromClosedChannel in go_study/grammar_exercise/channelTest" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="go_study" />
       <working_directory value="$PROJECT_DIR$/grammar_exercise/channelTest" />
@@ -177,6 +180,18 @@
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
       <pattern value="^\QTestReadFromClosedChannel\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestTicker in go_study/grammar_exercise/ticker" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="go_study" />
+      <working_directory value="$PROJECT_DIR$/grammar_exercise/ticker" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="go_study/grammar_exercise/ticker" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestTicker\E$" />
       <method v="2" />
     </configuration>
     <configuration name="TestWriteClosedChannel in go_study/grammar_exercise/channelTest" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -193,19 +208,19 @@
     </configuration>
     <list>
       <item itemvalue="Go Remote.10.250.125.33" />
-      <item itemvalue="Go Test.TestMultiLevelMap in go_study/grammar_exercise/mapTest" />
       <item itemvalue="Go Test.TestReadFromClosedChannel in go_study/grammar_exercise/channelTest" />
       <item itemvalue="Go Test.TestChannelCopyValue in go_study/grammar_exercise/channelTest" />
       <item itemvalue="Go Test.TestCloseChannel in go_study/grammar_exercise/channelTest" />
       <item itemvalue="Go Test.TestWriteClosedChannel in go_study/grammar_exercise/channelTest" />
+      <item itemvalue="Go Test.TestTicker in go_study/grammar_exercise/ticker" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.TestTicker in go_study/grammar_exercise/ticker" />
         <item itemvalue="Go Test.TestWriteClosedChannel in go_study/grammar_exercise/channelTest" />
         <item itemvalue="Go Test.TestCloseChannel in go_study/grammar_exercise/channelTest" />
         <item itemvalue="Go Test.TestChannelCopyValue in go_study/grammar_exercise/channelTest" />
         <item itemvalue="Go Test.TestReadFromClosedChannel in go_study/grammar_exercise/channelTest" />
-        <item itemvalue="Go Test.TestMultiLevelMap in go_study/grammar_exercise/mapTest" />
       </list>
     </recent_temporary>
   </component>
@@ -261,7 +276,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/third_party/go-plugin-example" />
     </ignored-roots>
-    <MESSAGE value="mutex实验代码以及原理剖析" />
     <MESSAGE value="在k8s的pod中执行shell命令" />
     <MESSAGE value="k8s DaemonSet 添加、删除、更新、获取操作" />
     <MESSAGE value="bufio reader and writer" />
@@ -286,7 +300,8 @@
     <MESSAGE value="检测一个文件的user name和group name" />
     <MESSAGE value="fix bug" />
     <MESSAGE value="优化channel的示例代码" />
-    <option name="LAST_COMMIT_MESSAGE" value="优化channel的示例代码" />
+    <MESSAGE value="删除channel的生产者消费者代码" />
+    <option name="LAST_COMMIT_MESSAGE" value="删除channel的生产者消费者代码" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>

@@ -56,8 +56,6 @@ func (client *mockClient) singleFlightGetAsyn(key string) (interface{}, error) {
 	case res = <-resCh:
 		return res.Val, res.Err
 	}
-
-	return nil, nil
 }
 
 const cnt = 2
