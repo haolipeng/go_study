@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+//如果有效实现变量的枚举
 type ByteSize float64
 
 const (

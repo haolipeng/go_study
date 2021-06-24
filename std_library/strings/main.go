@@ -6,6 +6,9 @@ import (
 )
 
 func main() {
+	name := "haolipeng"
+	fmt.Println("name last char:", name[len(name)-1:])
+
 	ifStr := "3: eth0@if246: <BROADCAST> mtu 1500 qdisc noqueue state up"
 	//查找某个子串的索引
 	index := strings.Index(ifStr, "eth0")

@@ -3,6 +3,7 @@ module go_study
 go 1.15
 
 require (
+	github.com/360EntSecGroup-Skylar/excelize/v2 v2.4.0
 	github.com/PuerkitoBio/goquery v1.6.0
 	github.com/dkiser/go-plugin-example v0.0.0-20170205011010-bead7e2bd676
 	github.com/fasthttp-contrib/websocket v0.0.0-20160511215533-1f3b11f56072 // indirect
@@ -21,6 +22,7 @@ require (
 	github.com/kataras/iris v0.0.2
 	github.com/kataras/iris/v12 v12.1.8 // indirect
 	github.com/kr/pretty v0.2.1 // indirect
+	github.com/ledongthuc/pdf v0.0.0-20200323191019-23c5852adbd2
 	github.com/mattn/go-colorable v0.1.8 // indirect
 	github.com/moul/http2curl v1.0.0 // indirect
 	github.com/nats-io/nats-server/v2 v2.1.8 // indirect
@@ -33,7 +35,7 @@ require (
 	github.com/stretchr/testify v1.6.1
 	github.com/valyala/fasthttp v1.16.0 // indirect
 	github.com/yudai/pp v2.0.1+incompatible // indirect
-	golang.org/x/net v0.0.0-20201006153459-a7d1128ccaa0
+	golang.org/x/net v0.0.0-20210415231046-e915ea6b2b7d
 	golang.org/x/sync v0.0.0-20200317015054-43a5402ce75a
 	golang.org/x/time v0.0.0-20200630173020-3af7569d3a1e
 	golang.org/x/xerrors v0.0.0-20191204190536-9bdfabe68543
