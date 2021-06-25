@@ -2,10 +2,11 @@ package main
 
 import (
 	"fmt"
+	"testing"
 	"time"
 )
 
-func testTimer() {
+func TestTimer(t *testing.T) {
 	timer := time.NewTimer(time.Second * 5)
 	<-timer.C
 	fmt.Println()
@@ -14,7 +15,7 @@ func testTimer() {
 	fmt.Println("Timer is inactivated")
 }
 
-func testTimerStop() {
+func TestTimerStop(t *testing.T) {
 	timer := time.NewTimer(time.Second * 5)
 
 	go func() {
@@ -28,9 +29,4 @@ func testTimerStop() {
 	if ok {
 		fmt.Println("timer is stopped")
 	}
-}
-
-func main() {
-	//testTimer()
-	testTimerStop()
 }
