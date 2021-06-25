@@ -17,6 +17,7 @@ const (
 	YB
 )
 
+//实现枚举类型对应的String()函数
 func (b ByteSize) String() string {
 	switch {
 	case b >= YB:
@@ -39,8 +40,28 @@ func (b ByteSize) String() string {
 	return fmt.Sprintf("%.2fB", b)
 }
 
+// FishType 在所需枚举值上设置go:generate 指令
+//go:generate stringer -type=FishType
+type FishType int
+
+const (
+	A FishType = iota
+	B
+	C
+	D
+)
+
 func main() {
-	var val ByteSize = 1e13
-	fmt.Println(val.String())
-	fmt.Printf("%v,%v,%v,%v,", KB, MB, GB, TB)
+	//借助Go中的String方法的默认约定，针对定义了String()方法的类型，默认输出时候会调用该String()方法
+	//var val ByteSize = 1e13
+	//fmt.Println(val)
+
+	fmt.Printf("%v,%v,%v,%v\n", KB, MB, GB, TB)
+
+	//测试go:generate生成的枚举值
+	var f1 FishType = A
+	fmt.Println(f1)
+
+	var f2 FishType = D
+	fmt.Println(f2)
 }

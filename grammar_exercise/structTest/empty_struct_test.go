@@ -20,8 +20,10 @@ func TestEmptyStruct(t *testing.T) {
 
 	c := emptyStruct{}
 
+	//a，b，c三个变量的地址相同
 	fmt.Printf("%p\n", &a)
 	fmt.Printf("%p\n", &b)
 	fmt.Printf("%p\n", &c)
 	fmt.Printf("empty struct size is %d\n", unsafe.Sizeof(struct{}{}))
+
 }
