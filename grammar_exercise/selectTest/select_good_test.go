@@ -1,4 +1,4 @@
-package main
+package selectTest
 
 import (
 	"fmt"
@@ -6,6 +6,9 @@ import (
 	"time"
 )
 
+//Generator
+//这个是在《go爬虫课程》讲的例子
+//Generator 初始化channel并每隔一段时间投递数据到通道上
 func Generator() chan int {
 	out := make(chan int)
 	go func() {

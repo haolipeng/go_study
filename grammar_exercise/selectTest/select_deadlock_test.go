@@ -1,8 +1,11 @@
-package main
+package selectTest
 
-import "fmt"
+import (
+	"fmt"
+	"testing"
+)
 
-func main() {
+func TestDeadLock(t *testing.T) {
 	ch1 := make(chan string, 1)
 	ch2 := make(chan string, 1)
 
