@@ -23,6 +23,9 @@ func stubValue() {
 }
 
 //场景2:给普通函数打桩
+func Exec(cmd string) (string, error) {
+	return "hello world", errors.New("I am error!")
+}
 func stubFunc() {
 	var (
 		output string
@@ -55,10 +58,6 @@ func stubLibraryFunc() {
 	defer stubs.Reset()
 }
 
-func Exec(cmd string) (string, error) {
-	return "hello world", errors.New("I am error!")
-}
-
 //场景4：设置环境变量
 func stubEnv() {
 	stubs := gostub.New()
@@ -67,8 +66,8 @@ func stubEnv() {
 }
 
 func main() {
-	//stubValue()
-	//stubFunc()
-	//stubLibraryFunc()
+	stubValue()
+	stubFunc()
+	stubLibraryFunc()
 	stubEnv()
 }
