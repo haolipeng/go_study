@@ -3,28 +3,10 @@ package main
 import (
 	"fmt"
 	"reflect"
+	"testing"
 )
 
-type User struct {
-	Name   string
-	Email  string
-	age    int
-	home   string
-	school string
-}
-
-func (user User) SetName(name string) {
-	user.Name = name
-}
-
-func (user User) SetAge(age int) {
-	user.age = age
-}
-
-func (user User) Show() {
-	fmt.Println("hello world")
-}
-func main() {
+func TestValueOf(t *testing.T) {
 	rv := []interface{}{"hi", 42, func() {}}
 	for _, v := range rv {
 		v := reflect.ValueOf(v)
@@ -36,5 +18,16 @@ func main() {
 		default:
 			fmt.Printf("unhandled kind %s", v.Kind())
 		}
+	}
+}
+
+func TestTypeOf(t *testing.T) {
+	var i int64
+	v := reflect.TypeOf(i)
+	elemType := v.Elem()
+	n := elemType.NumMethod()
+	for j := 0; j < n; j++ {
+		m := elemType.Method(j)
+		fmt.Println("method:", m.Type, m.Name)
 	}
 }
