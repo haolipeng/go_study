@@ -1,18 +1,14 @@
-package main
+package gostubTest
 
 import (
-	"fmt"
 	"github.com/prashantv/gostub"
+	"testing"
 )
 
 var counter = 100
 
-func stubGlobalVariable() {
+func TestStubGlobalVariable(t *testing.T) {
 	stubs := gostub.Stub(&counter, 200)
 	defer stubs.Reset()
-	fmt.Println("Counter:", counter)
-}
-
-func main() {
-	stubGlobalVariable()
+	t.Log("Counter:", counter)
 }
