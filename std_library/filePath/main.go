@@ -22,7 +22,32 @@ func prepareTestDirTree(tree string) (string, error) {
 	return tmpDir, nil
 }
 
+func TestFilePathRel() {
+	paths := []string{
+		"/a/b/c",
+		"/b/c",
+		"./b/c",
+	}
+	base := "/a"
+
+	fmt.Println("On Unix:")
+	for _, p := range paths {
+		rel, err := filepath.Rel(base, p)
+		fmt.Printf("%q: %q %v\n", p, rel, err)
+	}
+
+	//Output:
+	//
+	//On Unix:
+	//"/a/b/c": "b/c" <nil>
+	//"/b/c": "../b/c" <nil>
+	//"./b/c": "" Rel: can't make ./b/c relative to /a
+}
+
 func main() {
+	//测试下函数，相对路径和绝对路径两种情况都需要测试
+	TestFilePathRel()
+
 	tmpDir, err := prepareTestDirTree("dir/to/walk/skip")
 	if err != nil {
 		fmt.Printf("unable to create test dir tree: %v\n", err)
