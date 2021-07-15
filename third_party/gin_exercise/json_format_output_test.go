@@ -11,13 +11,31 @@ type Student struct {
 	Age  int    `json:"age"`
 }
 
+type Response struct {
+	Data    interface{} `json:"data"`
+	Message string      `json:"message"`
+	Status  int         `json:"status"`
+}
+
 //普通json格式输出
 func TestJsonFormatOutput(t *testing.T) {
 	r := gin.Default()
+	s1 := Student{
+		Name: "haolipeng",
+		Age:  32,
+	}
+	s2 := Student{
+		Name: "zhouyang",
+		Age:  33,
+	}
+	var stuList []Student
+	stuList = append(stuList, s1, s2)
+
 	r.GET("/users/haolipeng", func(c *gin.Context) {
-		c.JSON(http.StatusOK, Student{
-			Name: "haolipeng",
-			Age:  32,
+		c.JSON(http.StatusOK, &Response{
+			Data:    stuList,
+			Message: "success",
+			Status:  http.StatusOK,
 		})
 	})
 	r.Run(":8080")
