@@ -30,6 +30,7 @@ func (h *IpCountArray) Pop() interface{} {
 	return x
 }
 
+//topK功能的实现
 func main() {
 	h := &IpCountArray{
 		{
