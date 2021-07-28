@@ -5,6 +5,8 @@ go 1.15
 require (
 	github.com/360EntSecGroup-Skylar/excelize/v2 v2.4.0
 	github.com/PuerkitoBio/goquery v1.6.0
+	github.com/appleboy/gin-jwt/v2 v2.6.4
+	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/dkiser/go-plugin-example v0.0.0-20170205011010-bead7e2bd676
 	github.com/fasthttp-contrib/websocket v0.0.0-20160511215533-1f3b11f56072 // indirect
 	github.com/fatih/set v0.2.1
