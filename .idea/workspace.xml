@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
   <component name="BranchesTreeState">
     <expand />
     <select />
@@ -28,7 +31,7 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" path="C:\Go" />
+  <component name="GOROOT" url="file://C:/Go" />
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
@@ -41,12 +44,12 @@
     <option name="indexEntireGoPath" value="false" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/../../pkg/mod/github.com/golang/groupcache@v0.0.0-20200121045136-8c9f03a8e57e/groupcache.go" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/../../pkg/mod/github.com/golang/groupcache@v0.0.0-20200121045136-8c9f03a8e57e/http.go" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/../../pkg/mod/github.com/gogf/gf@v1.15.6/.example/text/gregex/gregex.go" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/../../pkg/mod/github.com/golang/groupcache@v0.0.0-20200121045136-8c9f03a8e57e/byteview.go" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/../../pkg/mod/github.com/golang/groupcache@v0.0.0-20200121045136-8c9f03a8e57e/lru/lru.go" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/../../pkg/mod/github.com/gogf/gf@v1.15.6/net/ghttp/ghttp_server_service_handler.go" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/../../pkg/mod/github.com/gogf/gf@v1.15.6/.example/text/gregex/gregex.go" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/../../pkg/mod/github.com/golang/groupcache@v0.0.0-20200121045136-8c9f03a8e57e/groupcache.go" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/../../pkg/mod/github.com/golang/groupcache@v0.0.0-20200121045136-8c9f03a8e57e/lru/lru.go" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/../../pkg/mod/github.com/golang/groupcache@v0.0.0-20200121045136-8c9f03a8e57e/byteview.go" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/../../pkg/mod/github.com/golang/groupcache@v0.0.0-20200121045136-8c9f03a8e57e/http.go" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectId" id="1jixKfpfjHMsDMZVwoFoSSHo8jO" />
   <component name="ProjectLevelVcsManager">
