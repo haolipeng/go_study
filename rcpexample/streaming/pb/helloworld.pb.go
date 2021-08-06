@@ -102,7 +102,7 @@ func (this *HelloRequest) VerboseEqual(that interface{}) error {
 		return fmt.Errorf("that is type *HelloRequest but is not nil && this == nil")
 	}
 	if this.Name != that1.Name {
-		return fmt.Errorf("Name this(%v) Not Equal that(%v)", this.Name, that1.Name)
+		return fmt.Errorf("name this(%v) Not Equal that(%v)\n", this.Name, that1.Name)
 	}
 	return nil
 }
@@ -162,7 +162,7 @@ func (this *HelloReply) VerboseEqual(that interface{}) error {
 		return fmt.Errorf("that is type *HelloReply but is not nil && this == nil")
 	}
 	if this.Message != that1.Message {
-		return fmt.Errorf("Message this(%v) Not Equal that(%v)", this.Message, that1.Message)
+		return fmt.Errorf("Message this(%v) Not Equal that(%v)\n", this.Message, that1.Message)
 	}
 	return nil
 }

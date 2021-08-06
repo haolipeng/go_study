@@ -54,7 +54,7 @@ func main() {
 }
 
 /*
-
+DaemonSetWithYaml
 clientset: 和k8s集群的客户端连接
 action:操作动作
 	add:添加

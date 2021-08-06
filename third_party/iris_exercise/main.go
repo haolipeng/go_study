@@ -39,8 +39,6 @@ func (c *lotteryController) Get() string {
 	return fmt.Sprintf("当前总共参与抽奖的用户数为:%d\n", count)
 }
 
-//POST http://localhost:8080/import
-//params:users
 func (c *lotteryController) PostImport() string {
 	strUsers := c.Ctx.FormValue("users")
 	users := strings.Split(strUsers, ",")

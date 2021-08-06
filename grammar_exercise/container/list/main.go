@@ -5,7 +5,7 @@ import (
 	"fmt"
 )
 
-//遍历list各个节点
+//ShowList 遍历list各个节点
 func ShowList(l *list.List) {
 	for e := l.Front(); e != nil; e = e.Next() {
 		fmt.Println(e.Value)

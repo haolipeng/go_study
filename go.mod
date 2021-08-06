@@ -11,11 +11,13 @@ require (
 	github.com/fatih/set v0.2.1
 	github.com/gin-gonic/gin v1.7.2
 	github.com/go-playground/validator/v10 v10.6.1 // indirect
+	github.com/go-resty/resty/v2 v2.6.0
 	github.com/gogo/protobuf v1.3.1
 	github.com/golang/groupcache v0.0.0-20200121045136-8c9f03a8e57e
 	github.com/golang/mock v1.5.0
 	github.com/golang/protobuf v1.5.2 // indirect
 	github.com/google/gopacket v1.1.19
+	github.com/gorilla/websocket v1.4.2
 	github.com/hashicorp/go-hclog v0.14.1
 	github.com/hashicorp/go-plugin v1.4.1
 	github.com/huaweicloud/golangsdk v0.0.0-20201228013212-d10065a3dc7f
