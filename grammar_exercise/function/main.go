@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 //知识点1
-//在函数调用时，像切片（slice）、字典（map）、接口（interface）、通道（channel）
+//在函数调用时，像切片（slice）、字典（map）、接口（interface）、通道（channel）作为函数参数
 //这样的引用类型都是默认使用引用传递（即使没有显式的指出指针）。
 
 //知识点2
@@ -15,10 +15,12 @@ func min(first, second int) (sum int) {
 
 //知识点3
 //传递指针不但可以节省内存，而且赋予了函数直接修改外部变量的能力
+
 func Mutiply(a, b int, reply *int) {
 	*reply = a * b
 }
 
+//知识点4
 //函数类型作为函数参数
 func add(a, b int) int {
 	fmt.Println("call add function!")

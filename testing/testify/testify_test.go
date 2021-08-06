@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
 	"testing"
 )
 
@@ -35,4 +36,11 @@ func TestSomething(t *testing.T) {
 
 	//断言不相等
 	assert.NotEqual(t, 123, 456, "they should not be equal")
+
+	//require和assert的区别在于，require不符合断言时，会中断当前运行
+	require.Equal(t, 123, 456)
+
+	//对于nil的
+	var object string
+	assert.NotNil(t, object)
 }
