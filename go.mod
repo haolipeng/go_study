@@ -5,11 +5,11 @@ go 1.15
 require (
 	github.com/PuerkitoBio/goquery v1.6.0
 	github.com/fasthttp-contrib/websocket v0.0.0-20160511215533-1f3b11f56072 // indirect
+	github.com/gin-gonic/gin v1.7.3
 	github.com/gogf/gf v1.16.4
 	github.com/gogo/protobuf v1.3.1
 	github.com/golang/groupcache v0.0.0-20200121045136-8c9f03a8e57e
 	github.com/golang/protobuf v1.4.3 // indirect
-	github.com/google/gopacket v1.1.19
 	github.com/huaweicloud/golangsdk v0.0.0-20201228013212-d10065a3dc7f
 	github.com/imdario/mergo v0.3.11 // indirect
 	github.com/jwangsadinata/go-multimap v0.0.0-20190620162914-c29f3d7f33b6
@@ -17,7 +17,6 @@ require (
 	github.com/kataras/iris v0.0.2
 	github.com/kataras/iris/v12 v12.1.8 // indirect
 	github.com/kr/pretty v0.2.1 // indirect
-	github.com/lesismal/arpc v1.1.0 // indirect
 	github.com/mattn/go-colorable v0.1.8 // indirect
 	github.com/moul/http2curl v1.0.0 // indirect
 	github.com/nats-io/nats-server/v2 v2.1.8 // indirect

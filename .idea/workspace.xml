@@ -9,14 +9,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a11b864b-5158-4507-bc40-0e2f0185bc36" name="Default Changelist" comment="mutex实验代码以及原理剖析">
-      <change afterPath="$PROJECT_DIR$/testing/gostubTest/stub_global_variable_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testing/gostubTest/system_library_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/GoFrame_exercise/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/GoFrame_exercise/web/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/go_study.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/go_study.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/third_party/delve_exercise/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/third_party/delve_exercise/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/std_library/http/http_exercise.go" beforeDir="false" afterPath="$PROJECT_DIR$/std_library/http/http_exercise.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Go Application" />
         <option value="Go File" />
+        <option value="Go Application" />
       </list>
     </option>
   </component>
@@ -38,6 +35,7 @@
         <option value="haolipeng &lt;1078285863@qq.com&gt;" />
       </list>
     </option>
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GoLibraries">
@@ -61,7 +59,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="DefaultGoTemplateProperty" value="Go Application" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="configurable..is.expanded" value="false" />
@@ -92,14 +90,23 @@
       <recent name="D:\goProject\src\go_study\rcpexample\streaming\pb" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.TestStubMultipleValueSystemLibrary in go_study/testing/gostubTest">
-    <configuration name="go build go_study/third_party/delve_exercise" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Build.go build http_exercise.go">
+    <configuration name="go build go_study/std_library/http_server" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_study" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="go_study/third_party/delve_exercise" />
+      <package value="go_study/std_library/http_server" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/third_party/delve_exercise/main.go" />
+      <filePath value="$PROJECT_DIR$/std_library/http_server/server.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build http_exercise.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go_study" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <package value="go_study" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/std_library/http/http_exercise.go" />
       <method v="2" />
     </configuration>
     <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
@@ -123,17 +130,6 @@
       <pattern value="^\QTestStubMultipleValueSystemLibrary\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="Test_test in go_study/geektime-go-trainning/error_handle/errorType" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="go_study" />
-      <working_directory value="$PROJECT_DIR$/geektime-go-trainning/error_handle/errorType" />
-      <kind value="PACKAGE" />
-      <package value="go_study/geektime-go-trainning/error_handle/errorType" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTest_test\E$" />
-      <method v="2" />
-    </configuration>
     <configuration name="system_library_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="go_study" />
       <working_directory value="$PROJECT_DIR$/testing/gostubTest" />
@@ -147,11 +143,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build http_exercise.go" />
+        <item itemvalue="Go Build.go build go_study/std_library/http_server" />
         <item itemvalue="Go Test.TestStubMultipleValueSystemLibrary in go_study/testing/gostubTest" />
         <item itemvalue="Go Test.system_library_test.go" />
         <item itemvalue="Go Build.go build main.go" />
-        <item itemvalue="Go Build.go build go_study/third_party/delve_exercise" />
-        <item itemvalue="Go Test.Test_test in go_study/geektime-go-trainning/error_handle/errorType" />
       </list>
     </recent_temporary>
   </component>
@@ -217,14 +213,14 @@
     <MESSAGE value="技术博客练习" />
     <MESSAGE value="string 和 []byte 字节切片之间的转换" />
     <MESSAGE value="client-go调用watch函数" />
-    <MESSAGE value="mutex实验代码以及原理剖析" />
     <MESSAGE value="在k8s的pod中执行shell命令" />
     <MESSAGE value="k8s DaemonSet 添加、删除、更新、获取操作" />
     <MESSAGE value="bufio reader and writer" />
     <MESSAGE value="scanner 读取文件的每一行的练习代码" />
     <MESSAGE value="临时文件和临时文件夹的创建和销毁" />
     <MESSAGE value="error处理代码提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="error处理代码提交" />
+    <MESSAGE value="mutex实验代码以及原理剖析" />
+    <option name="LAST_COMMIT_MESSAGE" value="mutex实验代码以及原理剖析" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
