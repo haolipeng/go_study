@@ -1,25 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
   <component name="BranchesTreeState">
     <expand />
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a11b864b-5158-4507-bc40-0e2f0185bc36" name="Default Changelist" comment="整理不同的代码">
-      <change afterPath="$PROJECT_DIR$/grammar_exercise/enum/fishtype_string.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grammar_exercise/structTest/empty_struct_equal_test.go" afterDir="false" />
+    <list default="true" id="a11b864b-5158-4507-bc40-0e2f0185bc36" name="Default Changelist" comment="mutex实验代码以及原理剖析">
+      <change beforePath="$PROJECT_DIR$/.idea/go_study.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/go_study.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grammar_exercise/const/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/grammar_exercise/enum/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grammar_exercise/structTest/empty_struct_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/grammar_exercise/structTest/empty_struct_test.go" afterDir="false" />
-    </list>
-    <list id="c2f8ca8b-8dd3-48cd-bda6-fb839780ac73" name="ignore Changelist" comment="ignore Changelist">
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/remote-targets.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/10_250_125_33.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/std_library/http/http_exercise.go" beforeDir="false" afterPath="$PROJECT_DIR$/std_library/http/http_exercise.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,88 +23,34 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Go Application" />
         <option value="Go File" />
+        <option value="Go Application" />
       </list>
     </option>
   </component>
-  <component name="GOROOT" url="file://$PROJECT_DIR$/../../../Program Files/Go" />
+  <component name="GOROOT" url="file://C:/Go" />
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
         <option value="haolipeng &lt;1078285863@qq.com&gt;" />
       </list>
     </option>
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GitSEFilterConfiguration">
-    <file-type-list>
-      <filtered-out-file-type name="LOCAL_BRANCH" />
-      <filtered-out-file-type name="REMOTE_BRANCH" />
-      <filtered-out-file-type name="TAG" />
-      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
-    </file-type-list>
-  </component>
-  <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="ddb81c91-b22d-4660-8f9f-9bbbac020d00" />
-  </component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="hiddenUrls">
-      <set>
-        <option value="https://github.com/haolipeng/go_study" />
-      </set>
-    </option>
   </component>
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="false" />
-    <option name="urls">
-      <list>
-        <option value="file://$PROJECT_DIR$/../.." />
-      </list>
-    </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/../../pkg/mod/github.com/hashicorp/go-plugin@v1.4.1/client.go" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/../../pkg/mod/github.com/hashicorp/go-plugin@v1.4.1/plugin.go" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/../../pkg/mod/github.com/hashicorp/go-plugin@v1.4.1/protocol.go" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/../../pkg/mod/github.com/hashicorp/go-plugin@v1.4.1/grpc_broker.go" root0="SKIP_INSPECTION" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/.idea/workspace.xml">
-      <ranges>
-        <range start1="7" end1="10" start2="7" end2="10" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="11" end1="13" start2="11" end2="15" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="78" end1="110" start2="80" end2="108" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="160" end1="162" start2="158" end2="160" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="163" end1="165" start2="161" end2="162" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="166" end1="167" start2="163" end2="164" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="168" end1="171" start2="165" end2="166" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="173" end1="174" start2="168" end2="169" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="175" end1="177" start2="170" end2="171" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="178" end1="179" start2="172" end2="173" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="180" end1="183" start2="174" end2="175" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="185" end1="186" start2="177" end2="178" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="187" end1="188" start2="179" end2="180" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="190" end1="191" start2="182" end2="183" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="194" end1="195" start2="186" end2="187" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="197" end1="198" start2="189" end2="190" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="206" end1="207" start2="198" end2="199" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="209" end1="210" start2="201" end2="202" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="213" end1="215" start2="205" end2="207" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="216" end1="217" start2="208" end2="209" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="218" end1="218" start2="210" end2="211" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="222" end1="225" start2="215" end2="215" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="227" end1="227" start2="217" end2="220" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="230" end1="230" start2="223" end2="226" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="232" end1="235" start2="228" end2="228" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="290" end1="291" start2="283" end2="283" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="315" end1="316" start2="307" end2="309" changelist="a11b864b-5158-4507-bc40-0e2f0185bc36" />
-        <range start1="417" end1="421" start2="410" end2="411" changelist="c2f8ca8b-8dd3-48cd-bda6-fb839780ac73" />
-      </ranges>
-    </file>
+    <setting file="file://$PROJECT_DIR$/../../pkg/mod/github.com/gogf/gf@v1.15.6/net/ghttp/ghttp_server_service_handler.go" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/../../pkg/mod/github.com/gogf/gf@v1.15.6/.example/text/gregex/gregex.go" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/../../pkg/mod/github.com/golang/groupcache@v0.0.0-20200121045136-8c9f03a8e57e/groupcache.go" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/../../pkg/mod/github.com/golang/groupcache@v0.0.0-20200121045136-8c9f03a8e57e/lru/lru.go" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/../../pkg/mod/github.com/golang/groupcache@v0.0.0-20200121045136-8c9f03a8e57e/byteview.go" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/../../pkg/mod/github.com/golang/groupcache@v0.0.0-20200121045136-8c9f03a8e57e/http.go" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectId" id="1jixKfpfjHMsDMZVwoFoSSHo8jO" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+  <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -119,113 +59,95 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="DefaultGoTemplateProperty" value="Go Application" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="ToolWindowEvent Log.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="configurable..is.expanded" value="false" />
     <property name="configurable.GoLibrariesConfigurable.is.expanded" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/grammar_exercise" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/std_library" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\goProject\src\go_study" />
-      <recent name="C:\goProject\src\go_study\third_party\pdf_parser" />
-      <recent name="C:\goProject\src\go_study\third_party\go-plugin" />
-      <recent name="D:\goProject\src\go_study\third_party\kubernetes_yaml" />
-      <recent name="D:\goProject\src\go_study" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\goProject\src\go_study\grammar_exercise\timer" />
-      <recent name="C:\goProject\src\go_study\grammar_exercise" />
-      <recent name="C:\goProject\src\go_study\" />
-      <recent name="C:\goProject\src\go_study\go_reading_blog" />
-      <recent name="C:\goProject\src\go_study\grammar_exercise\select" />
+      <recent name="D:\goProject\src\go_study\geektime-go-trainning\error_handle\countLines" />
+      <recent name="D:\goProject\src\go_study\" />
+      <recent name="D:\goProject\src\go_study\std_library" />
+      <recent name="D:\goProject\src\go_study\common_mistake\for-range" />
+      <recent name="D:\goProject\src\go_study\common_mistake\string" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\goProject\src\go_study" />
+      <recent name="D:\goProject\src\go_study\third_party\k8s_client" />
+      <recent name="D:\goProject\src\go_study\rcpexample\streaming\pb" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build go_study/grammar_exercise/enum">
-    <configuration name="go build go_study/grammar_exercise/const" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Build.go build http_exercise.go">
+    <configuration name="go build go_study/std_library/http_server" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_study" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="go_study/grammar_exercise/const" />
+      <package value="go_study/std_library/http_server" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/grammar_exercise/const/main.go" />
+      <filePath value="$PROJECT_DIR$/std_library/http_server/server.go" />
       <method v="2" />
     </configuration>
-    <configuration name="go build go_study/grammar_exercise/enum" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build http_exercise.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_study" />
       <working_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="go_study/grammar_exercise/enum" />
+      <kind value="FILE" />
+      <package value="go_study" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/grammar_exercise/enum/main.go" />
+      <filePath value="$PROJECT_DIR$/std_library/http/http_exercise.go" />
       <method v="2" />
     </configuration>
-    <configuration name="TestEmptyStructEqual in go_study/grammar_exercise/structTest" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_study" />
-      <working_directory value="$PROJECT_DIR$/grammar_exercise/structTest" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <package value="go_study" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/testing/gostub/main.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestStubMultipleValueSystemLibrary in go_study/testing/gostubTest" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="go_study" />
+      <working_directory value="$PROJECT_DIR$/testing/gostubTest" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="go_study/grammar_exercise/structTest" />
+      <package value="go_study/testing/gostubTest" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestEmptyStructEqual\E$" />
+      <pattern value="^\QTestStubMultipleValueSystemLibrary\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestTimeAfter in go_study/grammar_exercise/timer" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="system_library_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="go_study" />
-      <working_directory value="$PROJECT_DIR$/grammar_exercise/timer" />
+      <working_directory value="$PROJECT_DIR$/testing/gostubTest" />
       <root_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="go_study/grammar_exercise/timer" />
+      <kind value="FILE" />
+      <package value="go_study" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/testing/gostubTest/system_library_test.go" />
       <framework value="gotest" />
-      <pattern value="^\QTestTimeAfter\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestTimeAfterInSelect in go_study/grammar_exercise/timer" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="go_study" />
-      <working_directory value="$PROJECT_DIR$/grammar_exercise/timer" />
-      <root_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="go_study/grammar_exercise/timer" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestTimeAfterInSelect\E$" />
-      <method v="2" />
-    </configuration>
-    <list>
-      <item itemvalue="Go Remote.10.250.125.33" />
-      <item itemvalue="Go Test.TestTimeAfterInSelect in go_study/grammar_exercise/timer" />
-      <item itemvalue="Go Test.TestTimeAfter in go_study/grammar_exercise/timer" />
-      <item itemvalue="Go Test.TestEmptyStructEqual in go_study/grammar_exercise/structTest" />
-      <item itemvalue="Go Build.go build go_study/grammar_exercise/const" />
-      <item itemvalue="Go Build.go build go_study/grammar_exercise/enum" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build go_study/grammar_exercise/enum" />
-        <item itemvalue="Go Build.go build go_study/grammar_exercise/const" />
-        <item itemvalue="Go Test.TestEmptyStructEqual in go_study/grammar_exercise/structTest" />
-        <item itemvalue="Go Test.TestTimeAfter in go_study/grammar_exercise/timer" />
-        <item itemvalue="Go Test.TestTimeAfterInSelect in go_study/grammar_exercise/timer" />
+        <item itemvalue="Go Build.go build http_exercise.go" />
+        <item itemvalue="Go Build.go build go_study/std_library/http_server" />
+        <item itemvalue="Go Test.TestStubMultipleValueSystemLibrary in go_study/testing/gostubTest" />
+        <item itemvalue="Go Test.system_library_test.go" />
+        <item itemvalue="Go Build.go build main.go" />
       </list>
     </recent_temporary>
   </component>
@@ -261,11 +183,6 @@
             </State>
           </value>
         </entry>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
       </map>
     </option>
     <option name="OPEN_GENERIC_TABS">
@@ -278,35 +195,32 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="SHOW_UNVERSIONED_FILES_WHILE_COMMIT" value="false" />
-    <ignored-roots>
-      <path value="$PROJECT_DIR$/third_party/go-plugin-example" />
-    </ignored-roots>
+    <MESSAGE value="代码验证error group和http库" />
+    <MESSAGE value="nil slice and nil map usage" />
+    <MESSAGE value="nil string is a empty string" />
+    <MESSAGE value="slice or array as function arguments" />
+    <MESSAGE value="invalid switch case and fallthrough" />
+    <MESSAGE value="以小写字母开头的结构体将不会被（json、xml、gob等）编码，因此当你编码这些未导出的结构体时，你将会得到零值。" />
+    <MESSAGE value="panic and recover 使用方法" />
+    <MESSAGE value="slice中有隐藏数据" />
+    <MESSAGE value="slice broken data" />
+    <MESSAGE value="stale slice" />
+    <MESSAGE value="提供高级版的for-range技巧demo" />
+    <MESSAGE value="空 interface接口" />
+    <MESSAGE value="modify bug" />
+    <MESSAGE value="init函数的使用姿势" />
+    <MESSAGE value="总结go编程中容易犯的错误" />
+    <MESSAGE value="技术博客练习" />
+    <MESSAGE value="string 和 []byte 字节切片之间的转换" />
+    <MESSAGE value="client-go调用watch函数" />
+    <MESSAGE value="在k8s的pod中执行shell命令" />
+    <MESSAGE value="k8s DaemonSet 添加、删除、更新、获取操作" />
+    <MESSAGE value="bufio reader and writer" />
     <MESSAGE value="scanner 读取文件的每一行的练习代码" />
     <MESSAGE value="临时文件和临时文件夹的创建和销毁" />
     <MESSAGE value="error处理代码提交" />
-    <MESSAGE value="error type用法" />
-    <MESSAGE value="count_lines.go 改进版本" />
-    <MESSAGE value="错误处理：&#10;count_lines 读取文件中行数&#10;error type&#10;sentinel error" />
-    <MESSAGE value="提交文档" />
-    <MESSAGE value="消除error流程处理" />
-    <MESSAGE value="反射练习" />
-    <MESSAGE value="modify code" />
-    <MESSAGE value="使用华为云openstack sdk来获取云资源" />
-    <MESSAGE value="标准库的单元测试 example" />
-    <MESSAGE value="goconvey测试框架例子" />
-    <MESSAGE value="更新select + timer的使用" />
-    <MESSAGE value="添加go-plugin的示例" />
-    <MESSAGE value="删除go-plugin的示例" />
-    <MESSAGE value="整理阅读博客时的配套代码" />
-    <MESSAGE value="go101配套代码阅读" />
-    <MESSAGE value="检测一个文件的user name和group name" />
-    <MESSAGE value="fix bug" />
-    <MESSAGE value="优化channel的示例代码" />
-    <MESSAGE value="删除channel的生产者消费者代码" />
-    <MESSAGE value="增加ticker代码" />
-    <MESSAGE value="for-select-break测试" />
-    <MESSAGE value="整理不同的代码" />
-    <option name="LAST_COMMIT_MESSAGE" value="整理不同的代码" />
+    <MESSAGE value="mutex实验代码以及原理剖析" />
+    <option name="LAST_COMMIT_MESSAGE" value="mutex实验代码以及原理剖析" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -345,77 +259,16 @@
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/third_party/kubernetes_client/main.go</url>
-          <line>47</line>
+          <url>file://$PROJECT_DIR$/third_party/delve_exercise/main.go</url>
+          <line>16</line>
           <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/third_party/groupcache_exercise/main.go</url>
-          <line>54</line>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/third_party/groupcache_exercise/main.go</url>
-          <line>67</line>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/third_party/groupcache_exercise/main.go</url>
-          <line>97</line>
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/../../pkg/mod/github.com/golang/groupcache@v0.0.0-20200121045136-8c9f03a8e57e/http.go</url>
-          <line>143</line>
-          <option name="timeStamp" value="40" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/../../pkg/mod/github.com/golang/groupcache@v0.0.0-20200121045136-8c9f03a8e57e/groupcache.go</url>
-          <line>260</line>
-          <option name="timeStamp" value="42" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/../../pkg/mod/github.com/golang/groupcache@v0.0.0-20200121045136-8c9f03a8e57e/groupcache.go</url>
-          <line>267</line>
-          <option name="timeStamp" value="43" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/../../pkg/mod/golang.org/x/sync@v0.0.0-20200317015054-43a5402ce75a/singleflight/singleflight.go</url>
-          <line>66</line>
-          <option name="timeStamp" value="45" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/third_party/go-plugin/basic/main.go</url>
-          <line>21</line>
-          <option name="timeStamp" value="50" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/third_party/pdf_parser/main.go</url>
-          <line>13</line>
-          <option name="timeStamp" value="51" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/std_library/strings/main.go</url>
-          <line>9</line>
-          <option name="timeStamp" value="52" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/grammar_exercise/mutex/var_in_struct_test.go</url>
-          <line>28</line>
-          <option name="timeStamp" value="55" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="GoApplicationRunConfiguration">
         <watch expression="*(*&quot;string&quot;)(824636984960)" />
-        <watch expression="stringGroup" />
-        <watch expression="ok" />
-        <watch expression="cacheHit" />
       </configuration>
     </watches-manager>
-  </component>
-  <component name="YamllintSettings">
-    <option name="binPath" value="yamllint" />
   </component>
 </project>

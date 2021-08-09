@@ -5,19 +5,16 @@ go 1.15
 require (
 	github.com/360EntSecGroup-Skylar/excelize/v2 v2.4.0
 	github.com/PuerkitoBio/goquery v1.6.0
-	github.com/appleboy/gin-jwt/v2 v2.6.4
-	github.com/dkiser/go-plugin-example v0.0.0-20170205011010-bead7e2bd676
 	github.com/fasthttp-contrib/websocket v0.0.0-20160511215533-1f3b11f56072 // indirect
 	github.com/fatih/set v0.2.1
 	github.com/gin-gonic/gin v1.7.2
 	github.com/go-playground/validator/v10 v10.6.1 // indirect
-	github.com/go-resty/resty/v2 v2.6.0
+	github.com/gogf/gf v1.16.5
 	github.com/gogo/protobuf v1.3.1
 	github.com/golang/groupcache v0.0.0-20200121045136-8c9f03a8e57e
 	github.com/golang/mock v1.5.0
 	github.com/golang/protobuf v1.5.2 // indirect
 	github.com/google/gopacket v1.1.19
-	github.com/gorilla/websocket v1.4.2
 	github.com/hashicorp/go-hclog v0.14.1
 	github.com/hashicorp/go-plugin v1.4.1
 	github.com/huaweicloud/golangsdk v0.0.0-20201228013212-d10065a3dc7f
@@ -30,7 +27,6 @@ require (
 	github.com/kr/pretty v0.2.1 // indirect
 	github.com/ledongthuc/pdf v0.0.0-20200323191019-23c5852adbd2
 	github.com/leodido/go-urn v1.2.1 // indirect
-	github.com/mattn/go-colorable v0.1.8 // indirect
 	github.com/mattn/go-isatty v0.0.13 // indirect
 	github.com/moul/http2curl v1.0.0 // indirect
 	github.com/nats-io/nats-server/v2 v2.1.8 // indirect
@@ -40,9 +36,8 @@ require (
 	github.com/prashantv/gostub v1.0.0
 	github.com/russross/blackfriday/v2 v2.1.0 // indirect
 	github.com/smartystreets/goconvey v1.6.4
-	github.com/stretchr/testify v1.6.1
+	github.com/stretchr/testify v1.7.0
 	github.com/ugorji/go v1.2.6 // indirect
-	github.com/urfave/cli/v2 v2.3.0
 	github.com/valyala/fasthttp v1.16.0 // indirect
 	github.com/yudai/pp v2.0.1+incompatible // indirect
 	golang.org/x/crypto v0.0.0-20210616213533-5ff15b29337e // indirect
