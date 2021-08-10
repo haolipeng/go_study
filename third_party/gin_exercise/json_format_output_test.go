@@ -1,6 +1,7 @@
 package gin_exercise
 
 import (
+	"fmt"
 	"github.com/gin-gonic/gin"
 	"net/http"
 	"testing"
@@ -38,16 +39,90 @@ func TestJsonFormatOutput(t *testing.T) {
 			Status:  http.StatusOK,
 		})
 	})
-	r.Run(":8080")
+	err := r.Run(":8080")
+	if err != nil {
+		fmt.Println("server run failed")
+	}
 }
 
-//json数组格式输出
-var classmates = []Student{{Name: "haolipeng", Age: 32}, {Name: "pujunlong", Age: 36}, {Name: "lidong", Age: 33}}
+type BusinessInfo struct {
+	IpAddress        string `json:"ipAddress"`        //ip地址
+	Hostname         string `json:"hostname"`         //主机名称
+	SystemName       string `json:"systemName"`       //操作系统
+	HostStatus       string `json:"hostStatus"`       //在线状态
+	Grade            string `json:"grade"`            //资产等级
+	GroupName        string `json:"groupName"`        //业务组
+	HostType         string `json:"type"`             //主机类型（lin为Linux、win为Windows）
+	LabelBusiness    string `json:"labelBusiness"`    //业务标签
+	LabelPosition    string `json:"labelPosition"`    //位置标签
+	LabelEnvironment string `json:"labelEnvironment"` //环境标签
+	LabelRole        string `json:"labelRole"`        //角色标签
+}
+
+var assetsInfos = []BusinessInfo{
+	{
+		IpAddress:        "192.168.1.1",
+		Hostname:         "OAWeb",
+		SystemName:       "CentOS Linux",
+		HostStatus:       "离线",
+		Grade:            "重要资产",
+		HostType:         "lin",
+		GroupName:        "北京组",
+		LabelPosition:    "北京",
+		LabelBusiness:    "ERP系统",
+		LabelEnvironment: "生产",
+		LabelRole:        "Nginx",
+	},
+	{
+		IpAddress:        "192.168.1.2",
+		Hostname:         "OAWeb",
+		SystemName:       "CentOS Linux",
+		HostStatus:       "离线",
+		Grade:            "重要资产",
+		HostType:         "lin",
+		GroupName:        "北京组",
+		LabelPosition:    "北京",
+		LabelBusiness:    "ERP系统",
+		LabelEnvironment: "研发",
+		LabelRole:        "Nginx",
+	},
+	{
+		IpAddress:        "192.168.1.3",
+		Hostname:         "OAWeb",
+		SystemName:       "CentOS Linux",
+		HostStatus:       "离线",
+		Grade:            "重要资产",
+		HostType:         "lin",
+		GroupName:        "北京组",
+		LabelPosition:    "北京",
+		LabelBusiness:    "ERP系统",
+		LabelEnvironment: "销售",
+		LabelRole:        "Nginx",
+	},
+	{
+		IpAddress:        "192.168.1.4",
+		Hostname:         "OAWeb",
+		SystemName:       "CentOS Linux",
+		HostStatus:       "离线",
+		Grade:            "重要资产",
+		HostType:         "lin",
+		GroupName:        "北京组",
+		LabelPosition:    "北京",
+		LabelBusiness:    "ERP系统",
+		LabelEnvironment: "财务",
+		LabelRole:        "Nginx",
+	},
+}
+
+func handleAssetsJson(c *gin.Context) {
+	c.IndentedJSON(http.StatusOK, assetsInfos)
+}
 
 func TestJsonArrayOutput(t *testing.T) {
 	r := gin.Default()
-	r.GET("/users", func(c *gin.Context) {
-		c.IndentedJSON(http.StatusOK, classmates)
-	})
-	r.Run(":8080")
+	r.POST("/base/host/get/attribute", handleAssetsJson)
+	err := r.Run(":8084")
+	if err != nil {
+		fmt.Println("server run failed")
+	}
 }

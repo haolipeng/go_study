@@ -6,8 +6,9 @@ import (
 )
 
 type Library struct {
-	Name   string
-	Latest string
+	NameS  string `json:"name"`
+	Latest string `json:"latest"`
+	Age    string `json:"age"`
 }
 
 type Libraries struct {
@@ -23,7 +24,7 @@ func main() {
 
 	for _, lib := range libraries.Results {
 		fmt.Println("first library:")
-		fmt.Printf("name:%s latest:%s\n", lib.Name, lib.Latest)
+		fmt.Printf("name:%s latest:%s\n", lib.NameS, lib.Latest)
 		break
 	}
 }
