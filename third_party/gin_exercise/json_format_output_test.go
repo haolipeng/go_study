@@ -118,9 +118,27 @@ func handleAssetsJson(c *gin.Context) {
 	c.IndentedJSON(http.StatusOK, assetsInfos)
 }
 
+func handleTask(c *gin.Context) {
+	resp := Response{
+		Data:    "1004",
+		Message: "success",
+		Status:  0,
+	}
+	c.JSON(http.StatusOK, resp)
+}
+
 func TestJsonArrayOutput(t *testing.T) {
 	r := gin.Default()
 	r.POST("/base/host/get/attribute", handleAssetsJson)
+	err := r.Run(":8084")
+	if err != nil {
+		fmt.Println("server run failed")
+	}
+}
+
+func TestMockAgentProxyService(t *testing.T) {
+	r := gin.Default()
+	r.POST("/console/task/create_new", handleTask)
 	err := r.Run(":8084")
 	if err != nil {
 		fmt.Println("server run failed")

@@ -1,8 +1,11 @@
 package mapTest
 
-import "fmt"
+import (
+	"fmt"
+	"testing"
+)
 
-func mapCurd() {
+func TestMapCurd(t *testing.T) {
 	//空map无法使用，需要显式初始化或make
 	//var nilMap  mapTest[string] string
 	//nilMap["name"] = "haolipeng" //panic: assignment to entry in nil mapTest
@@ -23,7 +26,7 @@ func mapCurd() {
 
 	//map获取元素,可用第二个值ok判断key在map中是否存在
 	fmt.Println("-----------判断值是否存在--------------")
-	courseName, ok := m["course"]
+	courseName, ok := m["course"] //
 	fmt.Printf("value:%s,exist:%v", courseName, ok)
 
 	//map中key不存在时，返回null
@@ -50,9 +53,11 @@ func mapCurd() {
 	for k, v := range m {
 		fmt.Println(k, v)
 	}
+
+	t.Log("pass")
 }
 
-//map是引用类型,以函数参数形式存在，函数内部修改会影响指向的同一个map
+//map是引用类型,map作为函数参数，函数内部修改会影响指向的同一个map
 func modifyMap(m map[string]string) {
 	m["course"] = "C++"
 }

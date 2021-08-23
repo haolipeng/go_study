@@ -13,7 +13,7 @@ func TestContextTimeout(t *testing.T) {
 	go watch(ctx, "测试协程")
 
 	//等待10秒钟
-	time.Sleep(time.Second * 10)
+	time.Sleep(time.Second * 70)
 
 	// 打印最后的时间
 	oneDay := time.Now()
