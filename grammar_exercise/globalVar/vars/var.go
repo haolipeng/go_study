@@ -1,0 +1,5 @@
+package vars
+
+var (
+	Root = ""
+)
