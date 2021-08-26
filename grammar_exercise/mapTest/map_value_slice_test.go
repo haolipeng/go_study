@@ -11,6 +11,7 @@ type ServiceInfo struct {
 	Port int
 }
 
+//验证value为slice切片的map映射表，直接append是否生效
 func TestMapSliceAppend(t *testing.T) {
 	var (
 		infos []ServiceInfo
