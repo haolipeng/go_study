@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+//函数变参
 func sum(nums ...int) {
 	total := 0
 	for _, num := range nums {
@@ -27,6 +28,7 @@ func typeCheck(values ...interface{}) {
 }
 
 func main() {
+	//传递多个函数参数
 	sum(1, 2)
 	sum(1, 2, 3)
 
