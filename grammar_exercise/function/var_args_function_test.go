@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"testing"
+)
 
 //函数变参
 func sum(nums ...int) {
@@ -27,7 +30,7 @@ func typeCheck(values ...interface{}) {
 	}
 }
 
-func main() {
+func TestVarLenArgs(t *testing.T) {
 	//传递多个函数参数
 	sum(1, 2)
 	sum(1, 2, 3)
@@ -35,7 +38,9 @@ func main() {
 	//通过slice作为函数参数来传递
 	s := []int{1, 2, 3, 4}
 	sum(s...)
+}
 
+func TestTypeCheck(t *testing.T) {
 	fmt.Println("type check variable type")
 	typeCheck(true, "456", 10, 1.23)
 }

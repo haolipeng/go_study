@@ -8,6 +8,7 @@ import (
 )
 
 func prepareTestDirTree(tree string) (string, error) {
+	//filepath.Walk()
 	tmpDir, err := ioutil.TempDir("", "")
 	if err != nil {
 		return "", fmt.Errorf("error creating temp directory: %v\n", err)
