@@ -9,12 +9,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a11b864b-5158-4507-bc40-0e2f0185bc36" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/grammar_exercise/commit/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grammar_exercise/defer/recover/recover.go" beforeDir="false" afterPath="$PROJECT_DIR$/grammar_exercise/recover/recover.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grammar_exercise/errors/main.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grammar_exercise/function/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/grammar_exercise/function/common_func_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grammar_exercise/function/var_args_function.go" beforeDir="false" afterPath="$PROJECT_DIR$/grammar_exercise/function/var_args_function_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/std_library/filePath/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/std_library/filePath/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +25,7 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" url="file://C:/Go" />
+  <component name="GOROOT" url="file://C:/Program Files/Go" />
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
@@ -70,14 +66,14 @@
     <property name="go.modules.go.list.on.any.changes.was.set" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/std_library" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Elkeid" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="go.dep" />
+    <property name="settings.editor.selected.configurable" value="web.server" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -93,71 +89,70 @@
       <recent name="D:\goProject\src\go_study\common_mistake\for-range" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.TestReadFromClosedChannel in go_study/grammar_exercise/channelTest">
-    <configuration name="go build go_study/std_library/json" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Build.go build go_study/grammar_exercise/commit">
+    <configuration name="go build go_study/grammar_exercise/commit" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_study" />
       <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="go_study/grammar_exercise/commit" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/grammar_exercise/commit/main.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestAlignOf in go_study/grammar_exercise/sizeof" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="go_study" />
+      <working_directory value="$PROJECT_DIR$/grammar_exercise/sizeof" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="go_study/grammar_exercise/sizeof" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestAlignOf\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestEmptyStruct in go_study/grammar_exercise/sizeof" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="go_study" />
+      <working_directory value="$PROJECT_DIR$/grammar_exercise/sizeof" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="go_study/grammar_exercise/sizeof" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestEmptyStruct\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestTicker in go_study/grammar_exercise/ticker" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="go_study" />
+      <working_directory value="$PROJECT_DIR$/grammar_exercise/ticker" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="go_study/grammar_exercise/ticker" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestTicker\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="empty_struct_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="go_study" />
+      <working_directory value="$PROJECT_DIR$/grammar_exercise/sizeof" />
+      <root_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
-      <package value="go_study/std_library/json" />
+      <package value="go_study" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/std_library/json/testDecode.go" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestContextTimeout in go_study/grammar_exercise/context" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="go_study" />
-      <working_directory value="$PROJECT_DIR$/grammar_exercise/context" />
-      <root_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="go_study/grammar_exercise/context" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/grammar_exercise/sizeof/empty_struct_test.go" />
       <framework value="gotest" />
-      <pattern value="^\QTestContextTimeout\E$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestEmptyStructEqual in go_study/grammar_exercise/structTest" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="go_study" />
-      <working_directory value="$PROJECT_DIR$/grammar_exercise/structTest" />
-      <root_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="go_study/grammar_exercise/structTest" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestEmptyStructEqual\E$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestMapAssign in go_study/grammar_exercise/mapTest" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="go_study" />
-      <working_directory value="$PROJECT_DIR$/grammar_exercise/mapTest" />
-      <root_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="go_study/grammar_exercise/mapTest" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestMapAssign\E$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestReadFromClosedChannel in go_study/grammar_exercise/channelTest" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="go_study" />
-      <working_directory value="$PROJECT_DIR$/grammar_exercise/channelTest" />
-      <root_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="go_study/grammar_exercise/channelTest" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestReadFromClosedChannel\E$" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Test.TestReadFromClosedChannel in go_study/grammar_exercise/channelTest" />
-        <item itemvalue="Go Test.TestEmptyStructEqual in go_study/grammar_exercise/structTest" />
-        <item itemvalue="Go Build.go build go_study/std_library/json" />
-        <item itemvalue="Go Test.TestContextTimeout in go_study/grammar_exercise/context" />
-        <item itemvalue="Go Test.TestMapAssign in go_study/grammar_exercise/mapTest" />
+        <item itemvalue="Go Build.go build go_study/grammar_exercise/commit" />
+        <item itemvalue="Go Test.TestTicker in go_study/grammar_exercise/ticker" />
+        <item itemvalue="Go Test.empty_struct_test.go" />
+        <item itemvalue="Go Test.TestEmptyStruct in go_study/grammar_exercise/sizeof" />
+        <item itemvalue="Go Test.TestAlignOf in go_study/grammar_exercise/sizeof" />
       </list>
     </recent_temporary>
   </component>
@@ -205,7 +200,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="SHOW_UNVERSIONED_FILES_WHILE_COMMIT" value="false" />
-    <MESSAGE value="nil slice and nil map usage" />
     <MESSAGE value="nil string is a empty string" />
     <MESSAGE value="slice or array as function arguments" />
     <MESSAGE value="invalid switch case and fallthrough" />
@@ -230,7 +224,8 @@
     <MESSAGE value="error处理代码提交" />
     <MESSAGE value="mutex实验代码以及原理剖析" />
     <MESSAGE value="实验代码" />
-    <option name="LAST_COMMIT_MESSAGE" value="实验代码" />
+    <MESSAGE value="golang 内存对齐代码示例" />
+    <option name="LAST_COMMIT_MESSAGE" value="golang 内存对齐代码示例" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
