@@ -12,6 +12,11 @@ type Response struct {
 	Status  int             `json:"status"`
 }
 
+type DataInfo struct {
+	Name string `json:"name"`
+	Age  int    `json:"age"`
+}
+
 func TestJsonDecoder(t *testing.T) {
 	const jsonStream = `
 	{
@@ -29,7 +34,10 @@ func TestJsonDecoder(t *testing.T) {
     "status": 200
 	}`
 
-	var resp Response
+	var (
+		resp  Response
+		infos []DataInfo
+	)
 	//进行json反序列化
 	err := json.Unmarshal([]byte(jsonStream), &resp)
 	if err != nil {
@@ -37,18 +45,10 @@ func TestJsonDecoder(t *testing.T) {
 		return
 	}
 
-	/*
-		//将resp.Data再次序列化
-		bytes, err := json.Marshal(resp.Data)
-		if err != nil {
-			return
-		}
-
-		//将resp.Data反序列化成特定类型Info
-		err = json.Unmarshal(bytes, &infos)
-		if err != nil {
-			return
-		}
-		fmt.Println("value:", infos)
-	*/
+	//将resp.Data反序列化成特定类型Info
+	err = json.Unmarshal(resp.Data, &infos)
+	if err != nil {
+		return
+	}
+	fmt.Println("value:", infos)
 }

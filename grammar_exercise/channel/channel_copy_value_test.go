@@ -1,4 +1,4 @@
-package channelTest
+package channel
 
 import (
 	"fmt"
@@ -6,7 +6,7 @@ import (
 )
 
 //验证将数值投递如通道是浅拷贝还是深拷贝
-//结论是浅拷贝
+//结论:浅拷贝
 type People struct {
 	name    string
 	age     uint8

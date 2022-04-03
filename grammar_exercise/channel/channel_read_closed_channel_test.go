@@ -1,4 +1,4 @@
-package channelTest
+package channel
 
 import (
 	"fmt"
@@ -17,6 +17,7 @@ func TestReadFromClosedChannel(t *testing.T) {
 	for {
 		select {
 		//case data := <-ch: //错误做法,读取已关闭的通道会一直读取到类型的空值
+		//正确做法，采用comma语法，判断数值是否存在
 		case data, ok := <-ch:
 			if ok {
 				fmt.Println("获取数据", data)

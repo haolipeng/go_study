@@ -1,4 +1,4 @@
-package channelTest
+package channel
 
 import "testing"
 
@@ -8,12 +8,12 @@ func TestCloseNilChannel(t *testing.T) {
 	close(a)
 }
 
-//测试2：连续关闭通道两次
+//测试2：关闭已经处于关闭状态的通道，会引发panic
 func TestCloseChannelTwice(t *testing.T) {
 	dataCh := make(chan string, 10)
 	dataCh <- "hello world"
 	close(dataCh)
-	close(dataCh)
+	close(dataCh) //panic: close of closed channel
 }
 
 //测试3：向已关闭通道写入数据
