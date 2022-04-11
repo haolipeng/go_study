@@ -1,8 +1,12 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"testing"
+)
 
-//如果有效实现变量的枚举
+//golang实现枚举
+
 type ByteSize float64
 
 const (
@@ -51,7 +55,7 @@ const (
 	D
 )
 
-func main() {
+func TestEnum(t *testing.T) {
 	//借助Go中的String方法的默认约定，针对定义了String()方法的类型，默认输出时候会调用该String()方法
 	//var val ByteSize = 1e13
 	//fmt.Println(val)
@@ -59,9 +63,7 @@ func main() {
 	fmt.Printf("%v,%v,%v,%v\n", KB, MB, GB, TB)
 
 	//测试go:generate生成的枚举值
-	var f1 FishType = A
-	fmt.Println(f1)
+	fmt.Println(A)
 
-	var f2 FishType = D
-	fmt.Println(f2)
+	fmt.Println(D)
 }

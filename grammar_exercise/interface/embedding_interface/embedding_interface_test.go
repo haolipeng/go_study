@@ -61,5 +61,4 @@ func TestEmbeddingInterface(t *testing.T) {
 		"Trial by Code", "Sea of Rubies"}
 	game1 := game{"ABC", "$125", collection}
 	shop(game1)
-
 }

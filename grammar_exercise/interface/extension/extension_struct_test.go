@@ -26,9 +26,9 @@ type Dog struct {
 }
 
 //注释掉Dog的Speak()函数，则调用Pet的Speak()函数
-func (d *Dog) Speak() {
-	fmt.Println("dog Speak() called")
-}
+//func (d *Dog) Speak() {
+//	fmt.Println("dog Speak() called")
+//}
 
 func (d *Dog) SpeakTo(name string) {
 	d.Speak()
@@ -41,5 +41,5 @@ func TestExtension(t *testing.T) {
 
 	var dog *Dog = new(Dog)
 	dog.Speak()
-	//dog.SpeakTo("Chao")
+	dog.SpeakTo("Chao")
 }
