@@ -38,6 +38,12 @@ func (d *Dog) SpeakTo(name string) {
 func TestExtension(t *testing.T) {
 	//dog := new(Dog)
 	//var dog Pet = new(Dog) //cannot use new(Dog) (type *Dog) as type Pet in assignment
+	//结构体嵌入方式的初始化方式
+	chuba := Dog{
+		Pet: Pet{name: "初八"},
+		age: 4,
+	}
+	chuba.Speak()
 
 	var dog *Dog = new(Dog)
 	dog.Speak()
