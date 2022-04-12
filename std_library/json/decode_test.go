@@ -1,4 +1,4 @@
-package jsonTest
+package json
 
 import (
 	"encoding/json"
