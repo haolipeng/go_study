@@ -7,12 +7,16 @@ import (
 	"testing"
 )
 
-func TestUVarint(t *testing.T) {
+//TODO:这个题暂时没搞清楚
+func TestPutUVarint(t *testing.T) {
 	buf := make([]byte, binary.MaxVarintLen64)
 
 	for _, x := range []uint64{1, 2, 127, 128, 255, 256} {
 		n := binary.PutUvarint(buf, x)
+		fmt.Println("put bytes:", n)
 		fmt.Printf("%x\n", buf[:n])
+		fmt.Printf("buf: %x\n", buf)
+		fmt.Println("-------------------------------")
 	}
 }
 
