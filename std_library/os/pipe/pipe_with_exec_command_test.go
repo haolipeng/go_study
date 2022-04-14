@@ -37,10 +37,13 @@ func Test1(t *testing.T) {
 	//first three entries correspond to standard input, standard output and standard error
 	cmd := exec.Command("/bin/sh")
 
-	cmd.SysProcAttr = &syscall.SysProcAttr{}
-	cmd.ExtraFiles = append(cmd.ExtraFiles, inR, outW, outW)
-	dir, _ := os.Getwd()
-	cmd.Dir = dir
+	cmd.SysProcAttr = &syscall.SysProcAttr{Setpgid: true}
+	cmd.ExtraFiles = append(cmd.ExtraFiles, inR, outW)
+
+	cmd.Stdin = inR
+	cmd.Stdout = outW
+	cmd.Stderr = outW
+
 	err = cmd.Start()
 	if err != nil {
 		fmt.Println(err)
@@ -74,6 +77,11 @@ func Test1(t *testing.T) {
 			fmt.Println(s.Text())
 		}
 
+		err := cmd.Wait()
+		if err != nil {
+			fmt.Println("cmd.Wait failed")
+			return
+		}
 		done <- struct{}{}
 
 		fmt.Println("Finished")
