@@ -3,7 +3,7 @@ module go_study
 go 1.15
 
 require (
-	github.com/gin-gonic/gin v1.7.2
+	github.com/gin-gonic/gin v1.7.7
 	github.com/go-playground/validator/v10 v10.6.1 // indirect
 	github.com/golang/mock v1.5.0
 	github.com/golang/protobuf v1.5.2 // indirect
