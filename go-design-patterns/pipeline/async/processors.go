@@ -23,6 +23,7 @@ func (s *SqProcessor) Process(ctx context.Context, wg *sync.WaitGroup, dataChan 
 		
 		for {
 			select {
+			// 从输入通道读取数据
 			case s, ok := <-dataChan:
 				if !ok {
 					log.Println("sq data channel closed!")
