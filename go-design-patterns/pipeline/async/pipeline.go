@@ -40,14 +40,17 @@ func (m *ProcessorManager) Run(ctx context.Context) {
 	var wg = sync.WaitGroup{}
 
 	// 组装pipeline,如何组装这个pipeline的呢
+	// 1. 先从source获取数据
 	wg.Add(1)
 	dataChan := m.source.Process(ctx, &wg, m.errChan)
 
+	// 2. 将数据传递给processor进行处理
 	for _, v := range m.ps {
 		wg.Add(1)
 		dataChan = v.Process(ctx, &wg, dataChan, m.errChan)
 	}
 
+	// 3. 将处理后的数据传递给sink进行处理
 	wg.Add(1)
 	m.sink.Process(ctx, &wg, dataChan, m.errChan)
 
