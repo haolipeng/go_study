@@ -20,7 +20,7 @@ func NewTimerSource(nums ...int) *TimerSource {
 func (t *TimerSource) Process(ctx context.Context, wg *sync.WaitGroup, errChan chan error) <-chan int {
 	defer wg.Done()
 
-	outChannel := make(chan int)
+	outChannel := make(chan int, 10)
 
 	go func() {
 		defer close(outChannel)
@@ -46,7 +46,7 @@ func (t *TimerSource) Process(ctx context.Context, wg *sync.WaitGroup, errChan c
 
 			// 外部中断
 			case <-ctx.Done():
-				log.Println("Notify to exit source!!!")
+				log.Println("Timer source received cancel signal")
 				return
 			}
 		}

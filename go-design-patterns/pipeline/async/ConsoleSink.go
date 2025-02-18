@@ -29,6 +29,9 @@ func (s *ConsoleSink) Process(ctx context.Context, wg *sync.WaitGroup, dataChan 
 					log.Println("sink data channel closed!")
 					return
 				}
+			case <-ctx.Done():
+				log.Println("Sink received cancel signal")
+				return
 			}
 		}
 	}()

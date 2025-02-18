@@ -24,8 +24,10 @@ func (s *SqProcessor) Process(ctx context.Context, wg *sync.WaitGroup, dataChan 
 					log.Println("sq data channel closed!")
 					return
 				}
-
 				outChannel <- s * s
+			case <-ctx.Done():
+				log.Println("Sq processor received cancel signal")
+				return
 			}
 		}
 	}()
@@ -52,9 +54,11 @@ func (s *SumProcessor) Process(ctx context.Context, wg *sync.WaitGroup, dataChan
 					log.Println("sum data channel closed!")
 					return
 				}
-
 				sum += s
 				outChannel <- sum
+			case <-ctx.Done():
+				log.Println("Sum processor received cancel signal")
+				return
 			}
 		}
 	}()
