@@ -24,9 +24,9 @@ And nothing 'gainst Time's scythe can make defence
 Save breed, to brave him when he takes thee hence`
 
 type ProcessorManager struct {
-	source ISource      //一个数据源
-	sink   ISink        //一个输出
-	ps     []IProcessor //多个处理器
+	source     ISource      //一个数据源
+	sink       ISink        //一个输出
+	processors []IProcessor //多个处理器
 }
 
 func NewProcessorManager() *ProcessorManager {
@@ -35,7 +35,7 @@ func NewProcessorManager() *ProcessorManager {
 
 // AddProcessor add processor
 func (pm *ProcessorManager) AddProcessor(processor IProcessor) {
-	pm.ps = append(pm.ps, processor)
+	pm.processors = append(pm.processors, processor)
 }
 
 // AddSource add source
@@ -64,7 +64,7 @@ func (pm *ProcessorManager) Run(ctx context.Context) error {
 	for data := range in {
 		// 依次执行所有处理器
 		// 每个处理器的输出作为下一个处理器的输入
-		for _, p := range pm.ps {
+		for _, p := range pm.processors {
 			data, err = p.Process(ctx, data)
 			if err != nil {
 				log.Printf("process err %s\n", err)
@@ -99,7 +99,7 @@ func (pm *ProcessorManager) RunN(ctx context.Context, maxCnt int) error {
 	syncProcess := func(data any) {
 		// 依次执行所有处理器
 		// 处理器的输出作为下一个处理器的输入
-		for _, v := range pm.ps {
+		for _, v := range pm.processors {
 			data, err = v.Process(ctx, data)
 			if err != nil {
 				log.Printf("process err %s\n", err)
