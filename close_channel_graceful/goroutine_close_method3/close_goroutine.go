@@ -62,7 +62,7 @@ func main() {
 	time.Sleep(3 * time.Second)
 	//有三种方式关闭go协程
 	//close(stop) // 关闭stop channel
-	//cancel() // 关闭context
+	//cancel() // 外部关闭context
 	//休眠几秒，让程序有序退出
 	time.Sleep(time.Second * 3)
 
