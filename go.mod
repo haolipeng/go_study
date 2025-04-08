@@ -7,6 +7,7 @@ require (
 	github.com/bilibili/gengine v1.5.7
 	github.com/gin-gonic/gin v1.7.2
 	github.com/golang/mock v1.5.0
+	github.com/pkg/errors v0.9.1
 	github.com/prashantv/gostub v1.0.0
 	github.com/smartystreets/goconvey v1.6.4
 	github.com/stretchr/testify v1.7.0
